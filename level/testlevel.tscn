@@ -20,13 +20,9 @@ scale = Vector2( -32.8417, 2.24354 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
-scale = Vector2( -10.2385, 0.62585 )
-
-[node name="Area2D2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 567.699, 418.909 )
-scale = Vector2( 0.05, 0.05 )
-
-[node name="Sprite2" type="Sprite" parent="Area2D2"]
-position = Vector2( -4492.84, 2907.13 )
-scale = Vector2( 364.384, 27.0061 )
+position = Vector2( -7.62939e-06, -0.605671 )
+scale = Vector2( -18.2071, 1.27136 )
 texture = ExtResource( 1 )
+
+[node name="diamond" parent="." instance=ExtResource( 3 )]
+position = Vector2( 508.892, 439.342 )

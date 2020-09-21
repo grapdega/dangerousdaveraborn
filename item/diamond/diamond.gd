@@ -2,15 +2,6 @@ extends Area2D
 
 
 
-func _ready():
-	pass # Replace with function body.
-
-
-
-
-
-
-
-func _body_entered(body):
-	if body:
+func _on_diamond_body_entered(body):
+	if body.is_in_group("player"):
 		queue_free()

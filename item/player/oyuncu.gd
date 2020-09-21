@@ -23,6 +23,9 @@ func _physics_process(delta):
 	else:
 		velocity.x=0
 		animation.play("stop")
+	
+	if not raycast.is_colliding():
+		animation.play("jump")
 	velocity = move_and_slide(velocity)
 
 func _ready():

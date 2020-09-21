@@ -19,6 +19,11 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
@@ -30,13 +35,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "walk"
-frame = 1
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="brutal" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 1 )
+animation = "jump"
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 scale = Vector2( 86.8428, 11.8598 )
