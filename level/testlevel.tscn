@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://misc/floor2.png" type="Texture" id=1]
+[ext_resource path="res://item/player/oyuncu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://item/diamond/diamond.tscn" type="PackedScene" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="testlevel" type="Node2D"]
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 350.827, 403.986 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 344, 562 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2( -32.8417, 2.24354 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+scale = Vector2( -10.2385, 0.62585 )
+
+[node name="Area2D2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 567.699, 418.909 )
+scale = Vector2( 0.05, 0.05 )
+
+[node name="Sprite2" type="Sprite" parent="Area2D2"]
+position = Vector2( -4492.84, 2907.13 )
+scale = Vector2( 364.384, 27.0061 )
+texture = ExtResource( 1 )
