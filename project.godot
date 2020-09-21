@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="dangerousdaveremastered"
+config/name="thegame"
 run/main_scene="res://level/testlevel.tscn"
 config/icon="res://icon.png"
 
