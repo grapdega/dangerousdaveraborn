@@ -1,28 +1,56 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://misc/floor2.png" type="Texture" id=1]
+[ext_resource path="res://object/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://item/player/oyuncu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://item/diamond/diamond.tscn" type="PackedScene" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
+[ext_resource path="res://object/Class.tscn" type="PackedScene" id=4]
+[ext_resource path="res://object/Door.tscn" type="PackedScene" id=5]
 
 [node name="testlevel" type="Node2D"]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
-position = Vector2( 350.827, 403.986 )
+position = Vector2( 93.5127, 545.257 )
 scale = Vector2( 0.05, 0.05 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2( 344, 562 )
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 16, 1, 0, 17, 1, 0, 18, 1, 0, 19, 1, 0, 20, 1, 0, 21, 1, 0, 22, 1, 0, 23, 1, 0, 24, 1, 0, 25, 1, 0, 26, 1, 0, 27, 1, 0, 28, 1, 0, 29, 1, 0, 30, 2, 0, 31, 2, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1, 0, 65542, 1, 0, 65543, 1, 0, 65544, 1, 0, 65545, 1, 0, 65546, 1, 0, 65547, 1, 0, 65548, 1, 0, 65549, 1, 0, 65550, 1, 0, 65551, 1, 0, 65552, 1, 0, 65553, 1, 0, 65554, 1, 0, 65555, 1, 0, 65556, 1, 0, 65557, 1, 0, 65558, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 65565, 1, 0, 65566, 2, 0, 65567, 2, 0, 131072, 1, 0, 131073, 1, 0, 131100, 1, 0, 131101, 1, 0, 131102, 2, 0, 131103, 2, 0, 196608, 1, 0, 196609, 1, 0, 196636, 1, 0, 196637, 1, 0, 196638, 2, 0, 196639, 2, 0, 262144, 1, 0, 262145, 1, 0, 262172, 1, 0, 262173, 1, 0, 262174, 2, 0, 262175, 2, 0, 327680, 1, 0, 327681, 1, 0, 327704, 1, 0, 327705, 1, 0, 327708, 1, 0, 327709, 1, 0, 327710, 2, 0, 327711, 2, 0, 393216, 1, 0, 393217, 1, 0, 393221, 1, 0, 393222, 1, 0, 393227, 1, 0, 393228, 1, 0, 393234, 1, 0, 393235, 1, 0, 393240, 1, 0, 393241, 1, 0, 393244, 1, 0, 393245, 1, 0, 393246, 2, 0, 393247, 2, 0, 458752, 1, 0, 458753, 1, 0, 458757, 1, 0, 458758, 1, 0, 458763, 1, 0, 458764, 1, 0, 458770, 1, 0, 458771, 1, 0, 458780, 1, 0, 458781, 1, 0, 458782, 2, 0, 458783, 2, 0, 524288, 1, 0, 524289, 1, 0, 524316, 1, 0, 524317, 1, 0, 524318, 2, 0, 524319, 2, 0, 589824, 1, 0, 589825, 1, 0, 589845, 1, 0, 589846, 1, 0, 589852, 1, 0, 589853, 1, 0, 589854, 2, 0, 589855, 2, 0, 655360, 1, 0, 655361, 1, 0, 655368, 1, 0, 655369, 1, 0, 655375, 1, 0, 655376, 1, 0, 655381, 1, 0, 655382, 1, 0, 655388, 1, 0, 655389, 1, 0, 655390, 2, 0, 655391, 2, 0, 720896, 1, 0, 720897, 1, 0, 720904, 1, 0, 720905, 1, 0, 720911, 1, 0, 720912, 1, 0, 720922, 1, 0, 720923, 1, 0, 720924, 1, 0, 720925, 1, 0, 720926, 2, 0, 720927, 2, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786458, 1, 0, 786459, 1, 0, 786460, 1, 0, 786461, 1, 0, 786462, 2, 0, 786463, 2, 0, 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851996, 1, 0, 851997, 1, 0, 851998, 2, 0, 851999, 2, 0, 917504, 1, 0, 917505, 1, 0, 917511, 1, 0, 917512, 1, 0, 917513, 1, 0, 917514, 1, 0, 917515, 1, 0, 917516, 1, 0, 917517, 1, 0, 917532, 1, 0, 917533, 1, 0, 917534, 2, 0, 917535, 2, 0, 983040, 1, 0, 983041, 1, 0, 983047, 1, 0, 983048, 1, 0, 983049, 1, 0, 983050, 1, 0, 983051, 1, 0, 983052, 1, 0, 983053, 1, 0, 983058, 1, 0, 983059, 1, 0, 983060, 1, 0, 983061, 1, 0, 983062, 1, 0, 983063, 1, 0, 983064, 1, 0, 983065, 1, 0, 983066, 1, 0, 983068, 1, 0, 983069, 1, 0, 983070, 2, 0, 983071, 2, 0, 1048576, 1, 0, 1048577, 1, 0, 1048594, 1, 0, 1048595, 1, 0, 1048604, 1, 0, 1048605, 1, 0, 1048606, 2, 0, 1048607, 2, 0, 1114112, 1, 0, 1114113, 1, 0, 1114130, 1, 0, 1114131, 1, 0, 1114140, 1, 0, 1114141, 1, 0, 1114142, 2, 0, 1114143, 2, 0, 1179648, 1, 0, 1179649, 1, 0, 1179650, 1, 0, 1179651, 1, 0, 1179652, 1, 0, 1179653, 1, 0, 1179654, 1, 0, 1179655, 1, 0, 1179656, 1, 0, 1179657, 1, 0, 1179658, 1, 0, 1179659, 1, 0, 1179660, 1, 0, 1179661, 1, 0, 1179662, 1, 0, 1179663, 1, 0, 1179664, 1, 0, 1179665, 1, 0, 1179666, 1, 0, 1179667, 1, 0, 1179668, 1, 0, 1179669, 1, 0, 1179670, 1, 0, 1179671, 1, 0, 1179672, 1, 0, 1179673, 1, 0, 1179674, 1, 0, 1179675, 1, 0, 1179676, 1, 0, 1179677, 1, 0, 1179678, 2, 0, 1179679, 2, 0 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-scale = Vector2( -32.8417, 2.24354 )
-shape = SubResource( 1 )
+[node name="Diamonds" type="Node2D" parent="."]
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D"]
-position = Vector2( -7.62939e-06, -0.605671 )
-scale = Vector2( -18.2071, 1.27136 )
-texture = ExtResource( 1 )
+[node name="diamond" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 293.005, 290.126 )
 
-[node name="diamond" parent="." instance=ExtResource( 3 )]
-position = Vector2( 508.892, 439.342 )
+[node name="diamond2" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 94.5804, 482.202 )
+
+[node name="diamond3" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 99.3426, 344.098 )
+
+[node name="diamond4" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 196.174, 156.785 )
+
+[node name="diamond5" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 383.487, 155.197 )
+
+[node name="diamond6" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 513.654, 290.126 )
+
+[node name="diamond7" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 699.38, 255.204 )
+
+[node name="diamond8" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 796.212, 132.974 )
+
+[node name="diamond9" parent="Diamonds" instance=ExtResource( 3 )]
+position = Vector2( 864.47, 318.7 )
+
+[node name="Class" parent="." instance=ExtResource( 4 )]
+position = Vector2( 606.113, 167.703 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+show_behind_parent = true
+position = Vector2( 665.684, 544.034 )
+scale = Vector2( 1.95043, 2.01981 )
