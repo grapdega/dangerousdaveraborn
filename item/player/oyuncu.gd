@@ -4,11 +4,13 @@ export var gravity=9.81
 export var speed=50
 export var runspeed=150
 export var height=30
-var velocity = Vector2.ZERO
 export var hasClass = false
+var velocity = Vector2.ZERO
+
 onready var raycast = $RayCast2D
 onready var animation = $Sprite
 onready var player_vars = get_node("/root/Globals")
+
 func _physics_process(delta):
 	velocity.y+=gravity*delta*speed
 	velocity = move_and_slide(velocity)
