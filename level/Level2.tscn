@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://object/Class.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://object/Door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://item/tileset/floor.png" type="Texture" id=8]
+[ext_resource path="res://object/Fire.tscn" type="PackedScene" id=9]
 
 [node name="Level2" type="Node2D"]
 
@@ -58,5 +59,64 @@ position = Vector2( 17.8451, 16.6077 )
 [node name="Door" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2629.04, 226.499 )
 scale = Vector2( 1.83999, 1.83999 )
+
+[node name="Fire" parent="." instance=ExtResource( 9 )]
+position = Vector2( 207.979, 594.142 )
+
+[node name="Fire2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 238.165, 594.142 )
+
+[node name="Fire3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 268.402, 594.142 )
+
+[node name="Fire4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 298.587, 594.142 )
+
+[node name="Fire5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 328.758, 594.142 )
+
+[node name="Fire6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 358.943, 594.142 )
+
+[node name="Fire7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 389.181, 594.142 )
+
+[node name="Fire8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 419.366, 594.142 )
+
+[node name="Fire9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 449.63, 594.142 )
+
+[node name="Fire10" parent="." instance=ExtResource( 9 )]
+position = Vector2( 479.867, 594.142 )
+
+[node name="Fire12" parent="." instance=ExtResource( 9 )]
+position = Vector2( 559.813, 594.038 )
+
+[node name="Fire13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 589.998, 594.038 )
+
+[node name="Fire14" parent="." instance=ExtResource( 9 )]
+position = Vector2( 620.235, 594.038 )
+
+[node name="Fire15" parent="." instance=ExtResource( 9 )]
+position = Vector2( 650.421, 594.038 )
+
+[node name="Fire16" parent="." instance=ExtResource( 9 )]
+position = Vector2( 680.684, 594.038 )
+
+[node name="Fire17" parent="." instance=ExtResource( 9 )]
+position = Vector2( 710.922, 594.038 )
+
+[node name="Fire18" parent="." instance=ExtResource( 9 )]
+position = Vector2( 741.137, 594.038 )
+
+[node name="Fire19" parent="." instance=ExtResource( 9 )]
+position = Vector2( 762.513, 594.037 )
+scale = Vector2( 0.410458, 0.986376 )
+
+[node name="Fire11" parent="." instance=ExtResource( 9 )]
+position = Vector2( 503.928, 594.267 )
+scale = Vector2( 0.586561, 0.956346 )
 
 [editable path="KinematicBody2D"]
