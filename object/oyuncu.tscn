@@ -16,14 +16,14 @@ animations = [ {
 "name": "stop",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
 "speed": 5.0
 } ]
 
@@ -31,7 +31,9 @@ animations = [ {
 script = ExtResource( 4 )
 height = 33
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaCollision" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0, -48 )
 shape = SubResource( 1 )
 
@@ -40,8 +42,13 @@ scale = Vector2( 32.9142, 32.9142 )
 frames = SubResource( 2 )
 animation = "jump"
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -48 )
+shape = SubResource( 1 )
+
 [node name="RayCast2D" type="RayCast2D" parent="."]
-scale = Vector2( 500, 11.86 )
+position = Vector2( 0.0636902, -16.427 )
+scale = Vector2( 4.04164, 11.2598 )
 enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -50,3 +57,4 @@ limit_left = 0
 limit_top = 0
 limit_right = 1024
 limit_bottom = 595
+[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

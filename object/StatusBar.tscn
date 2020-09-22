@@ -9,14 +9,14 @@
 
 [sub_resource type="StyleBoxTexture" id=1]
 
-[node name="StatusBar" type="Node2D"]
+[node name="StatusBar" type="CanvasLayer"]
 script = ExtResource( 2 )
 
 [node name="Score" type="TextureRect" parent="."]
-margin_left = -2.27374e-13
-margin_top = -8.0
-margin_right = 110.0
-margin_bottom = 17.0
+margin_left = 7.0
+margin_top = 6.0
+margin_right = 116.0
+margin_bottom = 29.0
 rect_scale = Vector2( 1.5, 3 )
 texture = ExtResource( 4 )
 __meta__ = {
@@ -24,11 +24,11 @@ __meta__ = {
 }
 
 [node name="ScoreCount" type="Label" parent="."]
-margin_left = 176.0
-margin_top = -8.0
-margin_right = 229.0
-margin_bottom = 7.0
-rect_scale = Vector2( 3.47488, 5.89213 )
+margin_left = 211.182
+margin_top = 17.142
+margin_right = 252.182
+margin_bottom = 31.142
+rect_scale = Vector2( 2.92215, 4.7826 )
 custom_styles/normal = SubResource( 1 )
 text = "00000"
 __meta__ = {
@@ -36,10 +36,10 @@ __meta__ = {
 }
 
 [node name="Level" type="TextureRect" parent="."]
-margin_left = 352.0
-margin_top = -8.0
-margin_right = 462.0
-margin_bottom = 17.0
+margin_left = 363.784
+margin_top = 8.40508
+margin_right = 455.784
+margin_bottom = 34.4051
 rect_scale = Vector2( 1.5, 3 )
 texture = ExtResource( 5 )
 __meta__ = {
@@ -47,20 +47,21 @@ __meta__ = {
 }
 
 [node name="LevelCount" type="Label" parent="."]
-margin_left = 528.0
-margin_top = -8.0
-margin_right = 547.0
-margin_bottom = 6.0
-rect_scale = Vector2( 3.07787, 6.82319 )
+margin_left = 537.514
+margin_top = 16.9733
+margin_right = 553.514
+margin_bottom = 30.9733
+rect_scale = Vector2( 3.31336, 4.88215 )
 text = "00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Daves" type="TextureRect" parent="."]
-margin_left = 640.0
-margin_right = 741.0
-margin_bottom = 22.0
+margin_left = 614.756
+margin_top = 10.2432
+margin_right = 715.756
+margin_bottom = 34.2432
 rect_scale = Vector2( 1.5, 3 )
 texture = ExtResource( 3 )
 __meta__ = {
@@ -68,30 +69,33 @@ __meta__ = {
 }
 
 [node name="DavesCount" type="TextureRect" parent="."]
-margin_left = 800.0
-margin_right = 835.0
-margin_bottom = 32.0
-rect_scale = Vector2( 2.11157, 2.25012 )
+margin_left = 784.0
+margin_top = 8.0
+margin_right = 816.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2.26671, 2.49708 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DavesCount2" type="TextureRect" parent="."]
-margin_left = 872.0
-margin_right = 907.0
-margin_bottom = 32.0
-rect_scale = Vector2( 2.11157, 2.25012 )
+margin_left = 864.0
+margin_top = 8.0
+margin_right = 896.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2.26671, 2.49708 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DavesCount3" type="TextureRect" parent="."]
-margin_left = 944.0
-margin_right = 979.0
-margin_bottom = 32.0
-rect_scale = Vector2( 2.11157, 2.25012 )
+margin_left = 936.0
+margin_top = 8.0
+margin_right = 968.0
+margin_bottom = 40.0
+rect_scale = Vector2( 2.26671, 2.49708 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -99,10 +103,10 @@ __meta__ = {
 
 [node name="DoorMessage" type="TextureRect" parent="."]
 visible = false
-margin_left = 141.502
-margin_top = 546.573
-margin_right = 485.502
-margin_bottom = 586.573
+margin_left = 213.565
+margin_top = 548.692
+margin_right = 557.565
+margin_bottom = 588.692
 rect_scale = Vector2( 1.62969, 1.08194 )
 texture = ExtResource( 6 )
 __meta__ = {

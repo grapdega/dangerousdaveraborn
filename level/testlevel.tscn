@@ -79,7 +79,6 @@ scale = Vector2( 1.95043, 2.01981 )
 position = Vector2( 96.0746, 543.668 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 7 )]
-position = Vector2( 6.27367, 58.3045 )
 
 [editable path="KinematicBody2D"]
 

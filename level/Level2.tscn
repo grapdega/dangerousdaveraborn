@@ -16,7 +16,7 @@
 position = Vector2( 128.739, 531.776 )
 scale = Vector2( 0.05, 0.05 )
 
-[node name="Camera2D" parent="KinematicBody2D" index="3"]
+[node name="Camera2D" parent="KinematicBody2D" index="4"]
 limit_right = 2657
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -54,69 +54,29 @@ position = Vector2( 566.964, 544.286 )
 position = Vector2( 65.5159, 216.706 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 6 )]
-position = Vector2( 17.8451, 16.6077 )
 
 [node name="Door" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2629.04, 226.499 )
 scale = Vector2( 1.83999, 1.83999 )
 
 [node name="Fire" parent="." instance=ExtResource( 9 )]
-position = Vector2( 207.979, 594.142 )
+position = Vector2( 248.674, 588.725 )
+scale = Vector2( 3.75937, 1.83812 )
 
 [node name="Fire2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 238.165, 594.142 )
-
-[node name="Fire3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 268.402, 594.142 )
+position = Vector2( 361.939, 588.725 )
+scale = Vector2( 3.75937, 1.83812 )
 
 [node name="Fire4" parent="." instance=ExtResource( 9 )]
-position = Vector2( 298.587, 594.142 )
+position = Vector2( 600.284, 588.725 )
+scale = Vector2( 3.75937, 1.83812 )
 
 [node name="Fire5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 328.758, 594.142 )
+position = Vector2( 713.549, 588.725 )
+scale = Vector2( 3.75937, 1.83812 )
 
-[node name="Fire6" parent="." instance=ExtResource( 9 )]
-position = Vector2( 358.943, 594.142 )
-
-[node name="Fire7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 389.181, 594.142 )
-
-[node name="Fire8" parent="." instance=ExtResource( 9 )]
-position = Vector2( 419.366, 594.142 )
-
-[node name="Fire9" parent="." instance=ExtResource( 9 )]
-position = Vector2( 449.63, 594.142 )
-
-[node name="Fire10" parent="." instance=ExtResource( 9 )]
-position = Vector2( 479.867, 594.142 )
-
-[node name="Fire12" parent="." instance=ExtResource( 9 )]
-position = Vector2( 559.813, 594.038 )
-
-[node name="Fire13" parent="." instance=ExtResource( 9 )]
-position = Vector2( 589.998, 594.038 )
-
-[node name="Fire14" parent="." instance=ExtResource( 9 )]
-position = Vector2( 620.235, 594.038 )
-
-[node name="Fire15" parent="." instance=ExtResource( 9 )]
-position = Vector2( 650.421, 594.038 )
-
-[node name="Fire16" parent="." instance=ExtResource( 9 )]
-position = Vector2( 680.684, 594.038 )
-
-[node name="Fire17" parent="." instance=ExtResource( 9 )]
-position = Vector2( 710.922, 594.038 )
-
-[node name="Fire18" parent="." instance=ExtResource( 9 )]
-position = Vector2( 741.137, 594.038 )
-
-[node name="Fire19" parent="." instance=ExtResource( 9 )]
-position = Vector2( 762.513, 594.037 )
-scale = Vector2( 0.410458, 0.986376 )
-
-[node name="Fire11" parent="." instance=ExtResource( 9 )]
-position = Vector2( 503.928, 594.267 )
-scale = Vector2( 0.586561, 0.956346 )
+[node name="Fire3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 470.056, 588.674 )
+scale = Vector2( 3.39444, 1.83812 )
 
 [editable path="KinematicBody2D"]
