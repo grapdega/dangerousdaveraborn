@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var gravity=9.81
+export var gravity=10
 export var speed=50
 export var runspeed=150
 export var height=30
@@ -15,7 +15,7 @@ func _physics_process(delta):
 	velocity.y+=gravity*delta*speed
 	velocity = move_and_slide(velocity)
 	if (Input.is_action_pressed("ui_accept") or Input.is_action_pressed("ui_up")) and raycast.is_colliding():
-		velocity.y-=speed*delta*gravity*height
+		velocity.y-=speed*delta*gravity*height*(10/gravity)
 	if Input.is_action_pressed("ui_left"):
 		velocity.x=-speed*delta*runspeed
 		animation.flip_h=true

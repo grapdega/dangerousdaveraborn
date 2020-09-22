@@ -48,4 +48,5 @@ enabled = true
 current = true
 limit_left = 0
 limit_top = 0
+limit_right = 1024
 limit_bottom = 595
