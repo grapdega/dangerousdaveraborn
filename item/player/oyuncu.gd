@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
 export var gravity=9.81
-export var speed=80
+export var speed=50
 export var runspeed=150
-export var height=25
+export var height=30
 var velocity = Vector2.ZERO
 export var hasClass = false
 onready var raycast = $RayCast2D
@@ -12,7 +12,7 @@ onready var player_vars = get_node("/root/Globals")
 func _physics_process(delta):
 	velocity.y+=gravity*delta*speed
 	velocity = move_and_slide(velocity)
-	if Input.is_action_pressed("ui_accept") and raycast.is_colliding():
+	if (Input.is_action_pressed("ui_accept") or Input.is_action_pressed("ui_up")) and raycast.is_colliding():
 		velocity.y-=speed*delta*gravity*height
 	if Input.is_action_pressed("ui_left"):
 		velocity.x=-speed*delta*runspeed
