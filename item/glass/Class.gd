@@ -6,4 +6,6 @@ func _on_Class_body_entered(body):
 	if body.is_in_group("player"):
 		player_Vars.player_score += 500
 		player_Vars.player_has_class = true
+		$AnimationPlayer.play("fade_out")
+		yield($AnimationPlayer,"animation_finished")
 		queue_free()
