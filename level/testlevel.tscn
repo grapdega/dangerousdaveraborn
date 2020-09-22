@@ -17,6 +17,9 @@ position = Vector2( 2.37842, -45.742 )
 position = Vector2( 171.425, 536.267 )
 scale = Vector2( 0.05, 0.05 )
 
+[node name="Camera2D" parent="KinematicBody2D" index="3"]
+limit_right = 1024
+
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -999
 tile_set = ExtResource( 1 )
@@ -80,6 +83,8 @@ position = Vector2( 96.0746, 543.668 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 7 )]
 position = Vector2( 6.27367, 58.3045 )
+
+[editable path="KinematicBody2D"]
 
 [editable path="Diamonds/diamond10"]
 
