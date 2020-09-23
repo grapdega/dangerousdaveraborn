@@ -15,13 +15,13 @@ func _physics_process(delta):
 	if isLife:
 		velocity.y+=gravity*delta*speed
 		velocity = move_and_slide(velocity)
-		if (Input.is_action_pressed("ui_accept") or Input.is_action_pressed("ui_up")) and raycast.is_colliding():
+		if Input.is_action_pressed("jump") and raycast.is_colliding():
 			velocity.y-=speed*delta*gravity*height*(10/gravity)
-		if Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("left"):
 			velocity.x=-speed*delta*runspeed
 			animation.flip_h=true
 			animation.play("walk")
-		elif Input.is_action_pressed("ui_right"):
+		elif Input.is_action_pressed("right"):
 			velocity.x=+speed*delta*runspeed
 			animation.flip_h=false
 			animation.play("walk")
