@@ -29,7 +29,6 @@ animations = [ {
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 4 )
-height = 33
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -53,7 +52,7 @@ enabled = true
 current = true
 limit_left = 0
 limit_top = 0
-limit_right = 1024
-limit_bottom = 595
+limit_right = 99999
+limit_bottom = 450
 limit_smoothed = true
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

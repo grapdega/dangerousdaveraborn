@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://misc/face.png" type="Texture" id=1]
 [ext_resource path="res://item/StatusBar/StatusBar.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://misc/score.png" type="Texture" id=4]
 [ext_resource path="res://misc/level.png" type="Texture" id=5]
 [ext_resource path="res://misc/door_enable_banner.png" type="Texture" id=6]
+[ext_resource path="res://object/black.tscn" type="PackedScene" id=7]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
@@ -13,22 +14,22 @@
 script = ExtResource( 2 )
 
 [node name="Score" type="TextureRect" parent="."]
-margin_left = 7.0
-margin_top = 6.0
-margin_right = 116.0
-margin_bottom = 29.0
-rect_scale = Vector2( 1.5, 3 )
+margin_left = 8.0
+margin_top = 10.0
+margin_right = 117.0
+margin_bottom = 33.0
+rect_scale = Vector2( 0.88568, 1.77136 )
 texture = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScoreCount" type="Label" parent="."]
-margin_left = 211.182
-margin_top = 17.142
-margin_right = 252.182
-margin_bottom = 31.142
-rect_scale = Vector2( 2.92215, 4.7826 )
+margin_left = 120.0
+margin_top = 9.0
+margin_right = 161.0
+margin_bottom = 23.0
+rect_scale = Vector2( 2.16771, 3.51454 )
 custom_styles/normal = SubResource( 1 )
 text = "00000"
 __meta__ = {
@@ -36,79 +37,82 @@ __meta__ = {
 }
 
 [node name="Level" type="TextureRect" parent="."]
-margin_left = 363.784
-margin_top = 8.40508
-margin_right = 455.784
-margin_bottom = 34.4051
-rect_scale = Vector2( 1.5, 3 )
+margin_left = 222.456
+margin_top = 7.55041
+margin_right = 314.456
+margin_bottom = 33.5504
+rect_scale = Vector2( 0.89758, 1.79516 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LevelCount" type="Label" parent="."]
-margin_left = 537.514
-margin_top = 16.9733
-margin_right = 553.514
-margin_bottom = 30.9733
-rect_scale = Vector2( 3.31336, 4.88215 )
+margin_left = 309.859
+margin_top = 6.23107
+margin_right = 325.859
+margin_bottom = 22.2311
+rect_scale = Vector2( 2.68942, 3.96279 )
 text = "00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Daves" type="TextureRect" parent="."]
-margin_left = 614.756
-margin_top = 10.2432
-margin_right = 715.756
-margin_bottom = 34.2432
-rect_scale = Vector2( 1.5, 3 )
+margin_left = 365.03
+margin_top = 8.74489
+margin_right = 466.03
+margin_bottom = 32.7449
+rect_scale = Vector2( 0.994493, 1.98899 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DavesCount" type="TextureRect" parent="."]
-margin_left = 784.0
-margin_top = 8.0
-margin_right = 816.0
-margin_bottom = 40.0
-rect_scale = Vector2( 2.26671, 2.49708 )
+margin_left = 462.502
+margin_top = 1.98985
+margin_right = 494.502
+margin_bottom = 33.9898
+rect_scale = Vector2( 1.7328, 1.9089 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DavesCount2" type="TextureRect" parent="."]
-margin_left = 864.0
-margin_top = 8.0
-margin_right = 896.0
-margin_bottom = 40.0
-rect_scale = Vector2( 2.26671, 2.49708 )
+margin_left = 517.888
+margin_top = 0.508454
+margin_right = 549.888
+margin_bottom = 32.5085
+rect_scale = Vector2( 1.85091, 1.96953 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DavesCount3" type="TextureRect" parent="."]
-margin_left = 936.0
-margin_top = 8.0
-margin_right = 968.0
-margin_bottom = 40.0
-rect_scale = Vector2( 2.26671, 2.49708 )
+margin_left = 575.406
+margin_top = 0.508455
+margin_right = 607.406
+margin_bottom = 32.5085
+rect_scale = Vector2( 1.8762, 2.02538 )
 texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="DoorMessage" type="TextureRect" parent="."]
-visible = false
-margin_left = 213.565
-margin_top = 548.692
-margin_right = 557.565
-margin_bottom = 588.692
-rect_scale = Vector2( 1.62969, 1.08194 )
+margin_left = 156.668
+margin_top = 407.897
+margin_right = 500.668
+margin_bottom = 447.897
 texture = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="black" parent="." instance=ExtResource( 7 )]
+position = Vector2( 319.596, 411.745 )
+scale = Vector2( 20.0985, 2.5573 )
+z_index = -1
