@@ -8,7 +8,7 @@
 [ext_resource path="res://item/player/player_jetpack.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 11.1897, 15.2691 )
+extents = Vector2( 9.41841, 15.6301 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -43,14 +43,14 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "jetpack"
+animation = "stop"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.21022, 1.05112 )
 shape = SubResource( 1 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-position = Vector2( 0, -3.558 )
+position = Vector2( 0, -1.558 )
 scale = Vector2( 4, 0.45 )
 enabled = true
 
@@ -59,6 +59,6 @@ current = true
 limit_left = 0
 limit_top = 0
 limit_right = 99999
-limit_bottom = 450
+limit_bottom = 420
 limit_smoothed = true
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

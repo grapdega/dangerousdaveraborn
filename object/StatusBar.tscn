@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://misc/DaveFace.png" type="Texture" id=1]
 [ext_resource path="res://item/StatusBar/StatusBar.gd" type="Script" id=2]
@@ -12,28 +12,23 @@
 [ext_resource path="res://misc/jetpack_progress.png" type="Texture" id=10]
 [ext_resource path="res://misc/gun_icon.png" type="Texture" id=11]
 [ext_resource path="res://misc/gun.png" type="Texture" id=12]
+[ext_resource path="res://misc/thin.png" type="Texture" id=13]
 
 [sub_resource type="StyleBoxTexture" id=1]
 
 [node name="StatusBar" type="CanvasLayer"]
 script = ExtResource( 2 )
 
-[node name="Score" type="TextureRect" parent="."]
-margin_left = 8.0
-margin_top = 8.0
-margin_right = 117.0
-margin_bottom = 31.0
-rect_scale = Vector2( 0.8, 1 )
+[node name="Score" type="Sprite" parent="."]
+position = Vector2( 65.6867, 16.4217 )
+z_index = 999
 texture = ExtResource( 4 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="ScoreCount" type="Label" parent="."]
-margin_left = 112.0
-margin_top = 8.0
-margin_right = 153.0
-margin_bottom = 22.0
+[node name="ScoreCount" type="Label" parent="Score"]
+margin_left = 60.616
+margin_top = -10.5406
+margin_right = 101.616
+margin_bottom = 3.4594
 rect_scale = Vector2( 1.2, 1.6 )
 custom_styles/normal = SubResource( 1 )
 text = "00000"
@@ -41,44 +36,32 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Level" type="TextureRect" parent="."]
-margin_left = 192.0
-margin_top = 8.0
-margin_right = 284.0
-margin_bottom = 34.0
-rect_scale = Vector2( 0.8, 1 )
+[node name="Level" type="Sprite" parent="."]
+position = Vector2( 291.352, 17.4811 )
+z_index = 999
 texture = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="LevelCount" type="Label" parent="."]
-margin_left = 304.0
-margin_top = 8.0
-margin_right = 320.0
-margin_bottom = 22.0
+[node name="LevelCount" type="Label" parent="Level"]
+margin_left = 52.9073
+margin_top = -11.0703
+margin_right = 68.9073
+margin_bottom = 2.92966
 rect_scale = Vector2( 1.2, 1.6 )
 text = "00"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Daves" type="TextureRect" parent="."]
-margin_left = 360.0
-margin_top = 8.0
-margin_right = 461.0
-margin_bottom = 32.0
-rect_scale = Vector2( 0.8, 1 )
+[node name="Daves" type="Sprite" parent="."]
+position = Vector2( 449.742, 17.4811 )
+z_index = 999
 texture = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
-[node name="DaveCount" type="TextureProgress" parent="."]
-margin_left = 472.0
-margin_top = 8.0
-margin_right = 568.0
-margin_bottom = 40.0
+[node name="DaveCount" type="TextureProgress" parent="Daves"]
+margin_left = 51.923
+margin_top = -12.6595
+margin_right = 147.923
+margin_bottom = 19.3405
 rect_scale = Vector2( 0.838563, 0.800328 )
 max_value = 3.0
 value = 3.0
@@ -87,24 +70,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="DoorMessage" type="TextureRect" parent="."]
-margin_left = 156.668
-margin_top = 407.897
-margin_right = 500.668
-margin_bottom = 447.897
+[node name="DoorMessage" type="Sprite" parent="."]
+position = Vector2( 317.697, 399.091 )
+z_index = 999
 texture = ExtResource( 6 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="black" parent="." instance=ExtResource( 7 )]
-position = Vector2( 319.596, 411.745 )
-scale = Vector2( 20.0985, 2.5573 )
-z_index = -1
+position = Vector2( 321.596, 387.153 )
+scale = Vector2( 20.0985, 2.85549 )
+z_index = 97
+
+[node name="black2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 319.858, 17.7751 )
+scale = Vector2( 20.1482, 1.22388 )
+z_index = 97
 
 [node name="JetpackNode" type="Node2D" parent="."]
-visible = false
-position = Vector2( 104, 384 )
+position = Vector2( 127.402, 357.585 )
+z_index = 999
 __meta__ = {
 "_edit_group_": true
 }
@@ -122,9 +105,9 @@ __meta__ = {
 
 [node name="JetpackCount" type="TextureProgress" parent="JetpackNode"]
 margin_left = 52.668
-margin_top = -8.0
+margin_top = -7.52539
 margin_right = 310.668
-margin_bottom = 18.0
+margin_bottom = 18.4746
 max_value = 500.0
 value = 500.0
 texture_over = ExtResource( 9 )
@@ -135,7 +118,8 @@ __meta__ = {
 
 [node name="GunNode" type="Node2D" parent="."]
 visible = false
-position = Vector2( 488, 370.828 )
+position = Vector2( 510.653, 347.231 )
+z_index = 999
 __meta__ = {
 "_edit_group_": true
 }
@@ -157,3 +141,13 @@ texture = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="thin" type="Sprite" parent="."]
+position = Vector2( 321, 339 )
+z_index = 999
+texture = ExtResource( 13 )
+
+[node name="thin2" type="Sprite" parent="."]
+position = Vector2( 321.51, 37.2234 )
+z_index = 999
+texture = ExtResource( 13 )

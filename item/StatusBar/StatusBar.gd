@@ -3,8 +3,8 @@ extends CanvasLayer
 onready var globals = get_node("/root/Globals")
 
 func _process(_delta):
-	$ScoreCount.text = str(globals.player_score)
-	$LevelCount.text = str(globals.level)
+	$Score/ScoreCount.text = str(globals.player_score)
+	$Level/LevelCount.text = str(globals.level)
 	
 	if globals.player_has_class:
 		$DoorMessage.visible = true
@@ -20,5 +20,5 @@ func _process(_delta):
 			globals.jetpackIsActive= false
 			globals.hasJetpack = false
 			$JetpackNode.visible = false
-	$DaveCount.value = globals.healt
+	$Daves/DaveCount.value = globals.healt
 	

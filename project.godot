@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="thegame"
-run/main_scene="res://level/testlevel.tscn"
+run/main_scene="res://level/Level1.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -26,7 +26,7 @@ Globals="*res://Globals.gd"
 [display]
 
 window/size/width=640
-window/size/height=450
+window/size/height=430
 
 [gdnative]
 

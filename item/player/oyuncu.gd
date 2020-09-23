@@ -1,9 +1,10 @@
 extends KinematicBody2D
 
-export var gravity=10
-export var speed=40
-export var runspeed=150
-var height=15
+export var gravity=7
+export var speed=50
+export var runspeed=100
+export var maxgravity=70
+var height=14
 export var hasClass = false
 var velocity = Vector2.ZERO
 var isLife = true
@@ -24,6 +25,7 @@ func _physics_process(delta):
 			jetpack_move(delta)
 		else:
 			move(delta)
+		velocity = move_and_slide(velocity)
 	else:
 		print("Death")
 
@@ -48,8 +50,10 @@ func jetpack_move(delta):
 
 func move(delta):
 	velocity.y+=gravity*delta*speed
+	if velocity.y>maxgravity:
+		velocity.y=maxgravity
 	if Input.is_action_pressed("jump") and raycast.is_colliding():
-		velocity.y-=speed*delta*gravity*height*(10/gravity)
+		velocity.y-=speed*delta*gravity*height
 	if Input.is_action_pressed("left"):
 		velocity.x=-speed*delta*runspeed
 		animation.flip_h=true
