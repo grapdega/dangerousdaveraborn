@@ -27,6 +27,8 @@ Globals="*res://Globals.gd"
 
 window/size/width=640
 window/size/height=430
+window/size/fullscreen=true
+window/stretch/mode="2d"
 
 [gdnative]
 
