@@ -10,7 +10,6 @@ __meta__ = {
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 345.445, 544.375 )
-scale = Vector2( 0.05, 0.05 )
 gravity = 3
 
 [node name="TileMap" type="TileMap" parent="."]

@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
 export var gravity=10
-export var speed=50
+export var speed=40
 export var runspeed=150
-export var height=30
+export var height=24
 export var hasClass = false
 var velocity = Vector2.ZERO
 var isLife = true
