@@ -120,12 +120,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureProgress" type="TextureProgress" parent="JetpackNode"]
+[node name="JetpackCount" type="TextureProgress" parent="JetpackNode"]
 margin_left = 52.668
 margin_top = -8.0
 margin_right = 310.668
 margin_bottom = 18.0
-value = 100.0
+max_value = 500.0
+value = 500.0
 texture_over = ExtResource( 9 )
 texture_progress = ExtResource( 10 )
 __meta__ = {

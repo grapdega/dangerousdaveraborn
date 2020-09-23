@@ -1,13 +1,14 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=1]
-[ext_resource path="res://object/Class.tscn" type="PackedScene" id=2]
+[ext_resource path="res://object/Cup.tscn" type="PackedScene" id=2]
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=3]
 [ext_resource path="res://object/diamond.tscn" type="PackedScene" id=5]
 [ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://object/Door.tscn" type="PackedScene" id=7]
 [ext_resource path="res://item/tileset/floor.png" type="Texture" id=8]
 [ext_resource path="res://object/Fire.tscn" type="PackedScene" id=9]
+
 
 [node name="Level2" type="Node2D"]
 

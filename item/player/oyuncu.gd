@@ -9,38 +9,66 @@ var velocity = Vector2.ZERO
 var isLife = true
 onready var raycast = $RayCast2D
 onready var animation = $Sprite
-onready var player_vars = get_node("/root/Globals")
+onready var globals = get_node("/root/Globals")
+
+func _ready():
+	self.add_to_group("player")
 
 func _physics_process(delta):
 	if isLife:
-		velocity.y+=gravity*delta*speed
 		velocity = move_and_slide(velocity)
-		if Input.is_action_pressed("jump") and raycast.is_colliding():
-			velocity.y-=speed*delta*gravity*height*(10/gravity)
-		if Input.is_action_pressed("left"):
-			velocity.x=-speed*delta*runspeed
-			animation.flip_h=true
-			animation.play("walk")
-		elif Input.is_action_pressed("right"):
-			velocity.x=+speed*delta*runspeed
-			animation.flip_h=false
-			animation.play("walk")
+		if Input.is_action_just_pressed("jetpack") and globals.hasJetpack:
+			globals.jetpackIsActive = !globals.jetpackIsActive
+		if globals.jetpackIsActive:
+			animation.play("jetpack")
+			jetpack_move(delta)
 		else:
-			velocity.x=0
-			animation.play("stop")
-		if not raycast.is_colliding():
-			animation.play("jump")
-		velocity = move_and_slide(velocity)
+			move(delta)
 	else:
 		print("Death")
+
+func jetpack_move(delta):
+	if Input.is_action_pressed("jump"):
+		velocity.y = -speed*delta*runspeed
+		animation.play("jetpack")
+	elif Input.is_action_pressed("ui_down"):
+		velocity.y = speed*delta*runspeed
+		animation.play("jetpack")
+	elif Input.is_action_pressed("left"):
+		velocity.x=-speed*delta*runspeed
+		animation.play("jetpack")
+		animation.flip_h=true
+	elif Input.is_action_pressed("right"):
+		velocity.x=+speed*delta*runspeed
+		animation.play("jetpack")
+		animation.flip_h=false
+	else:
+		velocity.y = 0
+		velocity.x = 0
+
+func move(delta):
+	velocity.y+=gravity*delta*speed
+	if Input.is_action_pressed("jump") and raycast.is_colliding():
+		velocity.y-=speed*delta*gravity*height*(10/gravity)
+	if Input.is_action_pressed("left"):
+		velocity.x=-speed*delta*runspeed
+		animation.flip_h=true
+		animation.play("walk")
+	elif Input.is_action_pressed("right"):
+		velocity.x=+speed*delta*runspeed
+		animation.flip_h=false
+		animation.play("walk")
+	else:
+		velocity.x=0
+		animation.play("stop")
 		
-func _ready():
-	self.add_to_group("player")
-	
+	if not raycast.is_colliding():
+		animation.play("jump")
+
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("fire"):
-		player_vars.healt -= 1
-		if player_vars.healt == 0:
+		globals.healt -= 1
+		if globals.healt == 0:
 			isLife = false
 		else:
 			get_tree().reload_current_scene()

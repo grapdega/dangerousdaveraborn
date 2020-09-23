@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_jetpack.png-a3d89285f16b498ce680797d20b1ee53.stex"
+path="res://.import/jetpack2.png-dbc5025a12a2deb333dd6cf5a989607f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://item/player/player_jetpack.png"
-dest_files=[ "res://.import/player_jetpack.png-a3d89285f16b498ce680797d20b1ee53.stex" ]
+source_file="res://misc/jetpack2.png"
+dest_files=[ "res://.import/jetpack2.png-dbc5025a12a2deb333dd6cf5a989607f.stex" ]
 
 [params]
 
