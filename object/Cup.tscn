@@ -1,13 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://item/glass/cup2.png" type="Texture" id=1]
+[ext_resource path="res://item/glass/cup_top.png" type="Texture" id=1]
 [ext_resource path="res://item/glass/Class.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.1176, 16.4126 )
 
+[sub_resource type="Animation" id=4]
+resource_name = "animation_finished"
+
 [sub_resource type="Animation" id=2]
-resource_name = "fade_out"
+resource_name = "cup"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0, 1, 2, 3 ]
+}
+
+[sub_resource type="Animation" id=3]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:scale")
@@ -30,10 +49,14 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+hframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/fade_out = SubResource( 2 )
+anims/animation_finished = SubResource( 4 )
+anims/cup = SubResource( 2 )
+anims/fade_out = SubResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_Class_body_entered"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

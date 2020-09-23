@@ -11,6 +11,7 @@ var isLife = true
 onready var raycast = $RayCast2D
 onready var animation = $Sprite
 onready var globals = get_node("/root/Globals")
+const BULLET = preload("res://object/Bullet.tscn")
 
 func _ready():
 	self.add_to_group("player")
@@ -25,6 +26,10 @@ func _physics_process(delta):
 			jetpack_move(delta)
 		else:
 			move(delta)
+		if Input.is_action_just_pressed("fire"):
+			var bullet = BULLET.instance()
+			get_parent().add_child(bullet)
+			bullet.position = get_node("Position2D").global_position
 		velocity = move_and_slide(velocity)
 	else:
 		print("Death")

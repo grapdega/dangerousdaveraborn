@@ -35,6 +35,9 @@ animations = [ {
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -61,4 +64,7 @@ limit_top = 0
 limit_right = 99999
 limit_bottom = 420
 limit_smoothed = true
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 13.2313, 0.198429 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

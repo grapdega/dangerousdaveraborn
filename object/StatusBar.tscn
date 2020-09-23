@@ -58,13 +58,13 @@ z_index = 999
 texture = ExtResource( 3 )
 
 [node name="DaveCount" type="TextureProgress" parent="Daves"]
-margin_left = 51.923
-margin_top = -12.6595
-margin_right = 147.923
-margin_bottom = 19.3405
+margin_left = 52.0
+margin_top = -13.0
+margin_right = 217.0
+margin_bottom = 19.0
 rect_scale = Vector2( 0.838563, 0.800328 )
-max_value = 3.0
-value = 3.0
+max_value = 5.0
+value = 5.0
 texture_progress = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
