@@ -14,6 +14,7 @@ onready var globals = get_node("/root/Globals")
 const BULLET = preload("res://object/Bullet.tscn")
 
 func _ready():
+	print("Deneme")
 	self.add_to_group("player")
 
 func _physics_process(delta):
