@@ -13,8 +13,7 @@
 [ext_resource path="res://misc/gun_icon.png" type="Texture" id=11]
 [ext_resource path="res://misc/gun.png" type="Texture" id=12]
 [ext_resource path="res://misc/thin.png" type="Texture" id=13]
-
-[sub_resource type="StyleBoxTexture" id=1]
+[ext_resource path="res://misc/num0.png" type="Texture" id=14]
 
 [node name="StatusBar" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -24,33 +23,38 @@ position = Vector2( 65.6867, 16.4217 )
 z_index = 999
 texture = ExtResource( 4 )
 
-[node name="ScoreCount" type="Label" parent="Score"]
-margin_left = 60.616
-margin_top = -10.5406
-margin_right = 101.616
-margin_bottom = 3.4594
-rect_scale = Vector2( 1.2, 1.6 )
-custom_styles/normal = SubResource( 1 )
-text = "00000"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sprite1" type="Sprite" parent="Score"]
+position = Vector2( 70.3133, -0.4217 )
+texture = ExtResource( 14 )
+
+[node name="Sprite2" type="Sprite" parent="Score"]
+position = Vector2( 86.3133, -0.4217 )
+texture = ExtResource( 14 )
+
+[node name="Sprite3" type="Sprite" parent="Score"]
+position = Vector2( 102.313, -0.4217 )
+texture = ExtResource( 14 )
+
+[node name="Sprite4" type="Sprite" parent="Score"]
+position = Vector2( 118.313, -0.4217 )
+texture = ExtResource( 14 )
+
+[node name="Sprite5" type="Sprite" parent="Score"]
+position = Vector2( 134.313, -0.4217 )
+texture = ExtResource( 14 )
 
 [node name="Level" type="Sprite" parent="."]
 position = Vector2( 291.352, 17.4811 )
 z_index = 999
 texture = ExtResource( 5 )
 
-[node name="LevelCount" type="Label" parent="Level"]
-margin_left = 52.9073
-margin_top = -11.0703
-margin_right = 68.9073
-margin_bottom = 2.92966
-rect_scale = Vector2( 1.2, 1.6 )
-text = "00"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Sprite1" type="Sprite" parent="Level"]
+position = Vector2( 68.648, -1.4811 )
+texture = ExtResource( 14 )
+
+[node name="Sprite2" type="Sprite" parent="Level"]
+position = Vector2( 84.648, -1.4811 )
+texture = ExtResource( 14 )
 
 [node name="Daves" type="Sprite" parent="."]
 position = Vector2( 449.742, 17.4811 )

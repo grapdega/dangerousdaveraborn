@@ -2,9 +2,54 @@ extends CanvasLayer
 
 onready var globals = get_node("/root/Globals")
 
+var nums = {
+	"0": preload("res://misc/num0.png"),
+	"1": preload("res://misc/num1.png"),
+	"2": preload("res://misc/num2.png"),
+	"3": preload("res://misc/num3.png"),
+	"4": preload("res://misc/num4.png"),
+	"5": preload("res://misc/num5.png"),
+	"6": preload("res://misc/num6.png"),
+	"7": preload("res://misc/num7.png"),
+	"8": preload("res://misc/num8.png"),
+	"9": preload("res://misc/num9.png")
+}
+
+var numArr = []
+var levelArr = []
 func _process(_delta):
-	$Score/ScoreCount.text = str(globals.player_score)
-	$Level/LevelCount.text = str(globals.level)
+	for i in str(globals.player_score):
+		numArr.append(i)
+		
+	for i in str(globals.level):
+		levelArr.append(i)
+		
+	$Score/Sprite5.set_texture(nums[numArr[0]])
+	if globals.player_score >= 10:
+		$Score/Sprite4.set_texture(nums[numArr[0]])
+		$Score/Sprite5.set_texture(nums[numArr[1]])
+	if globals.player_score >= 100:
+		$Score/Sprite3.set_texture(nums[numArr[0]])
+		$Score/Sprite4.set_texture(nums[numArr[1]])
+		$Score/Sprite5.set_texture(nums[numArr[2]])
+	if globals.player_score >= 1000:
+		$Score/Sprite2.set_texture(nums[numArr[0]])
+		$Score/Sprite3.set_texture(nums[numArr[1]])
+		$Score/Sprite4.set_texture(nums[numArr[2]])
+		$Score/Sprite5.set_texture(nums[numArr[3]])
+	if globals.player_score >= 10000:
+		$Score/Sprite1.set_texture(nums[numArr[0]])
+		$Score/Sprite2.set_texture(nums[numArr[1]])
+		$Score/Sprite3.set_texture(nums[numArr[2]])
+		$Score/Sprite4.set_texture(nums[numArr[3]])
+		$Score/Sprite5.set_texture(nums[numArr[4]])
+	numArr.clear()
+	
+	$Level/Sprite2.set_texture(nums[levelArr[0]])
+	if globals.level >= 10:
+		$Level/Sprite1.set_texture(nums[levelArr[0]])
+		$Level/Sprite2.set_texture(nums[levelArr[1]])
+	levelArr.clear()
 	
 	if globals.player_has_class:
 		$DoorMessage.visible = true
