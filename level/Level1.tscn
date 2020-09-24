@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://item/diamond/diamond_red.png" type="Texture" id=2]
@@ -6,7 +6,6 @@
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://object/diamond.tscn" type="PackedScene" id=5]
 [ext_resource path="res://object/tuple.tscn" type="PackedScene" id=6]
-[ext_resource path="res://object/Jetpack.tscn" type="PackedScene" id=7]
 [ext_resource path="res://object/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=9]
 [ext_resource path="res://object/Cup.tscn" type="PackedScene" id=10]
@@ -119,9 +118,6 @@ limit_right = 640
 
 [node name="Cup" parent="." instance=ExtResource( 10 )]
 position = Vector2( 367.963, 158.685 )
-
-[node name="Jetpack" parent="." instance=ExtResource( 7 )]
-position = Vector2( 332.556, 350.365 )
 
 [editable path="diamonds/diamond10"]
 

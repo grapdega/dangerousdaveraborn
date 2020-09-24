@@ -14,6 +14,10 @@ func _process(_delta):
 		$JetpackNode.visible = true
 	else: $JetpackNode.visible = false
 	
+	if globals.hasGun:
+		$GunNode.visible = true
+	else: $GunNode.visible = false
+	
 	if globals.jetpackIsActive:
 		$JetpackNode/JetpackCount.value -= 1
 		if $JetpackNode/JetpackCount.value == 0:

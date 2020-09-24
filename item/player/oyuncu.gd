@@ -26,7 +26,7 @@ func _physics_process(delta):
 			jetpack_move(delta)
 		else:
 			move(delta)
-		if Input.is_action_just_pressed("fire"):
+		if Input.is_action_just_pressed("fire") and globals.hasGun:
 			var bullet = BULLET.instance()
 			get_parent().add_child(bullet)
 			bullet.position = get_node("Position2D").global_position

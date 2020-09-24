@@ -6,4 +6,5 @@ var level = 1
 var healt = 5
 var isHit = false
 var hasJetpack = false
+var hasGun = false
 var jetpackIsActive = false

@@ -9,4 +9,5 @@ func _on_Door_body_entered(body):
 		globals.player_has_class = false
 		globals.hasJetpack = false
 		globals.jetpackIsActive = false
+		globals.hasGun = false
 		
