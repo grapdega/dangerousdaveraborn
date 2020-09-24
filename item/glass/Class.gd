@@ -2,12 +2,12 @@ extends Area2D
 
 onready var player_Vars = get_node("/root/Globals")
 var bodyEntered = false
-func _process(delta):
+func _process(_delta):
 	if bodyEntered == false:
 		$AnimationPlayer.play("cup")
 	else:
 		$AnimationPlayer.play("fade_out")
-		player_Vars.player_score += 500
+		player_Vars.player_score += 1000
 		player_Vars.player_has_class = true
 		yield($AnimationPlayer,"animation_finished")
 		queue_free()

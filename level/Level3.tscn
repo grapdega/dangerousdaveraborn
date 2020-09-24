@@ -87,4 +87,5 @@ position = Vector2( 2152, 304 )
 position = Vector2( 255, 167 )
 
 [node name="Monster" parent="." instance=ExtResource( 9 )]
-position = Vector2( 970.482, 177.78 )
+position = Vector2( 983.879, 180.541 )
+rotation = 0.0011802

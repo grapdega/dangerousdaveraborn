@@ -17,7 +17,7 @@ animations = [ {
 extents = Vector2( 15.1031, 1.91558 )
 
 [node name="Fire" type="Area2D" groups=[
-"fire",
+"hit",
 ]]
 script = ExtResource( 4 )
 

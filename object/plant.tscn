@@ -3,29 +3,28 @@
 [ext_resource path="res://item/tileset/deadly_01.png" type="Texture" id=1]
 [ext_resource path="res://item/tileset/deadly_02.png" type="Texture" id=2]
 [ext_resource path="res://item/tileset/deadly_04.png" type="Texture" id=3]
-[ext_resource path="res://item/fire/Fire.gd" type="Script" id=4]
+[ext_resource path="res://item/plant/plant.gd" type="Script" id=4]
 [ext_resource path="res://item/tileset/deadly_03.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "fire",
+"name": "plant",
 "speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 15.1031, 16 )
 
-[node name="Fire" type="Area2D" groups=[
-"fire",
+[node name="Plant" type="Area2D" groups=[
+"hit",
 ]]
 script = ExtResource( 4 )
 
-[node name="FireSprite" type="AnimatedSprite" parent="."]
+[node name="PlantSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "fire"
-frame = 3
+animation = "plant"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )

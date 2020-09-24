@@ -6,11 +6,10 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.1176, 16.4126 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "animation_finished"
 
-[sub_resource type="Animation" id=2]
-resource_name = "cup"
+[sub_resource type="Animation" id=3]
 length = 0.4
 loop = true
 tracks/0/type = "value"
@@ -26,7 +25,7 @@ tracks/0/keys = {
 "values": [ 0, 1, 2, 3 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:scale")
@@ -55,8 +54,8 @@ hframes = 4
 shape = SubResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/animation_finished = SubResource( 4 )
-anims/cup = SubResource( 2 )
-anims/fade_out = SubResource( 3 )
+anims/animation_finished = SubResource( 2 )
+anims/cup = SubResource( 3 )
+anims/fade_out = SubResource( 4 )
 [connection signal="body_entered" from="." to="." method="_on_Class_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

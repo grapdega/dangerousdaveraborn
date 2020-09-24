@@ -17,6 +17,11 @@ animations = [ {
 "name": "stop",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "walk",
@@ -25,11 +30,6 @@ animations = [ {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "jetpack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "jump",
 "speed": 5.0
 } ]
 
@@ -70,4 +70,8 @@ position = Vector2( 19.6879, -3.37028 )
 __meta__ = {
 "_gizmo_extents_": 3.0
 }
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

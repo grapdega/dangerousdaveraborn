@@ -8,13 +8,13 @@ var height=14
 export var hasClass = false
 var velocity = Vector2.ZERO
 var isLife = true
+var canFire = true
 onready var raycast = $RayCast2D
 onready var animation = $Sprite
 onready var globals = get_node("/root/Globals")
 const BULLET = preload("res://object/Bullet.tscn")
 
 func _ready():
-	print("Deneme")
 	self.add_to_group("player")
 
 func _physics_process(delta):
@@ -27,10 +27,12 @@ func _physics_process(delta):
 			jetpack_move(delta)
 		else:
 			move(delta)
-		if Input.is_action_just_pressed("fire") and globals.hasGun:
+		if Input.is_action_just_pressed("fire") and globals.hasGun and canFire:
 			var bullet = BULLET.instance()
 			get_parent().add_child(bullet)
 			bullet.position = get_node("Position2D").global_position
+			canFire = false
+			$Timer.start()
 		velocity = move_and_slide(velocity)
 	else:
 		print("Death")
@@ -76,9 +78,12 @@ func move(delta):
 		animation.play("jump")
 
 func _on_Area2D_area_entered(area):
-	if area.is_in_group("fire"):
+	if area.is_in_group("hit"):
 		globals.healt -= 1
 		if globals.healt == 0:
 			isLife = false
 		else:
 			get_tree().reload_current_scene()
+
+func _on_Timer_timeout():
+	canFire = true
