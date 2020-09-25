@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://item/fire/fire3.png" type="Texture" id=1]
+[ext_resource path="res://item/fire/fire1.png" type="Texture" id=2]
+[ext_resource path="res://item/fire/fire2.png" type="Texture" id=3]
+[ext_resource path="res://item/fire/Fire.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "fire",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 16.9241, 16.9907 )
+
+[node name="Fire" type="Area2D" groups=[
+"hit",
+]]
+script = ExtResource( 4 )
+
+[node name="FireSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "fire"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
