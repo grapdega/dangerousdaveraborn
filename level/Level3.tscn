@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://object/Gun.tscn" type="PackedScene" id=10]
 [ext_resource path="res://item/tileset/wall.png" type="Texture" id=11]
 [ext_resource path="res://object/diamond.tscn" type="PackedScene" id=12]
+[ext_resource path="res://object/Fire2.tscn" type="PackedScene" id=13]
 
 [node name="Level2" type="Node2D"]
 __meta__ = {
@@ -101,7 +102,7 @@ position = Vector2( 479, 207.442 )
 position = Vector2( 2200, 80 )
 
 [node name="Jetpack" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2128, 304 )
+position = Vector2( 2124, 304 )
 
 [node name="Cup" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2152, 304 )
@@ -254,3 +255,36 @@ position = Vector2( 3211, 111 )
 
 [node name="Cup2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 3177, 110 )
+
+[node name="Fire15" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1996, 240 )
+
+[node name="Fire16" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2027, 272 )
+
+[node name="Fire17" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2060, 302 )
+
+[node name="Fire22" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2060, 272 )
+
+[node name="Fire24" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2184, 271 )
+
+[node name="Fire25" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2217, 240 )
+
+[node name="Fire23" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2030, 240 )
+
+[node name="Fire18" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2094, 302 )
+
+[node name="Fire19" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2185, 302 )
+
+[node name="Fire20" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2218, 271 )
+
+[node name="Fire21" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2250, 240 )
