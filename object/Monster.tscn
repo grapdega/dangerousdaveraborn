@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://misc/monster1.png" type="Texture" id=1]
 [ext_resource path="res://item/monster/Monster.gd" type="Script" id=2]
@@ -8,6 +8,9 @@ extents = Vector2( 27.1929, 14.9363 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 27.1737, 15.1417 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 208.227, 52.5526 )
 
 [node name="Monster" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -33,3 +36,11 @@ position = Vector2( -45.5868, -0.0160704 )
 __meta__ = {
 "_gizmo_extents_": 5.0
 }
+
+[node name="PlayerDetect" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect"]
+position = Vector2( -126.134, -1.68179 )
+shape = SubResource( 3 )
+[connection signal="body_entered" from="PlayerDetect" to="." method="_on_PlayerDetect_body_entered"]
+[connection signal="body_exited" from="PlayerDetect" to="." method="_on_PlayerDetect_body_exited"]

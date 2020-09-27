@@ -10,3 +10,4 @@ func _process(delta):
 
 func _on_MonsterBullet_body_entered(_body):
 	queue_free()
+

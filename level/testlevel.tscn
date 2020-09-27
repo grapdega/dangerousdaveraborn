@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=2]
@@ -9,6 +9,12 @@
 [ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://object/Fire.tscn" type="PackedScene" id=8]
 [ext_resource path="res://object/plant.tscn" type="PackedScene" id=9]
+[ext_resource path="res://item/path/Path2D.gd" type="Script" id=10]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0.510193, 1.70773, 0, 0, 0, 0, -30.3575, 28.0856, 0, 0, 0, 0, -93.7766, -8.95566, 0, 0, 0, 0, -16.3267, -56.6603, 0, 0, 0, 0, 34.7453, -31.4049, 0, 0, 0, 0, 0.510193, 1.70773 )
+}
 
 [node name="testlevel" type="Node2D"]
 
@@ -19,7 +25,7 @@ format = 1
 tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 65552, 0, 0, 65553, 0, 0, 65554, 0, 0, 65555, 0, 0, 131072, 0, 0, 131091, 0, 0, 196608, 0, 0, 196617, 0, 0, 196627, 0, 0, 262144, 0, 0, 262163, 0, 0, 327680, 0, 0, 327699, 0, 0, 393216, 0, 0, 393235, 0, 0, 458752, 0, 0, 458771, 0, 0, 524288, 0, 0, 524289, 0, 0, 524306, 0, 0, 524307, 0, 0, 589824, 0, 0, 589843, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655377, 0, 0, 655378, 0, 0, 655379, 0, 0 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 121.012, 279.769 )
+position = Vector2( 44.9027, 302.364 )
 
 [node name="Jetpack" parent="." instance=ExtResource( 4 )]
 position = Vector2( 589.611, 237.692 )
@@ -30,9 +36,6 @@ position = Vector2( 50.0249, 243.846 )
 [node name="Cup" parent="." instance=ExtResource( 5 )]
 position = Vector2( 302.522, 78.1895 )
 
-[node name="Monster" parent="." instance=ExtResource( 3 )]
-position = Vector2( 503.876, 291.51 )
-
 [node name="StatusBar" parent="." instance=ExtResource( 7 )]
 
 [node name="Fire" parent="." instance=ExtResource( 8 )]
@@ -40,3 +43,14 @@ position = Vector2( 304.289, 329.917 )
 
 [node name="Plant" parent="." instance=ExtResource( 9 )]
 position = Vector2( 395.769, 302.489 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 472.951, 217.13 )
+curve = SubResource( 1 )
+script = ExtResource( 10 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 0.510193, 1.70773 )
+rotate = false
+
+[node name="Monster" parent="Path2D/PathFollow2D" instance=ExtResource( 3 )]

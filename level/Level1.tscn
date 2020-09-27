@@ -42,7 +42,7 @@ tracks/0/keys = {
 "values": [ Vector2( 10, 10 ), Vector2( 15, 15 ) ]
 }
 
-[node name="testlevel" type="Node2D"]
+[node name="Level1" type="Node2D"]
 position = Vector2( 2.37842, -45.742 )
 
 [node name="TileMap" type="TileMap" parent="."]
