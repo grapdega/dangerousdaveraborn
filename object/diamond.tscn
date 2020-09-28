@@ -26,6 +26,9 @@ tracks/0/keys = {
 scale = Vector2( 0.1, 0.1 )
 z_index = -998
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 10, 10 )

@@ -3,7 +3,7 @@
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=2]
 
-[node name="Level2" type="Node2D"]
+[node name="LevelTemplate" type="Node2D"]
 __meta__ = {
 "_edit_vertical_guides_": [ 1056.34 ]
 }
