@@ -252,11 +252,13 @@ scale = Vector2( 1, 1 )
 position = Vector2( 8580, 980 )
 scale = Vector2( 1, 1 )
 
-[node name="Door2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 3211, 111 )
+[node name="diamond34" parent="diamonds" instance=ExtResource( 12 )]
+position = Vector2( 8910, 980 )
+scale = Vector2( 1, 1 )
 
-[node name="Cup2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 3177, 110 )
+[node name="diamond35" parent="diamonds" instance=ExtResource( 12 )]
+position = Vector2( 9230, 990 )
+scale = Vector2( 1, 1 )
 
 [node name="Fire15" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1996, 240 )
@@ -300,7 +302,7 @@ __meta__ = {
 }
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 0.349915, 0.939423 )
+position = Vector2( 0.763, 17.0308 )
 rotate = false
 
 [node name="Monster" parent="Path2D/PathFollow2D" instance=ExtResource( 9 )]
@@ -316,7 +318,7 @@ __meta__ = {
 }
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
-position = Vector2( 0.349915, 0.939423 )
+position = Vector2( 0.763, 17.0308 )
 rotate = false
 
 [node name="Monster" parent="Path2D2/PathFollow2D" instance=ExtResource( 9 )]
