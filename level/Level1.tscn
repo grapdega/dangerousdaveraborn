@@ -82,6 +82,8 @@ position = Vector2( 562.198, 180 )
 
 [node name="diamond10" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 562.198, 79.916 )
+point = 150
+texture = "res://item/diamond/diamond_red.png"
 
 [node name="Sprite" parent="diamonds/diamond10" index="0"]
 texture = ExtResource( 2 )
@@ -91,6 +93,8 @@ anims/fade_out = SubResource( 1 )
 
 [node name="diamond11" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 47.6743, 80.298 )
+point = 50
+texture = "res://item/diamond/bubble.png"
 
 [node name="Sprite" parent="diamonds/diamond11" index="0"]
 texture = ExtResource( 3 )

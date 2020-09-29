@@ -62,48 +62,6 @@ texture = ExtResource( 11 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 3 )]
 
-[node name="Fire" parent="." instance=ExtResource( 5 )]
-position = Vector2( 192, 209.051 )
-
-[node name="Fire2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 320, 207.442 )
-
-[node name="Fire5" parent="." instance=ExtResource( 5 )]
-position = Vector2( 643.172, 207.442 )
-
-[node name="Fire6" parent="." instance=ExtResource( 5 )]
-position = Vector2( 769, 207.442 )
-
-[node name="Fire7" parent="." instance=ExtResource( 5 )]
-position = Vector2( 897, 207.442 )
-
-[node name="Fire8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1056, 208 )
-
-[node name="Fire9" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1182, 207.442 )
-
-[node name="Fire10" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1213, 207.442 )
-
-[node name="Fire11" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1345, 208.051 )
-
-[node name="Fire12" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1472, 207.442 )
-
-[node name="Fire13" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1568, 207.442 )
-
-[node name="Fire14" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1728, 208.442 )
-
-[node name="Fire3" parent="." instance=ExtResource( 5 )]
-position = Vector2( 448, 207.442 )
-
-[node name="Fire4" parent="." instance=ExtResource( 5 )]
-position = Vector2( 479, 207.442 )
-
 [node name="Door" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2200, 80 )
 
@@ -260,39 +218,6 @@ scale = Vector2( 1, 1 )
 position = Vector2( 9230, 990 )
 scale = Vector2( 1, 1 )
 
-[node name="Fire15" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1996, 240 )
-
-[node name="Fire16" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2027, 272 )
-
-[node name="Fire17" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2060, 302 )
-
-[node name="Fire22" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2060, 272 )
-
-[node name="Fire24" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2184, 271 )
-
-[node name="Fire25" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2217, 240 )
-
-[node name="Fire23" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2030, 240 )
-
-[node name="Fire18" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2094, 302 )
-
-[node name="Fire19" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2185, 302 )
-
-[node name="Fire20" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2218, 271 )
-
-[node name="Fire21" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2250, 240 )
-
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 985.307, 183.229 )
 curve = SubResource( 1 )
@@ -324,3 +249,80 @@ rotate = false
 [node name="Monster" parent="Path2D2/PathFollow2D" instance=ExtResource( 9 )]
 position = Vector2( -0.303955, 0.121201 )
 rotation = 0.0011802
+
+[node name="Fires" type="Node2D" parent="."]
+
+[node name="Fire" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 192, 209.051 )
+
+[node name="Fire2" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 320, 207.442 )
+
+[node name="Fire5" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 643.172, 207.442 )
+
+[node name="Fire6" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 769, 207.442 )
+
+[node name="Fire7" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 897, 207.442 )
+
+[node name="Fire8" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 1056, 208 )
+
+[node name="Fire9" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 1182, 207.442 )
+
+[node name="Fire10" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 1213, 207.442 )
+
+[node name="Fire11" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 1345, 208.051 )
+
+[node name="Fire12" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 1472, 207.442 )
+
+[node name="Fire13" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 1568, 207.442 )
+
+[node name="Fire14" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 1728, 208.442 )
+
+[node name="Fire3" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 448, 207.442 )
+
+[node name="Fire4" parent="Fires" instance=ExtResource( 5 )]
+position = Vector2( 479, 207.442 )
+
+[node name="Fire15" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 1996, 240 )
+
+[node name="Fire16" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2027, 272 )
+
+[node name="Fire17" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2060, 302 )
+
+[node name="Fire22" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2060, 272 )
+
+[node name="Fire24" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2184, 271 )
+
+[node name="Fire25" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2217, 240 )
+
+[node name="Fire23" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2030, 240 )
+
+[node name="Fire18" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2094, 302 )
+
+[node name="Fire19" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2185, 302 )
+
+[node name="Fire20" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2218, 271 )
+
+[node name="Fire21" parent="Fires" instance=ExtResource( 13 )]
+position = Vector2( 2250, 240 )
