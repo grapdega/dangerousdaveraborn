@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://item/path/Path2D.gd" type="Script" id=1]
+[ext_resource path="res://object/Cup.tscn" type="PackedScene" id=2]
+[ext_resource path="res://object/tuple.tscn" type="PackedScene" id=3]
+[ext_resource path="res://object/Gun.tscn" type="PackedScene" id=4]
+[ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=5]
+[ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://object/Jetpack.tscn" type="PackedScene" id=8]
+[ext_resource path="res://object/plant.tscn" type="PackedScene" id=9]
+[ext_resource path="res://object/Door.tscn" type="PackedScene" id=10]
+[ext_resource path="res://misc/tree.png" type="Texture" id=11]
+[ext_resource path="res://object/diamond.tscn" type="PackedScene" id=12]
+[ext_resource path="res://object/Monster.tscn" type="PackedScene" id=13]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( -0.529732, -10.0649, 0.529732, 10.0649, 0.763, 17.0308, 15.6271, 18.5406, -15.6271, -18.5406, -50.554, 29.9129, 79.7689, 1.32433, -79.7689, -1.32433, -153.307, -7.229, 13.773, -12.7136, -13.773, 12.7136, -249.307, 24.771, -0.264866, 15.3622, 0.264866, -15.3622, -313.307, 16.771, 0, 0, 0, 0, -313.307, -47.229, -9.37452, -13.8934, 9.37452, 13.8934, -1.30701, -39.229, 1.05946, -14.0379, -1.05946, 14.0379, 6.69299, -7.229, 0, 0, 0, 0, 1.29272, 13.8524, 0, 0, 0, 0, 0.763, 17.0308 )
+}
+
+[node name="Level3" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [ 1056.34 ]
+}
+
+[node name="tuple" parent="." instance=ExtResource( 3 )]
+position = Vector2( 43.059, 319.707 )
+
+[node name="Tree" type="Node2D" parent="."]
+
+[node name="tree" type="Sprite" parent="Tree"]
+position = Vector2( 152, 165.875 )
+texture = ExtResource( 11 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72, 318.5 )
+gravity = 3
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -5, -1 )
+z_index = -999
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 67, 1, 0, 68, 1, 0, 69, 1, 0, 70, 1, 0, 71, 1, 0, 72, 1, 0, 73, 1, 0, 74, 1, 0, 75, 1, 0, 76, 1, 0, 77, 1, 0, 78, 1, 0, 79, 1, 0, 80, 1, 0, 81, 1, 0, 82, 1, 0, 83, 1, 0, 84, 1, 0, 85, 1, 0, 86, 1, 0, 87, 1, 0, 88, 1, 0, 89, 1, 0, 90, 1, 0, 91, 1, 0, 92, 1, 0, 93, 1, 0, 94, 1, 0, 95, 1, 0, 96, 1, 0, 97, 1, 0, 98, 1, 0, 99, 1, 0, 65603, 1, 0, 65604, 1, 0, 65605, 1, 0, 65606, 1, 0, 65607, 1, 0, 65608, 1, 0, 65609, 1, 0, 65629, 1, 0, 65635, 1, 0, 131072, 1, 0, 131139, 1, 0, 131140, 1, 0, 131141, 1, 0, 131142, 1, 0, 196608, 1, 0, 196675, 1, 0, 196676, 1, 0, 196677, 1, 0, 196687, 1, 0, 262144, 1, 0, 262207, 1, 0, 262210, 1, 0, 262211, 1, 0, 262212, 1, 0, 262222, 1, 0, 262223, 1, 0, 327680, 1, 0, 327756, 1, 0, 327758, 1, 0, 327759, 1, 0, 327765, 1, 0, 327766, 1, 0, 327767, 1, 0, 327768, 1, 0, 327769, 1, 0, 393216, 1, 0, 393265, 1, 0, 393281, 1, 0, 393289, 1, 0, 393294, 1, 0, 393295, 1, 0, 393301, 1, 0, 393302, 1, 0, 393303, 1, 0, 393304, 1, 0, 393305, 1, 0, 458752, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458783, 1, 0, 458786, 1, 0, 458795, 1, 0, 458798, 1, 0, 458803, 1, 0, 458830, 1, 0, 458831, 1, 0, 458834, 1, 0, 458837, 1, 0, 458838, 1, 0, 458839, 1, 0, 458840, 1, 0, 458841, 1, 0, 524288, 1, 0, 524299, 1, 0, 524300, 1, 0, 524301, 1, 0, 524313, 1, 0, 524314, 1, 0, 524315, 1, 0, 524316, 1, 0, 524317, 1, 0, 524325, 1, 0, 524328, 1, 0, 524340, 1, 0, 524341, 1, 0, 524342, 1, 0, 524351, 1, 0, 524358, 1, 0, 524366, 1, 0, 524367, 1, 0, 589824, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589849, 1, 0, 589850, 1, 0, 589851, 1, 0, 589852, 1, 0, 589853, 1, 0, 589859, 1, 0, 589876, 1, 0, 589877, 1, 0, 589878, 1, 0, 589891, 1, 0, 589902, 1, 0, 589903, 1, 0, 589907, 1, 0, 589908, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 0, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 0, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 655384, 1, 0, 655385, 1, 0, 655386, 1, 0, 655387, 1, 0, 655388, 1, 0, 655389, 1, 0, 655412, 1, 0, 655413, 1, 0, 655414, 1, 0, 655415, 1, 0, 655416, 1, 0, 655417, 1, 0, 655418, 1, 0, 655419, 1, 0, 655420, 1, 0, 655421, 1, 0, 655422, 1, 0, 655423, 1, 0, 655424, 1, 0, 655438, 1, 0, 655439, 1, 0, 655440, 1, 0, 655441, 1, 0, 655442, 1, 0, 655443, 1, 0, 655444, 1, 0, 655445, 1, 0, 655446, 1, 0, 655447, 1, 0, 655448, 1, 0, 655449, 1, 0, 655450, 1, 0, 655451, 1, 0, 655452, 1, 0, 655453, 1, 0, 655454, 1, 0, 655455, 1, 0, 655456, 1, 0, 655457, 1, 0, 655458, 1, 0, 655459, 1, 0 )
+
+[node name="StatusBar" parent="." instance=ExtResource( 6 )]
+
+[node name="Door" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2056, 64 )
+
+[node name="Jetpack" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1936, 136 )
+
+[node name="Cup" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1976, 136 )
+
+[node name="Gun" parent="." instance=ExtResource( 4 )]
+position = Vector2( 464, 240 )
+
+[node name="diamonds" type="Node2D" parent="."]
+position = Vector2( 2285, 13 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="diamond" parent="diamonds" instance=ExtResource( 12 )]
+position = Vector2( -2610, 990 )
+scale = Vector2( 1, 1 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 1448, 168 )
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 0.763, 17.0308 )
+rotate = false
+
+[node name="Monster" parent="Path2D/PathFollow2D" instance=ExtResource( 13 )]
+position = Vector2( -0.303955, 0.121201 )
+rotation = 0.0011802
+
+[node name="Path2D2" type="Path2D" parent="."]
+position = Vector2( 1816, 168 )
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
+position = Vector2( 0.763, 17.0308 )
+rotate = false
+
+[node name="Monster" parent="Path2D2/PathFollow2D" instance=ExtResource( 13 )]
+position = Vector2( -0.303955, 0.121201 )
+rotation = 0.0011802
+
+[node name="Fires" type="Node2D" parent="."]
+
+[node name="Fire" parent="Fires" instance=ExtResource( 9 )]
+position = Vector2( 43.0591, 216 )
