@@ -9,6 +9,7 @@ export var hasClass = false
 var velocity = Vector2.ZERO
 var isLife = true
 var canFire = true
+var inTree = false
 onready var raycast = $RayCast2D
 onready var animation = $Sprite
 onready var globals = get_node("/root/Globals")
@@ -25,6 +26,8 @@ func _physics_process(delta):
 		if globals.jetpackIsActive:
 			animation.play("jetpack")
 			jetpack_move(delta)
+		if inTree:
+			climb(delta)
 		else:
 			move(delta)
 		if Input.is_action_just_pressed("fire") and globals.hasGun and canFire:
@@ -77,6 +80,19 @@ func move(delta):
 	if not raycast.is_colliding():
 		animation.play("jump")
 
+func climb(delta):
+	if Input.is_action_pressed("jump"):
+		velocity.y = -speed*delta*runspeed
+	elif Input.is_action_pressed("ui_down"):
+		velocity.y = speed*delta*runspeed
+	elif Input.is_action_pressed("left"):
+		velocity.x=-speed*delta*runspeed
+	elif Input.is_action_pressed("right"):
+		velocity.x=+speed*delta*runspeed
+	else:
+		velocity.y = 0
+		velocity.x = 0
+
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("hit"):
 		globals.healt -= 1
@@ -84,6 +100,13 @@ func _on_Area2D_area_entered(area):
 			isLife = false
 		else:
 			get_tree().reload_current_scene()
+	
+	if area.is_in_group("tree"):
+		inTree = true
+
+func _on_Area2D_area_exited(area):
+	if area.is_in_group("tree"):
+		inTree = false
 
 func _on_Timer_timeout():
 	canFire = true

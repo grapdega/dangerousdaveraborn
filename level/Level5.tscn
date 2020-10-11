@@ -10,7 +10,7 @@
 [ext_resource path="res://object/Jetpack.tscn" type="PackedScene" id=8]
 [ext_resource path="res://object/plant.tscn" type="PackedScene" id=9]
 [ext_resource path="res://object/Door.tscn" type="PackedScene" id=10]
-[ext_resource path="res://misc/tree.png" type="Texture" id=11]
+[ext_resource path="res://object/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://object/diamond.tscn" type="PackedScene" id=12]
 [ext_resource path="res://object/Monster.tscn" type="PackedScene" id=13]
 
@@ -27,13 +27,6 @@ __meta__ = {
 
 [node name="tuple" parent="." instance=ExtResource( 3 )]
 position = Vector2( 43.059, 302.5 )
-
-[node name="Tree" type="Node2D" parent="."]
-
-[node name="tree" type="Sprite" parent="Tree"]
-position = Vector2( 145.697, 176 )
-z_index = -998
-texture = ExtResource( 11 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( 72, 302.5 )
@@ -175,3 +168,7 @@ position = Vector2( 2728, 302.5 )
 
 [node name="Fire5" parent="Fires" instance=ExtResource( 9 )]
 position = Vector2( 2696, 208 )
+
+[node name="Tree" parent="." instance=ExtResource( 11 )]
+position = Vector2( 160.651, 175.09 )
+z_index = -998
