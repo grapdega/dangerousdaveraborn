@@ -26,7 +26,7 @@ func _physics_process(delta):
 		if globals.jetpackIsActive:
 			animation.play("jetpack")
 			jetpack_move(delta)
-		if inTree:
+		elif inTree:
 			climb(delta)
 		else:
 			move(delta)
@@ -37,6 +37,9 @@ func _physics_process(delta):
 			canFire = false
 			$Timer.start()
 		velocity = move_and_slide(velocity)
+		
+		
+		
 	else:
 		print("Death")
 
