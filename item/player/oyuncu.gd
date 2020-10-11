@@ -83,15 +83,20 @@ func move(delta):
 func climb(delta):
 	if Input.is_action_pressed("jump"):
 		velocity.y = -speed*delta*runspeed
+		if !raycast.is_colliding():animation.play("climb")
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y = speed*delta*runspeed
+		if !raycast.is_colliding():animation.play("climb")
 	elif Input.is_action_pressed("left"):
 		velocity.x=-speed*delta*runspeed
+		if !raycast.is_colliding():animation.play("climb")
 	elif Input.is_action_pressed("right"):
 		velocity.x=+speed*delta*runspeed
+		if !raycast.is_colliding():animation.play("climb")
 	else:
 		velocity.y = 0
 		velocity.x = 0
+		animation.stop()
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("hit"):
