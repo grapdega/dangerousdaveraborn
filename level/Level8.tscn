@@ -225,31 +225,46 @@ position = Vector2( 1063.05, 384.923 )
 position = Vector2( 1096.9, 384.923 )
 
 [node name="Fire15" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2124.85, 392.973 )
+position = Vector2( 2124.85, 387.742 )
 
 [node name="Fire17" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2158.71, 392.973 )
+position = Vector2( 2158.71, 387.742 )
 
 [node name="Fire18" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2192.56, 392.973 )
+position = Vector2( 2192.56, 387.742 )
 
 [node name="Fire19" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2226.73, 392.973 )
+position = Vector2( 2226.73, 387.742 )
 
 [node name="Fire20" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2444.12, 395.802 )
+position = Vector2( 2444.12, 387.742 )
 
 [node name="Fire21" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2477.62, 395.802 )
+position = Vector2( 2477.62, 387.742 )
 
 [node name="Fire22" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2511.47, 395.802 )
+position = Vector2( 2511.47, 387.742 )
 
 [node name="Fire23" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2545.19, 395.802 )
+position = Vector2( 2545.19, 387.742 )
 
 [node name="Fire24" parent="fire" instance=ExtResource( 13 )]
-position = Vector2( 2579.04, 395.802 )
+position = Vector2( 2579.04, 387.742 )
+
+[node name="Fire25" parent="fire" instance=ExtResource( 13 )]
+position = Vector2( 2823.62, 389.742 )
+
+[node name="Fire29" parent="fire" instance=ExtResource( 13 )]
+position = Vector2( 2797.62, 389.742 )
+
+[node name="Fire26" parent="fire" instance=ExtResource( 13 )]
+position = Vector2( 2857.47, 389.742 )
+
+[node name="Fire27" parent="fire" instance=ExtResource( 13 )]
+position = Vector2( 2891.19, 389.742 )
+
+[node name="Fire28" parent="fire" instance=ExtResource( 13 )]
+position = Vector2( 2925.04, 389.742 )
 
 [node name="Fire16" parent="fire" instance=ExtResource( 13 )]
 position = Vector2( 1164.61, 383.923 )
