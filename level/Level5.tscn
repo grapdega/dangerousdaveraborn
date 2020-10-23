@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://item/path/Path2D.gd" type="Script" id=1]
 [ext_resource path="res://object/Cup.tscn" type="PackedScene" id=2]
@@ -13,10 +13,11 @@
 [ext_resource path="res://object/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://object/diamond.tscn" type="PackedScene" id=12]
 [ext_resource path="res://object/Monster.tscn" type="PackedScene" id=13]
+[ext_resource path="res://object/Monster2.tscn" type="PackedScene" id=14]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( -0.529732, -10.0649, 0.529732, 10.0649, 0.763, 17.0308, 15.6271, 18.5406, -15.6271, -18.5406, -50.554, 29.9129, 79.7689, 1.32433, -79.7689, -1.32433, -153.307, -7.229, 13.773, -12.7136, -13.773, 12.7136, -249.307, 24.771, -0.264866, 15.3622, 0.264866, -15.3622, -313.307, 16.771, 0, 0, 0, 0, -313.307, -47.229, -9.37452, -13.8934, 9.37452, 13.8934, -1.30701, -39.229, 1.05946, -14.0379, -1.05946, 14.0379, 6.69299, -7.229, 0, 0, 0, 0, 1.29272, 13.8524, 0, 0, 0, 0, 0.763, 17.0308 )
+"points": PoolVector2Array( 7.34876, -10.5109, -7.34876, 10.5109, 0, 24, 59.8708, 101.334, -59.8708, -101.334, -192, 56, -82.4282, -2.31172, 82.4282, 2.31172, -128, -72, -10.5222, -18.9378, 10.5222, 18.9378, -8, -32, 0, 0, 0, 0, 1.29272, 13.8524, 0, 0, 0, 0, 0.763, 17.0308, 0, 0, 0, 0, 2.03552, 10.7618, 0, 0, 0, 0, -16, 16 )
 }
 
 [node name="Level3" type="Node2D"]
@@ -111,12 +112,30 @@ __meta__ = {
 }
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
-position = Vector2( 0.763, 17.0308 )
+position = Vector2( 0, 24 )
 rotate = false
 
 [node name="Monster" parent="Path2D2/PathFollow2D" instance=ExtResource( 13 )]
 position = Vector2( -0.303955, 0.121201 )
 rotation = 0.0011802
+
+[node name="Path2D3" type="Path2D" parent="."]
+position = Vector2( 1392, 168 )
+curve = SubResource( 1 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D3"]
+position = Vector2( 0, 24 )
+rotate = false
+
+[node name="Monster" parent="Path2D3/PathFollow2D" instance=ExtResource( 13 )]
+position = Vector2( -0.303955, 0.121201 )
+rotation = 0.0011802
+
+[node name="Yuvarlak pic" parent="." instance=ExtResource( 14 )]
 
 [node name="Fires" type="Node2D" parent="."]
 

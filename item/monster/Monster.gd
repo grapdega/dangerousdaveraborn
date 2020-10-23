@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 const BULLET = preload("res://object/MonsterBullet.tscn")
 var timer
-var fire =	false
+var fire =	true
 func _ready():
 	timer = get_tree().create_timer(0.0)
 	self.add_to_group("monster")
@@ -10,7 +10,7 @@ func _ready():
 func _process(_delta):
 	if fire:
 		if timer.time_left <= 0.0:
-			timer = get_tree().create_timer(3.0)
+			timer = get_tree().create_timer(0.3)
 			yield(timer, "timeout")
 			var bullet = BULLET.instance()
 			get_parent().get_parent().add_child(bullet)

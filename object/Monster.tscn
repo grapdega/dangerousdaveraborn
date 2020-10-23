@@ -4,7 +4,7 @@
 [ext_resource path="res://item/monster/Monster.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 27.1929, 14.9363 )
+extents = Vector2( 20.9285, 13.1216 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 27.1737, 15.1417 )
@@ -42,5 +42,7 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect"]
 position = Vector2( -126.134, -1.68179 )
 shape = SubResource( 3 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
 [connection signal="body_entered" from="PlayerDetect" to="." method="_on_PlayerDetect_body_entered"]
 [connection signal="body_exited" from="PlayerDetect" to="." method="_on_PlayerDetect_body_exited"]
