@@ -32,6 +32,9 @@ position = Vector2( 48, 209.051 )
 position = Vector2( 80, 208 )
 gravity = 3
 
+[node name="Camera2D" parent="KinematicBody2D" index="4"]
+limit_right = 3260
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -5, -1 )
 z_index = -999
@@ -326,3 +329,5 @@ position = Vector2( 2218, 271 )
 
 [node name="Fire21" parent="Fires" instance=ExtResource( 13 )]
 position = Vector2( 2250, 240 )
+
+[editable path="KinematicBody2D"]

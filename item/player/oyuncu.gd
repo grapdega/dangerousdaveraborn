@@ -37,7 +37,9 @@ func _physics_process(delta):
 			canFire = false
 			$Timer.start()
 		velocity = move_and_slide(velocity)
-		
+		if self.global_position.y > 360:
+			self.global_position.y = -40
+		velocity = move_and_slide(velocity)
 		
 		
 	else:

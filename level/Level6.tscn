@@ -104,6 +104,9 @@ position = Vector2( 370.523, 80.861 )
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 58.7959, 325.742 )
 
+[node name="Camera2D" parent="KinematicBody2D" index="4"]
+limit_right = 2050
+
 [node name="Grass" type="Node2D" parent="."]
 
 [node name="grass" type="Sprite" parent="Grass"]
@@ -263,3 +266,5 @@ position = Vector2( 1293.62, 349.742 )
 position = Vector2( 204.621, 285.742 )
 
 [editable path="diamonds/diamond10"]
+
+[editable path="KinematicBody2D"]
