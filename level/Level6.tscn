@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=2]
@@ -10,8 +10,12 @@
 [ext_resource path="res://object/Jetpack.tscn" type="PackedScene" id=8]
 [ext_resource path="res://object/Gun.tscn" type="PackedScene" id=9]
 [ext_resource path="res://object/Cup.tscn" type="PackedScene" id=10]
+[ext_resource path="res://item/monster/enemies/Firildak4.tscn" type="PackedScene" id=11]
+[ext_resource path="res://item/monster/enemies/Firildak3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://item/monster/enemies/Firildak2.tscn" type="PackedScene" id=13]
+[ext_resource path="res://item/monster/enemies/Firildak.tscn" type="PackedScene" id=14]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=5]
 resource_name = "fade_out"
 length = 0.1
 tracks/0/type = "value"
@@ -63,7 +67,7 @@ position = Vector2( 582.328, 85.7078 )
 position = Vector2( 688, 176 )
 
 [node name="AnimationPlayer" parent="diamonds/diamond10" index="2"]
-anims/fade_out = SubResource( 1 )
+anims/fade_out = SubResource( 5 )
 
 [node name="diamond11" parent="diamonds" instance=ExtResource( 7 )]
 position = Vector2( 752, 80.861 )
@@ -106,6 +110,9 @@ position = Vector2( 58.7959, 325.742 )
 
 [node name="Camera2D" parent="KinematicBody2D" index="4"]
 limit_right = 2050
+
+[node name="Position2D" parent="KinematicBody2D" index="5"]
+position = Vector2( 18.8257, 40 )
 
 [node name="Grass" type="Node2D" parent="."]
 
@@ -265,6 +272,32 @@ position = Vector2( 1293.62, 349.742 )
 [node name="Jetpack" parent="." instance=ExtResource( 8 )]
 position = Vector2( 204.621, 285.742 )
 
+[node name="Firildak" parent="." instance=ExtResource( 14 )]
+
+[node name="PathFollow2D" parent="Firildak" index="0"]
+position = Vector2( 80, 27.3702 )
+
+[node name="Firildak2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 1157.62, 327.742 )
+
+[node name="PathFollow2D" parent="Firildak2" index="0"]
+position = Vector2( 80.0001, 26 )
+
+[node name="Firildak3" parent="." instance=ExtResource( 12 )]
+
+[node name="PathFollow2D" parent="Firildak3" index="0"]
+position = Vector2( 184.002, 26 )
+
+[node name="Firildak4" parent="." instance=ExtResource( 11 )]
+
 [editable path="diamonds/diamond10"]
 
 [editable path="KinematicBody2D"]
+
+[editable path="Firildak"]
+
+[editable path="Firildak2"]
+
+[editable path="Firildak3"]
+
+[editable path="Firildak4"]
