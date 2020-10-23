@@ -104,6 +104,7 @@ func climb(delta):
 		animation.stop()
 
 func _on_Area2D_area_entered(area):
+	return
 	if area.is_in_group("hit"):
 		globals.healt -= 1
 		if globals.healt == 0:
