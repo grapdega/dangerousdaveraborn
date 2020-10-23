@@ -20,14 +20,14 @@ animations = [ {
 "name": "stop",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "climb",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ) ],
 "loop": true,
 "name": "jetpack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "climb",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ) ],

@@ -10,7 +10,7 @@ func _ready():
 func _process(_delta):
 	if fire:
 		if timer.time_left <= 0.0:
-			timer = get_tree().create_timer(0.3)
+			timer = get_tree().create_timer(0.6)
 			yield(timer, "timeout")
 			var bullet = BULLET.instance()
 			get_parent().get_parent().add_child(bullet)

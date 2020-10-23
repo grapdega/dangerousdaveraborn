@@ -241,7 +241,7 @@ position = Vector2( 3060.38, 81.3718 )
 [node name="diamond42" parent="Diamonds" instance=ExtResource( 12 )]
 position = Vector2( 2991.81, 270.159 )
 
-[node name="Yuvarlak_pic" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2901.25, 210.057 )
+[node name="Yuvarlak pic" parent="." instance=ExtResource( 13 )]
+position = Vector2( 2904.24, 209.592 )
 
 [editable path="KinematicBody2D"]
