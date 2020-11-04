@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://item/tileset/platform.png" type="Texture" id=3]
 [ext_resource path="res://object/tuple.tscn" type="PackedScene" id=4]
+[ext_resource path="res://object/Door.tscn" type="PackedScene" id=5]
 [ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=7]
 
 [node name="testlevel" type="Node2D"]
@@ -69,5 +70,8 @@ position = Vector2( 208, 96 )
 limit_right = 3200
 
 [node name="StatusBar" parent="." instance=ExtResource( 7 )]
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1920, 144 )
 
 [editable path="KinematicBody2D"]

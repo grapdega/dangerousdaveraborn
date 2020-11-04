@@ -4,7 +4,7 @@
 [ext_resource path="res://item/gun/Gun.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 16.125, 11 )
+extents = Vector2( 18.1122, 11 )
 
 [node name="Gun" type="Area2D"]
 script = ExtResource( 2 )

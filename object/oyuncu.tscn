@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://item/player/player_stop.png" type="Texture" id=1]
 [ext_resource path="res://item/player/player_walk_2.png" type="Texture" id=2]
@@ -10,8 +10,8 @@
 [ext_resource path="res://item/player/climb3.png" type="Texture" id=8]
 [ext_resource path="res://item/player/Climb1.png" type="Texture" id=9]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 9.41841, 15.6301 )
+[sub_resource type="CapsuleShape2D" id=1]
+height = 4.5
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -41,6 +41,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=3]
+height = 7.35224
+
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 4 )
 
@@ -54,12 +57,12 @@ frames = SubResource( 2 )
 animation = "climb"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -0.21022, 1.05112 )
-shape = SubResource( 1 )
+position = Vector2( 0, 2.5 )
+shape = SubResource( 3 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 position = Vector2( 0, -1.558 )
-scale = Vector2( 4, 0.45 )
+scale = Vector2( 8, 0.45 )
 enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]

@@ -104,6 +104,8 @@ func climb(delta):
 		animation.stop()
 
 func _on_Area2D_area_entered(area):
+	if area.is_in_group("tree"):
+		inTree = true
 	return
 	if area.is_in_group("hit"):
 		globals.healt -= 1
@@ -112,8 +114,7 @@ func _on_Area2D_area_entered(area):
 		else:
 			get_tree().reload_current_scene()
 	
-	if area.is_in_group("tree"):
-		inTree = true
+
 
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("tree"):
