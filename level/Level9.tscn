@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://item/tileset/platform.png" type="Texture" id=3]
 [ext_resource path="res://object/tuple.tscn" type="PackedScene" id=4]
 [ext_resource path="res://object/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://object/Monster/9-yuvarlak.tscn" type="PackedScene" id=6]
 [ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=7]
+[ext_resource path="res://object/Monster/8-lvl-monster.tscn" type="PackedScene" id=8]
+[ext_resource path="res://object/diamond.tscn" type="PackedScene" id=9]
+[ext_resource path="res://object/Monster/Yuvarlak pic5.tscn" type="PackedScene" id=10]
+[ext_resource path="res://object/Monster/Yuvarlak pic3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://object/gold/round gold.tscn" type="PackedScene" id=12]
 
 [node name="testlevel" type="Node2D"]
 __meta__ = {
@@ -74,4 +80,131 @@ limit_right = 3200
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1920, 144 )
 
+[node name="Gold" type="Node2D" parent="."]
+
+[node name="diamond23" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 48, 72 )
+
+[node name="diamond24" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 337.352, 80 )
+
+[node name="diamond26" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 592, 72 )
+
+[node name="diamond27" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 848, 112 )
+
+[node name="diamond28" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 1000, 112 )
+
+[node name="diamond29" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 1040, 208 )
+
+[node name="diamond30" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 904, 208 )
+
+[node name="diamond31" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 816, 208 )
+
+[node name="diamond32" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 720, 240 )
+
+[node name="diamond25" parent="Gold" instance=ExtResource( 12 )]
+position = Vector2( 48.0001, 296 )
+
+[node name="diamond" parent="Gold" instance=ExtResource( 9 )]
+position = Vector2( 1160, 176 )
+
+[node name="Gold2" type="Node2D" parent="."]
+
+[node name="diamond23" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 48, 72 )
+
+[node name="diamond24" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 337.352, 80 )
+
+[node name="diamond26" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 592, 72 )
+
+[node name="diamond27" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 848, 112 )
+
+[node name="diamond28" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 1000, 112 )
+
+[node name="diamond29" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 1040, 208 )
+
+[node name="diamond30" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 904, 208 )
+
+[node name="diamond31" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 816, 208 )
+
+[node name="diamond32" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 720, 240 )
+
+[node name="diamond25" parent="Gold2" instance=ExtResource( 12 )]
+position = Vector2( 48.0001, 296 )
+
+[node name="diamond" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1304, 112 )
+
+[node name="diamond2" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1360, 176 )
+
+[node name="diamond3" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1296, 240 )
+
+[node name="diamond4" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1456, 80 )
+
+[node name="diamond5" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1488, 80 )
+
+[node name="diamond6" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1552, 152 )
+
+[node name="diamond8" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1712, 176 )
+
+[node name="diamond9" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1712, 80 )
+
+[node name="diamond10" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1920, 208 )
+
+[node name="diamond11" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2088, 168 )
+
+[node name="diamond12" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2232, 56 )
+
+[node name="diamond13" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2384, 176 )
+
+[node name="diamond14" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2512, 303.97 )
+
+[node name="diamond7" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 1624, 240 )
+
+[node name="Monster" type="Node" parent="."]
+
+[node name="Yuvarlak pic" parent="Monster" instance=ExtResource( 8 )]
+position = Vector2( 1288, 248 )
+
+[node name="Yuvarlak pic2" parent="Monster" instance=ExtResource( 6 )]
+position = Vector2( 1520, 250 )
+
+[node name="Yuvarlak pic3" parent="Monster" instance=ExtResource( 11 )]
+
+[node name="Yuvarlak pic4" parent="Monster" instance=ExtResource( 10 )]
+
 [editable path="KinematicBody2D"]
+
+[editable path="Monster/Yuvarlak pic2"]
+
+[editable path="Monster/Yuvarlak pic3"]
+
+[editable path="Monster/Yuvarlak pic4"]

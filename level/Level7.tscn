@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://item/path/Path2D.gd" type="Script" id=13]
 [ext_resource path="res://item/object-images/conevir6.png" type="Texture" id=14]
 [ext_resource path="res://item/monster/enemies/Anim/rotation.tres" type="Animation" id=15]
+[ext_resource path="res://object/Monster2.tscn" type="PackedScene" id=16]
+[ext_resource path="res://object/Tree.tscn" type="PackedScene" id=17]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -218,6 +220,16 @@ position = Vector2( 2488, 112 )
 
 [node name="Door" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1904, 144 )
+
+[node name="Tree" parent="." instance=ExtResource( 17 )]
+position = Vector2( 1323.5, 235.5 )
+scale = Vector2( 0.586157, 0.586157 )
+
+[node name="Yuvarlak pic" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1860.5, 222.5 )
+
+[node name="Yuvarlak pic2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1600.5, 202.5 )
 [connection signal="body_entered" from="Firildak/PathFollow2D/Monster/PlayerDetect" to="Firildak/PathFollow2D/Monster" method="_on_PlayerDetect_body_entered"]
 [connection signal="body_exited" from="Firildak/PathFollow2D/Monster/PlayerDetect" to="Firildak/PathFollow2D/Monster" method="_on_PlayerDetect_body_exited"]
 
