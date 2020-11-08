@@ -15,7 +15,7 @@
 [ext_resource path="res://item/monster/enemies/Firildak2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://item/monster/enemies/Firildak.tscn" type="PackedScene" id=14]
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=1]
 resource_name = "fade_out"
 length = 0.1
 tracks/0/type = "value"
@@ -67,7 +67,7 @@ position = Vector2( 582.328, 85.7078 )
 position = Vector2( 688, 176 )
 
 [node name="AnimationPlayer" parent="diamonds/diamond10" index="2"]
-anims/fade_out = SubResource( 5 )
+anims/fade_out = SubResource( 1 )
 
 [node name="diamond11" parent="diamonds" instance=ExtResource( 7 )]
 position = Vector2( 752, 80.861 )
@@ -280,13 +280,10 @@ position = Vector2( 80, 27.3702 )
 [node name="Firildak2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 1157.62, 327.742 )
 
-[node name="PathFollow2D" parent="Firildak2" index="0"]
-position = Vector2( 80.0001, 26 )
-
 [node name="Firildak3" parent="." instance=ExtResource( 12 )]
 
 [node name="PathFollow2D" parent="Firildak3" index="0"]
-position = Vector2( 184.002, 26 )
+position = Vector2( 80.0001, 26 )
 
 [node name="Firildak4" parent="." instance=ExtResource( 11 )]
 

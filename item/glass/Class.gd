@@ -11,6 +11,9 @@ func _process(_delta):
 		player_Vars.player_has_class = true
 		yield($AnimationPlayer,"animation_finished")
 		queue_free()
+		
+	if player_Vars.player_has_class:
+		queue_free()
 	
 
 func _on_Class_body_entered(body):

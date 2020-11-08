@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="thegame"
-run/main_scene="res://level/Level1.tscn"
+run/main_scene="res://object/StartScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

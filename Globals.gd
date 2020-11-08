@@ -8,3 +8,4 @@ var isHit = false
 var hasJetpack = false
 var hasGun = false
 var jetpackIsActive = false
+var monsterIsDead = false

@@ -68,7 +68,7 @@ __meta__ = {
 }
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Firildak"]
-position = Vector2( 80, 27.3702 )
+position = Vector2( -12.1426, 38.5797 )
 rotation = 4.86783e-07
 rotate = false
 
