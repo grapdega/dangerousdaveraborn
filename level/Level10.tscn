@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://object/Monster/9-yuvarlak.tscn" type="PackedScene" id=15]
 [ext_resource path="res://object/Cup.tscn" type="PackedScene" id=16]
 [ext_resource path="res://object/Jetpack.tscn" type="PackedScene" id=17]
+[ext_resource path="res://object/Water.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -526,6 +527,57 @@ position = Vector2( 2064, 240 )
 
 [node name="Cup" parent="." instance=ExtResource( 16 )]
 position = Vector2( 3120, 304 )
+
+[node name="Waters" type="Node2D" parent="."]
+
+[node name="Water" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 208.102, 272.149 )
+
+[node name="Water2" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 240.062, 272.149 )
+
+[node name="Water3" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 207.866, 304.004 )
+
+[node name="Water4" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 239.826, 304.004 )
+
+[node name="Water5" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2448, 176.005 )
+
+[node name="Water6" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2480.07, 176.005 )
+
+[node name="Water7" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2512, 176.005 )
+
+[node name="Water8" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2544.07, 176.005 )
+
+[node name="Water9" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2576.18, 176.005 )
+
+[node name="Water10" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2864, 336 )
+
+[node name="Water11" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2896, 336 )
+
+[node name="Water12" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2928, 336 )
+
+[node name="Water13" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 2992, 336 )
+
+[node name="Water14" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 3023.18, 336 )
+
+[node name="Water15" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 3054.81, 336 )
+
+[node name="Water16" parent="Waters" instance=ExtResource( 18 )]
+position = Vector2( 3086.44, 336 )
+scale = Vector2( 1.08, 1 )
 
 [editable path="gold/diamond4"]
 

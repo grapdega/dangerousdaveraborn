@@ -10,4 +10,5 @@ func _on_Door_body_entered(body):
 		globals.hasJetpack = false
 		globals.jetpackIsActive = false
 		globals.hasGun = false
+		globals.monsterIsDead = !globals.monsterIsDead
 	return
