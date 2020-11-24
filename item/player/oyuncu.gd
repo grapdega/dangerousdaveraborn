@@ -43,7 +43,7 @@ func _physics_process(delta):
 		
 		
 	else:
-		print("Death")
+		animation.play("dead")
 
 func jetpack_move(delta):
 	if Input.is_action_pressed("jump"):
@@ -112,7 +112,6 @@ func _on_Area2D_area_entered(area):
 			isLife = false
 		else:
 			get_tree().reload_current_scene()
-	
 
 
 func _on_Area2D_area_exited(area):
@@ -121,3 +120,10 @@ func _on_Area2D_area_exited(area):
 
 func _on_Timer_timeout():
 	canFire = true
+
+
+
+func _on_Sprite_animation_finished():
+	if animation.get_animation() == "dead":
+		queue_free()
+		get_tree().change_scene("res://object/StartScreen.tscn")

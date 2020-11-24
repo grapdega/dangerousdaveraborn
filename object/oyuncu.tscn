@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://item/player/player_stop.png" type="Texture" id=1]
 [ext_resource path="res://item/player/player_walk_2.png" type="Texture" id=2]
@@ -9,6 +9,10 @@
 [ext_resource path="res://item/player/Climb2.png" type="Texture" id=7]
 [ext_resource path="res://item/player/climb3.png" type="Texture" id=8]
 [ext_resource path="res://item/player/Climb1.png" type="Texture" id=9]
+[ext_resource path="res://misc/tile132.png" type="Texture" id=10]
+[ext_resource path="res://misc/tile130.png" type="Texture" id=11]
+[ext_resource path="res://misc/tile131.png" type="Texture" id=12]
+[ext_resource path="res://misc/tile129.png" type="Texture" id=13]
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 4.5
@@ -20,14 +24,19 @@ animations = [ {
 "name": "stop",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "jetpack",
-"speed": 5.0
+"frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "dead",
+"speed": 7.0
 }, {
 "frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "climb",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "jetpack",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
@@ -54,7 +63,8 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "climb"
+animation = "dead"
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 2.5 )
@@ -83,4 +93,5 @@ __meta__ = {
 wait_time = 2.0
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
+[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
