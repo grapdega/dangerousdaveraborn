@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ziplama.wav-c407c729a3405b3cc992defb4433e899.sample"
+
+[deps]
+
+source_file="res://misc/sounds/ziplama.wav"
+dest_files=[ "res://.import/ziplama.wav-c407c729a3405b3cc992defb4433e899.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

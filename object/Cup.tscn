@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://item/glass/cup_top.png" type="Texture" id=1]
 [ext_resource path="res://item/glass/Class.gd" type="Script" id=2]
+[ext_resource path="res://misc/sounds/kupa sesi.wav" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 16.1176, 16.4126 )
@@ -57,5 +58,8 @@ shape = SubResource( 1 )
 anims/animation_finished = SubResource( 2 )
 anims/cup = SubResource( 3 )
 anims/fade_out = SubResource( 4 )
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
 [connection signal="body_entered" from="." to="." method="_on_Class_body_entered"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

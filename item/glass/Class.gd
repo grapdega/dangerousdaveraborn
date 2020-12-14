@@ -7,6 +7,7 @@ func _process(_delta):
 		$AnimationPlayer.play("cup")
 	else:
 		$AnimationPlayer.play("fade_out")
+		$Sound.play()
 		player_Vars.player_score += 1000
 		player_Vars.player_has_class = true
 		yield($AnimationPlayer,"animation_finished")

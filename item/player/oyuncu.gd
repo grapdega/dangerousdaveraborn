@@ -22,6 +22,7 @@ func _physics_process(delta):
 	if isLife:
 		velocity = move_and_slide(velocity)
 		if Input.is_action_just_pressed("jetpack") and globals.hasJetpack:
+			$JetpackSound1.play()
 			globals.jetpackIsActive = !globals.jetpackIsActive
 		if globals.jetpackIsActive:
 			animation.play("jetpack")
@@ -46,6 +47,8 @@ func _physics_process(delta):
 		animation.play("dead")
 
 func jetpack_move(delta):
+	if not $JetpackSound2.playing:
+		$JetpackSound2.play()
 	if Input.is_action_pressed("jump"):
 		velocity.y = -speed*delta*runspeed
 		animation.play("jetpack")
@@ -69,21 +72,29 @@ func move(delta):
 	if velocity.y>maxgravity:
 		velocity.y=maxgravity
 	if Input.is_action_pressed("jump") and raycast.is_colliding():
+		if not $JumpSound.playing:
+			$JumpSound.play()
 		velocity.y-=speed*delta*gravity*height
 	if Input.is_action_pressed("left"):
+		if not $WalkSound.playing:
+			$WalkSound.play()
 		velocity.x=-speed*delta*runspeed
 		animation.flip_h=true
 		animation.play("walk")
 	elif Input.is_action_pressed("right"):
+		if not $WalkSound.playing:
+			$WalkSound.play()
 		velocity.x=+speed*delta*runspeed
 		animation.flip_h=false
 		animation.play("walk")
 	else:
 		velocity.x=0
 		animation.play("stop")
+		$WalkSound.stop()
 		
 	if not raycast.is_colliding():
 		animation.play("jump")
+		$WalkSound.stop()
 
 func climb(delta):
 	if Input.is_action_pressed("jump"):
@@ -113,7 +124,6 @@ func _on_Area2D_area_entered(area):
 		else:
 			get_tree().reload_current_scene()
 
-
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("tree"):
 		inTree = false
@@ -121,9 +131,11 @@ func _on_Area2D_area_exited(area):
 func _on_Timer_timeout():
 	canFire = true
 
-
-
 func _on_Sprite_animation_finished():
 	if animation.get_animation() == "dead":
 		queue_free()
 		get_tree().change_scene("res://object/StartScreen.tscn")
+
+
+func _on_JumpSound_finished():
+	$FallSound.play()
