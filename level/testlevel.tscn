@@ -28,6 +28,9 @@ texture = ExtResource( 11 )
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 44.9027, 302.364 )
 
+[node name="Camera2D" parent="KinematicBody2D" index="4"]
+limit_right = 705
+
 [node name="Jetpack" parent="." instance=ExtResource( 4 )]
 position = Vector2( 589.611, 237.692 )
 
@@ -51,3 +54,5 @@ position = Vector2( 656, 304 )
 [node name="Tree" parent="." instance=ExtResource( 13 )]
 position = Vector2( 133.836, 175.622 )
 z_index = -998
+
+[editable path="KinematicBody2D"]

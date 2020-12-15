@@ -9,5 +9,8 @@ func _process(delta):
 	
 func _input(event):
 	if event is InputEventKey:
-		if event.pressed:
+		if event.pressed and event.is_action_pressed("jump"):
 			get_tree().change_scene("res://level/Level1.tscn")
+		if event.pressed and event.is_action_pressed("fire"):
+			get_tree().change_scene("res://level/testlevel.tscn")
+   

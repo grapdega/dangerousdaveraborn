@@ -13,7 +13,7 @@ func _process(_delta):
 		queue_free()
 	if fire:
 		if timer.time_left <= 0.0:
-			timer = get_tree().create_timer(0.6)
+			timer = get_tree().create_timer(0.1+rand_range(0,9))
 			yield(timer, "timeout")
 			var bullet = BULLET.instance()
 			get_parent().get_parent().add_child(bullet)
