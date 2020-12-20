@@ -106,6 +106,8 @@ scale = Vector2( 1, 1 )
 position = Vector2( 1976, 184 )
 
 [node name="Korona4" parent="." instance=ExtResource( 13 )]
+position = Vector2( 3661.98, 216 )
+scale = Vector2( 0.990824, 1 )
 
 [node name="Korona2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 672, 168 )
@@ -147,6 +149,11 @@ position = Vector2( 2696, 208 )
 
 [node name="Tree" parent="." instance=ExtResource( 11 )]
 position = Vector2( 160.651, 175.09 )
+z_index = -998
+
+[node name="Tree2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 3088.47, 201.833 )
+scale = Vector2( 0.913957, 0.8154 )
 z_index = -998
 
 [node name="Waters" type="Node2D" parent="."]
