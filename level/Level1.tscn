@@ -1,47 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Images/diamond/diamond_red.png" type="Texture" id=2]
-[ext_resource path="res://Images/diamond/bubble.png" type="Texture" id=3]
+[ext_resource path="res://Prefabs/gold/diamond Red.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/gold/Diamond Bubble.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/tuple.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/StatusBar.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=10]
-
-
-[sub_resource type="Animation" id=1]
-resource_name = "fade_out"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 10, 10 ), Vector2( 15, 15 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "fade_out"
-length = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector2( 10, 10 ), Vector2( 15, 15 ) ]
-}
 
 [node name="Level1" type="Node2D"]
 position = Vector2( 2.37842, -45.742 )
@@ -66,6 +33,10 @@ position = Vector2( 47.1837, 350.559 )
 
 [node name="diamonds" type="Node" parent="."]
 
+[node name="diamond Red" parent="diamonds" instance=ExtResource( 2 )]
+
+[node name="Diamond Bubble2" parent="diamonds" instance=ExtResource( 3 )]
+
 [node name="diamond" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 114.551, 117.22 )
 
@@ -80,28 +51,6 @@ position = Vector2( 51.0553, 242.625 )
 
 [node name="diamond9" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 562.198, 180 )
-
-[node name="diamond10" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 562.198, 79.916 )
-point = 150
-texture = "res://item/diamond/diamond_red.png"
-
-[node name="Sprite" parent="diamonds/diamond10" index="0"]
-texture = ExtResource( 2 )
-
-[node name="AnimationPlayer" parent="diamonds/diamond10" index="2"]
-anims/fade_out = SubResource( 1 )
-
-[node name="diamond11" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 47.6743, 80.298 )
-point = 50
-texture = "res://item/diamond/bubble.png"
-
-[node name="Sprite" parent="diamonds/diamond11" index="0"]
-texture = ExtResource( 3 )
-
-[node name="AnimationPlayer" parent="diamonds/diamond11" index="2"]
-anims/fade_out = SubResource( 2 )
 
 [node name="diamond3" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 242.543, 118.014 )
@@ -123,9 +72,5 @@ limit_right = 640
 
 [node name="Cup" parent="." instance=ExtResource( 10 )]
 position = Vector2( 367.963, 158.685 )
-
-[editable path="diamonds/diamond10"]
-
-[editable path="diamonds/diamond11"]
 
 [editable path="KinematicBody2D"]

@@ -32,7 +32,6 @@ __meta__ = {
 "_edit_group_": true
 }
 point = 50
-texture = "res://item/diamond/bubble.png"
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 10, 10 )
