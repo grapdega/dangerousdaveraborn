@@ -12,7 +12,6 @@
 [ext_resource path="res://Images/diamond/bubble.png" type="Texture" id=10]
 [ext_resource path="res://Prefabs/plant.tscn" type="PackedScene" id=11]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
 length = 0.1
@@ -282,12 +281,6 @@ position = Vector2( 409, 332.475 )
 [node name="Fire10" parent="." instance=ExtResource( 9 )]
 position = Vector2( 441, 332.475 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 56, 301 )
-
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
-limit_right = 1575
-
 [node name="Fire18" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1290, 151 )
 
@@ -351,6 +344,9 @@ position = Vector2( 1290, 319 )
 [node name="Fire28" parent="." instance=ExtResource( 11 )]
 position = Vector2( 1322, 318.475 )
 
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 53.2008, 304.367 )
+
 [editable path="diamonds/diamond10"]
 
 [editable path="diamonds/diamond11"]
@@ -364,5 +360,3 @@ position = Vector2( 1322, 318.475 )
 [editable path="diamonds/diamond3"]
 
 [editable path="diamonds/diamond4"]
-
-[editable path="KinematicBody2D"]

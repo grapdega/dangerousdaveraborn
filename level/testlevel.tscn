@@ -12,7 +12,6 @@
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Tree.tscn" type="PackedScene" id=13]
 
-
 [node name="testlevel" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -27,9 +26,9 @@ position = Vector2( 302.522, 237.692 )
 texture = ExtResource( 11 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 44.9027, 302.364 )
+position = Vector2( 100.591, 291.037 )
 
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
+[node name="Camera2D" parent="KinematicBody2D" index="3"]
 limit_right = 705
 
 [node name="Jetpack" parent="." instance=ExtResource( 4 )]

@@ -10,7 +10,6 @@
 [ext_resource path="res://Prefabs/StatusBar.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=10]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
 length = 0.1
@@ -117,9 +116,7 @@ position = Vector2( 498.909, 118.808 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 91.6783, 267.408 )
-
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
-limit_right = 640
+rightlimit = 643
 
 [node name="Cup" parent="." instance=ExtResource( 10 )]
 position = Vector2( 367.963, 158.685 )
@@ -127,5 +124,3 @@ position = Vector2( 367.963, 158.685 )
 [editable path="diamonds/diamond10"]
 
 [editable path="diamonds/diamond11"]
-
-[editable path="KinematicBody2D"]

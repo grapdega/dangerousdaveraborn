@@ -120,7 +120,7 @@ position = Vector2( 3090.18, 111.637 )
 [node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( 49.8461, 208.9 )
 
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
+[node name="Camera2D" parent="KinematicBody2D" index="3"]
 limit_right = 3168
 
 [node name="Cup2" parent="." instance=ExtResource( 2 )]

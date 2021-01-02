@@ -377,12 +377,6 @@ position = Vector2( 1906.09, 243.627 )
 [node name="diamond5" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 2733.91, 304.24 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 79.5571, 346.946 )
-
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
-limit_right = 3200
-
 [node name="Cup" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2589.62, 125.658 )
 
@@ -569,6 +563,9 @@ position = Vector2( 525.564, 384.703 )
 position = Vector2( 395.664, 383.923 )
 scale = Vector2( 1.12, 1 )
 
+[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 71.8915, 346.912 )
+
 [editable path="diamonds/diamond10"]
 
 [editable path="diamonds/diamond14"]
@@ -590,7 +587,5 @@ scale = Vector2( 1.12, 1 )
 [editable path="diamonds/diamond20"]
 
 [editable path="diamonds/diamond21"]
-
-[editable path="KinematicBody2D"]
 
 [editable path="Yuvarlak pic"]

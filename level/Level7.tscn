@@ -42,7 +42,7 @@ __meta__ = {
 position = Vector2( 56, 120 )
 gravity = 3
 
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
+[node name="Camera2D" parent="KinematicBody2D" index="3"]
 limit_right = 2540
 
 [node name="TileMap" type="TileMap" parent="."]

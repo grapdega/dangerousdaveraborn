@@ -2,21 +2,22 @@ extends KinematicBody2D
 
 export var gravity=7
 export var speed=50
-export var runspeed=100
+export var runspeed=80
 export var maxgravity=70
-var height=30
+export var height=16
 export var hasClass = false
+export var rightlimit = 99999
 var velocity = Vector2.ZERO
 var isLife = true
-var canFire = true
+export var canFire = true
 var inTree = false
-onready var raycast = $RayCast2D
 onready var animation = $Sprite
 onready var globals = get_node("/root/Globals")
 const BULLET = preload("res://Prefabs/Bullet.tscn")
 
 func _ready():
 	self.add_to_group("player")
+	$Camera2D.limit_right=rightlimit
 
 func _physics_process(delta):
 	if isLife:
@@ -71,7 +72,7 @@ func move(delta):
 	velocity.y+=gravity*delta*speed
 	if velocity.y>maxgravity:
 		velocity.y=maxgravity
-	if Input.is_action_pressed("jump") and raycast.is_colliding():
+	if Input.is_action_pressed("jump") and is_on_floor():
 		if not $JumpSound.playing:
 			$JumpSound.play()
 		velocity.y-=speed*delta*gravity*height
@@ -92,23 +93,23 @@ func move(delta):
 		animation.play("stop")
 		$WalkSound.stop()
 		
-	if not raycast.is_colliding():
+	if not is_on_floor():
 		animation.play("jump")
 		$WalkSound.stop()
 
 func climb(delta):
 	if Input.is_action_pressed("jump"):
 		velocity.y = -speed*delta*runspeed
-		if !raycast.is_colliding():animation.play("climb")
+		if !is_on_floor():animation.play("climb")
 	elif Input.is_action_pressed("ui_down"):
 		velocity.y = speed*delta*runspeed
-		if !raycast.is_colliding():animation.play("climb")
+		if !is_on_floor():animation.play("climb")
 	elif Input.is_action_pressed("left"):
 		velocity.x=-speed*delta*runspeed
-		if !raycast.is_colliding():animation.play("climb")
+		if !is_on_floor():animation.play("climb")
 	elif Input.is_action_pressed("right"):
 		velocity.x=+speed*delta*runspeed
-		if !raycast.is_colliding():animation.play("climb")
+		if !is_on_floor():animation.play("climb")
 	else:
 		velocity.y = 0
 		velocity.x = 0
@@ -139,3 +140,14 @@ func _on_Sprite_animation_finished():
 
 func _on_JumpSound_finished():
 	$FallSound.play()
+
+func is_on_floor():
+	var direction=0
+	velocity = move_and_slide(velocity)	
+	if is_on_wall():
+		for i in get_slide_count():
+			var collision = get_slide_collision(i)
+			direction=collision.normal.y
+			if direction == -1:
+				return true
+		return false

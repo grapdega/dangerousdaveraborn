@@ -14,7 +14,6 @@
 [ext_resource path="res://Prefabs/gold/round gold.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=13]
 
-
 [node name="testlevel" type="Node2D"]
 __meta__ = {
 "_edit_vertical_guides_": [ 3200.0 ]
@@ -74,7 +73,7 @@ texture = ExtResource( 3 )
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 208, 96 )
 
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
+[node name="Camera2D" parent="KinematicBody2D" index="3"]
 limit_right = 3200
 
 [node name="StatusBar" parent="." instance=ExtResource( 7 )]

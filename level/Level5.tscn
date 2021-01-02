@@ -26,10 +26,6 @@ __meta__ = {
 [node name="tuple" parent="." instance=ExtResource( 3 )]
 position = Vector2( 43.059, 302.5 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 72, 302.5 )
-gravity = 3
-
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -5, -1 )
 z_index = -999
@@ -274,3 +270,6 @@ position = Vector2( 2601.52, 303.08 )
 [node name="Water39" parent="Waters" instance=ExtResource( 16 )]
 position = Vector2( 2634.6, 303.08 )
 scale = Vector2( 1.08, 1 )
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( 72.5202, 300.004 )

@@ -20,18 +20,13 @@
 [ext_resource path="res://sounds/jactpack ucarken.wav" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 10.3012, 16.0208 )
+extents = Vector2( 8.61276, 15.8417 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "stop",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ) ],
@@ -53,13 +48,18 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 4 )
+height = 17
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 
 [node name="AreaCollision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
@@ -69,13 +69,7 @@ frames = SubResource( 2 )
 animation = "stop"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 1 )
-
-[node name="RayCast2D" type="RayCast2D" parent="."]
-scale = Vector2( 8, 0.45 )
-enabled = true
-cast_to = Vector2( 0, 35.699 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -86,7 +80,7 @@ limit_bottom = 420
 limit_smoothed = true
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 19.6879, -3.37028 )
+position = Vector2( 11.203, 0 )
 __meta__ = {
 "_gizmo_extents_": 3.0
 }

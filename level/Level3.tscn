@@ -28,13 +28,6 @@ __meta__ = {
 [node name="tuple" parent="." instance=ExtResource( 4 )]
 position = Vector2( 48, 209.051 )
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 80, 208 )
-gravity = 3
-
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
-limit_right = 3260
-
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -5, -1 )
 z_index = -999
@@ -330,4 +323,5 @@ position = Vector2( 2218, 271 )
 [node name="Fire21" parent="Fires" instance=ExtResource( 13 )]
 position = Vector2( 2250, 240 )
 
-[editable path="KinematicBody2D"]
+[node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 79.0546, 206.32 )

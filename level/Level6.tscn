@@ -109,10 +109,10 @@ position = Vector2( 370.523, 80.861 )
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 58.7959, 325.742 )
 
-[node name="Camera2D" parent="KinematicBody2D" index="4"]
+[node name="Camera2D" parent="KinematicBody2D" index="3"]
 limit_right = 2050
 
-[node name="Position2D" parent="KinematicBody2D" index="5"]
+[node name="Position2D" parent="KinematicBody2D" index="4"]
 position = Vector2( 18.8257, 40 )
 
 [node name="Grass" type="Node2D" parent="."]
