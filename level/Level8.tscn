@@ -194,7 +194,9 @@ tracks/0/keys = {
 }
 
 [node name="Level8" type="Node2D"]
-position = Vector2( 2.37842, -45.742 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 1.31232 ]
+}
 
 [node name="Yuvarlak pic3" parent="." instance=ExtResource( 17 )]
 position = Vector2( 2242.91, 167.818 )
@@ -209,7 +211,7 @@ position = Vector2( 1004.67, 124.459 )
 position = Vector2( 1937.38, 287.798 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( -2.37842, -48.258 )
+position = Vector2( 0, -86 )
 z_index = -999
 tile_set = ExtResource( 1 )
 cell_size = Vector2( 32, 32 )
@@ -222,7 +224,7 @@ show_behind_parent = true
 position = Vector2( 3118.62, 159.55 )
 
 [node name="tuple" parent="." instance=ExtResource( 8 )]
-position = Vector2( 45.0624, 352.742 )
+position = Vector2( 47.8908, 299.002 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 4 )]
 
@@ -233,16 +235,16 @@ scale = Vector2( 0.703537, 0.703537 )
 [node name="diamonds" type="Node" parent="."]
 
 [node name="diamond9" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 575.698, 79.916 )
+position = Vector2( 575.698, 58.916 )
 
 [node name="diamond12" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 575.698, 79.916 )
+position = Vector2( 575.698, 58.916 )
 
 [node name="diamond13" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 496, 227 )
+position = Vector2( 496, 206 )
 
 [node name="diamond10" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 3119, 180 )
+position = Vector2( 3119, 159 )
 point = 150
 texture = "res://item/diamond/diamond_red.png"
 
@@ -253,7 +255,7 @@ texture = ExtResource( 3 )
 anims/fade_out = SubResource( 1 )
 
 [node name="diamond14" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 416, 113.808 )
+position = Vector2( 416, 92.808 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -264,7 +266,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 2 )
 
 [node name="diamond15" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1103, 210.729 )
+position = Vector2( 1103, 189.729 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -275,7 +277,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 3 )
 
 [node name="diamond16" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1166.99, 242 )
+position = Vector2( 1166.99, 221 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -286,7 +288,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 4 )
 
 [node name="diamond17" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1221.3, 272.951 )
+position = Vector2( 1221.3, 251.951 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -297,7 +299,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 5 )
 
 [node name="diamond18" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1289.1, 272.951 )
+position = Vector2( 1289.1, 251.951 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -308,7 +310,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 6 )
 
 [node name="diamond19" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1329.89, 304.206 )
+position = Vector2( 1329.89, 283.206 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -319,7 +321,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 7 )
 
 [node name="diamond22" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 2275.58, 84.1535 )
+position = Vector2( 2275.58, 63.1535 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -330,7 +332,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 8 )
 
 [node name="diamond23" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 2321.46, 240.061 )
+position = Vector2( 2321.46, 219.061 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -341,7 +343,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 9 )
 
 [node name="diamond20" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1403, 304.735 )
+position = Vector2( 1403, 283.735 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -352,7 +354,7 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 10 )
 
 [node name="diamond21" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1468.68, 305.442 )
+position = Vector2( 1468.68, 284.442 )
 point = 50
 texture = "res://item/diamond/bubble.png"
 
@@ -363,19 +365,19 @@ texture = ExtResource( 2 )
 anims/fade_out = SubResource( 11 )
 
 [node name="diamond" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1376, 86 )
+position = Vector2( 1376, 65 )
 
 [node name="diamond2" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1504, 86 )
+position = Vector2( 1504, 65 )
 
 [node name="diamond3" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1839.55, 275.719 )
+position = Vector2( 1839.55, 254.719 )
 
 [node name="diamond4" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 1906.09, 243.627 )
+position = Vector2( 1906.09, 222.627 )
 
 [node name="diamond5" parent="diamonds" instance=ExtResource( 5 )]
-position = Vector2( 2733.91, 304.24 )
+position = Vector2( 2733.91, 283.24 )
 
 [node name="Cup" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2589.62, 125.658 )
@@ -548,23 +550,23 @@ texture = ExtResource( 15 )
 position = Vector2( 493.622, 189.742 )
 
 [node name="Water" parent="." instance=ExtResource( 18 )]
-position = Vector2( 173.559, 385.041 )
+position = Vector2( 175.387, 346.887 )
 
 [node name="Water2" parent="." instance=ExtResource( 18 )]
-position = Vector2( 333.667, 383.888 )
+position = Vector2( 335.081, 331.562 )
 
 [node name="Water3" parent="." instance=ExtResource( 18 )]
-position = Vector2( 364.622, 383.888 )
+position = Vector2( 367.45, 330.148 )
 
 [node name="Water5" parent="." instance=ExtResource( 18 )]
 position = Vector2( 525.564, 384.703 )
 
 [node name="Water4" parent="." instance=ExtResource( 18 )]
-position = Vector2( 395.664, 383.923 )
+position = Vector2( 397.078, 331.597 )
 scale = Vector2( 1.12, 1 )
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 71.8915, 346.912 )
+position = Vector2( 78.9626, 298.829 )
 
 [editable path="diamonds/diamond10"]
 

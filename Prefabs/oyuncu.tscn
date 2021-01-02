@@ -80,7 +80,7 @@ limit_bottom = 420
 limit_smoothed = true
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 11.203, 0 )
+position = Vector2( 14.9153, -6.71752 )
 __meta__ = {
 "_gizmo_extents_": 3.0
 }
