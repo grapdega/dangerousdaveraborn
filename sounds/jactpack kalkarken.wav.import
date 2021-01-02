@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/jactpack kalkarken.wav-186c07234620ea6bd459ac121dfe0ad3.sample"
+
+[deps]
+
+source_file="res://sounds/jactpack kalkarken.wav"
+dest_files=[ "res://.import/jactpack kalkarken.wav-186c07234620ea6bd459ac121dfe0ad3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

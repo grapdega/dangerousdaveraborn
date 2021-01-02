@@ -1,14 +1,15 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://item/diamond/diamond_red.png" type="Texture" id=2]
-[ext_resource path="res://item/diamond/bubble.png" type="Texture" id=3]
-[ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=4]
-[ext_resource path="res://object/diamond.tscn" type="PackedScene" id=5]
-[ext_resource path="res://object/tuple.tscn" type="PackedScene" id=6]
-[ext_resource path="res://object/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://object/StatusBar.tscn" type="PackedScene" id=9]
-[ext_resource path="res://object/Cup.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Images/diamond/diamond_red.png" type="Texture" id=2]
+[ext_resource path="res://Images/diamond/bubble.png" type="Texture" id=3]
+[ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/tuple.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/StatusBar.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=10]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/yuvarlakelmas.wav-76676c681be95fd6c025b61e837e352c.sample"
+
+[deps]
+
+source_file="res://sounds/yuvarlakelmas.wav"
+dest_files=[ "res://.import/yuvarlakelmas.wav-76676c681be95fd6c025b61e837e352c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

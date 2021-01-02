@@ -1,0 +1,61 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Images/intro/dangerousdave4.png" type="Texture" id=1]
+[ext_resource path="res://Images/intro/dangerousdave2.png" type="Texture" id=2]
+[ext_resource path="res://Images/tileset/black.png" type="Texture" id=3]
+[ext_resource path="res://Images/intro/dangerousdave3.png" type="Texture" id=4]
+[ext_resource path="res://Images/intro/dangerousdave1.png" type="Texture" id=5]
+[ext_resource path="res://Prefabs/Fire2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=8]
+[ext_resource path="res://Images/Text/pressf1.png" type="Texture" id=9]
+[ext_resource path="res://Script/StartScreen/StartScreen.gd" type="Script" id=10]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "dave",
+"speed": 5.0
+} ]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource( 10 )
+
+[node name="Black" type="Sprite" parent="."]
+position = Vector2( 319.39, 213.557 )
+scale = Vector2( 20.9619, 14.3473 )
+z_index = -998
+texture = ExtResource( 3 )
+
+[node name="Black2" type="Sprite" parent="."]
+position = Vector2( 317, 392 )
+scale = Vector2( 20.1875, 3.5 )
+z_index = 1
+texture = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 314.702, 56.7523 )
+scale = Vector2( 1.95795, 1.97978 )
+frames = SubResource( 1 )
+animation = "dave"
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( 262149, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 262154, 1, 0, 262156, 1, 0, 262158, 1, 0, 327685, 1, 0, 327687, 1, 0, 327694, 1, 0, 393221, 1, 0, 393223, 1, 0, 393226, 1, 0, 393227, 1, 0, 393228, 1, 0, 393230, 1, 0, 458757, 1, 0, 458759, 1, 0, 458766, 1, 0, 524293, 1, 0, 524295, 1, 0, 524297, 1, 0, 524298, 1, 0, 524299, 1, 0, 524302, 1, 0, 589829, 1, 0, 589838, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655374, 1, 0 )
+
+[node name="Fire" parent="TileMap" instance=ExtResource( 6 )]
+position = Vector2( 272.107, 271.733 )
+
+[node name="diamond" parent="." instance=ExtResource( 7 )]
+position = Vector2( 272.949, 176.377 )
+
+[node name="diamond2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 431.731, 241.27 )
+
+[node name="PressF1" type="Sprite" parent="."]
+position = Vector2( 322.3, 355.062 )
+z_index = 1
+texture = ExtResource( 9 )

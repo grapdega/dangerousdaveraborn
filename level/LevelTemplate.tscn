@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://item/tileset/tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://object/oyuncu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=2]
+
 
 [node name="LevelTemplate" type="Node2D"]
 __meta__ = {
