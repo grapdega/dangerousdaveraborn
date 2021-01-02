@@ -20,7 +20,7 @@
 [ext_resource path="res://sounds/jactpack ucarken.wav" type="AudioStream" id=18]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8.61276, 15.8417 )
+extents = Vector2( 8.61276, 13.7203 )
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -39,11 +39,6 @@ animations = [ {
 "name": "climb",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "jetpack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "walk",
@@ -53,11 +48,16 @@ animations = [ {
 "loop": true,
 "name": "jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "jetpack",
+"speed": 5.0
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 4 )
-height = 17
+height = 20
 
 [node name="Area2D" type="Area2D" parent="."]
 
@@ -86,7 +86,7 @@ __meta__ = {
 }
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 300.0
 
 [node name="WalkSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 14 )

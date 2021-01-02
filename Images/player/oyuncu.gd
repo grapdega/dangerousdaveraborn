@@ -118,6 +118,8 @@ func climb(delta):
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("tree"):
 		inTree = true
+	if globals.godmode:
+		return
 	if area.is_in_group("hit"):
 		globals.healt -= 1
 		if globals.healt == 0:

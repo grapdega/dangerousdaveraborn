@@ -9,3 +9,4 @@ var hasJetpack = false
 var hasGun = false
 var jetpackIsActive = false
 var monsterIsDead = false
+var godmode = false

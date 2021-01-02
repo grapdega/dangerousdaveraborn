@@ -40,10 +40,6 @@ __meta__ = {
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 56, 120 )
-gravity = 3
-
-[node name="Camera2D" parent="KinematicBody2D" index="3"]
-limit_right = 2540
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 9, 0 )
@@ -367,5 +363,3 @@ position = Vector2( 1560.64, 367.994 )
 position = Vector2( 1590.57, 367.994 )
 [connection signal="body_entered" from="Firildak/PathFollow2D/Monster/PlayerDetect" to="Firildak/PathFollow2D/Monster" method="_on_PlayerDetect_body_entered"]
 [connection signal="body_exited" from="Firildak/PathFollow2D/Monster/PlayerDetect" to="Firildak/PathFollow2D/Monster" method="_on_PlayerDetect_body_exited"]
-
-[editable path="KinematicBody2D"]
