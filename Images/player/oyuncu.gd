@@ -20,6 +20,7 @@ func _ready():
 	$Camera2D.limit_right=rightlimit
 
 func _physics_process(delta):
+	$Camera2D.global_position.x=640*(int((global_position.x)/640))
 	if isLife:
 		velocity = move_and_slide(velocity)
 		if Input.is_action_just_pressed("jetpack") and globals.hasJetpack:
@@ -35,7 +36,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("fire") and globals.hasGun and canFire:
 			var bullet = BULLET.instance()
 			get_parent().add_child(bullet)
-			bullet.position = get_node("Position2D").global_position
+			bullet.position = Vector2(global_position.x + (globals.playerDirection*21),global_position.y)
 			canFire = false
 			$Timer.start()
 		velocity = move_and_slide(velocity)
@@ -58,9 +59,11 @@ func jetpack_move(delta):
 		animation.play("jetpack")
 	elif Input.is_action_pressed("left"):
 		velocity.x=-speed*delta*runspeed
+		globals.playerDirection=-1
 		animation.play("jetpack")
 		animation.flip_h=true
 	elif Input.is_action_pressed("right"):
+		globals.playerDirection=1
 		velocity.x=+speed*delta*runspeed
 		animation.play("jetpack")
 		animation.flip_h=false
@@ -79,12 +82,14 @@ func move(delta):
 	if Input.is_action_pressed("left"):
 		if not $WalkSound.playing:
 			$WalkSound.play()
+		globals.playerDirection=-1
 		velocity.x=-speed*delta*runspeed
 		animation.flip_h=true
 		animation.play("walk")
 	elif Input.is_action_pressed("right"):
 		if not $WalkSound.playing:
 			$WalkSound.play()
+		globals.playerDirection=1
 		velocity.x=+speed*delta*runspeed
 		animation.flip_h=false
 		animation.play("walk")
@@ -106,9 +111,11 @@ func climb(delta):
 		if !is_on_floor():animation.play("climb")
 	elif Input.is_action_pressed("left"):
 		velocity.x=-speed*delta*runspeed
+		globals.playerDirection=-1
 		if !is_on_floor():animation.play("climb")
 	elif Input.is_action_pressed("right"):
 		velocity.x=+speed*delta*runspeed
+		globals.playerDirection=1
 		if !is_on_floor():animation.play("climb")
 	else:
 		velocity.y = 0

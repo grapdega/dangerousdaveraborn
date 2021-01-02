@@ -10,3 +10,4 @@ var hasGun = false
 var jetpackIsActive = false
 var monsterIsDead = false
 var godmode = false
+var playerDirection = 1
