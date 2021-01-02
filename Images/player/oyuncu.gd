@@ -22,6 +22,9 @@ func _ready():
 func _physics_process(delta):
 	$Camera2D.global_position.x=640*(int((global_position.x)/640))
 	if isLife:
+		if Input.is_action_just_pressed("godmode"):
+			globals.godmode=true
+			globals.healt=-1
 		velocity = move_and_slide(velocity)
 		if Input.is_action_just_pressed("jetpack") and globals.hasJetpack:
 			$JetpackSound1.play()
