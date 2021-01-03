@@ -203,7 +203,7 @@ position = Vector2( -1650, 990 )
 scale = Vector2( 1, 1 )
 
 [node name="diamond11" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 990, 2895 )
+position = Vector2( 990, 2925 )
 scale = Vector2( 1, 1 )
 
 [node name="Korona" parent="." instance=ExtResource( 14 )]
@@ -389,52 +389,46 @@ position = Vector2( 3017, 79 )
 scale = Vector2( 0.1, 0.0861 )
 
 [node name="Fire" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2090, 346 )
+position = Vector2( 2087.17, 327.515 )
 
 [node name="Fire2" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2120, 346 )
+position = Vector2( 2117.17, 327.515 )
 
 [node name="Fire3" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2150, 346.413 )
+position = Vector2( 2147.17, 327.928 )
 
 [node name="Fire4" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2180, 346.413 )
+position = Vector2( 2177.17, 327.928 )
 
 [node name="Fire5" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2208, 346.413 )
+position = Vector2( 2205.17, 327.928 )
 
 [node name="Fire6" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2238, 346.413 )
+position = Vector2( 2235.17, 327.928 )
 
 [node name="Fire7" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2268, 346.826 )
+position = Vector2( 2265.17, 328.341 )
 
 [node name="Fire8" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2298, 346.826 )
+position = Vector2( 2295.17, 328.341 )
 
 [node name="Fire9" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2328, 346.826 )
+position = Vector2( 2325.17, 328.341 )
 
 [node name="Fire10" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2358, 346.826 )
+position = Vector2( 2355.17, 328.341 )
 
 [node name="Fire11" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2388, 347.24 )
+position = Vector2( 2385.17, 328.755 )
 
 [node name="Fire12" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2418, 347.24 )
+position = Vector2( 2415.17, 328.755 )
 
 [node name="Fire13" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2446, 347.24 )
+position = Vector2( 2443.17, 328.755 )
 
 [node name="Fire14" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2476, 347.24 )
-
-[node name="Fire15" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2506, 347.653 )
-
-[node name="Fire16" parent="." instance=ExtResource( 20 )]
-position = Vector2( 2536, 347.653 )
+position = Vector2( 2475.17, 328.755 )
 
 [node name="diamond Red" parent="." instance=ExtResource( 19 )]
 position = Vector2( 3499, 80 )

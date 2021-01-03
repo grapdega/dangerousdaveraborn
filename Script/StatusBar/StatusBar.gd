@@ -15,6 +15,12 @@ var nums = {
 	"9": preload("res://Images/number/num9.png")
 }
 
+func _ready():
+	if globals.godmode:
+		globals.hasJetpack=true
+		globals.hasGun=true
+		globals.player_has_class=true
+
 var numArr = []
 var levelArr = []
 func _process(_delta):
@@ -64,7 +70,8 @@ func _process(_delta):
 	else: $GunNode.visible = false
 	
 	if globals.jetpackIsActive:
-		$JetpackNode/JetpackCount.value -= 1
+		if false == globals.godmode:
+			$JetpackNode/JetpackCount.value -= 1
 		if $JetpackNode/JetpackCount.value == 0:
 			globals.jetpackIsActive= false
 			globals.hasJetpack = false

@@ -14,17 +14,23 @@ var inTree = false
 onready var animation = $Sprite
 onready var globals = get_node("/root/Globals")
 const BULLET = preload("res://Prefabs/Bullet.tscn")
+var paused=false
 
 func _ready():
 	self.add_to_group("player")
 	$Camera2D.limit_right=rightlimit
 
 func _physics_process(delta):
+	if paused:
+		return
 	$Camera2D.global_position.x=640*(int((global_position.x)/640))
 	if isLife:
 		if Input.is_action_just_pressed("godmode"):
 			globals.godmode=true
 			globals.healt=-1
+			globals.hasGun=true
+			globals.hasJetpack=true
+			globals.player_has_class=true
 		velocity = move_and_slide(velocity)
 		if Input.is_action_just_pressed("jetpack") and globals.hasJetpack:
 			$JetpackSound1.play()
@@ -40,8 +46,9 @@ func _physics_process(delta):
 			var bullet = BULLET.instance()
 			get_parent().add_child(bullet)
 			bullet.position = Vector2(global_position.x + (globals.playerDirection*21),global_position.y)
-			canFire = false
-			$Timer.start()
+			if false == globals.godmode:
+				canFire = false
+				$Timer.start()
 		velocity = move_and_slide(velocity)
 		if self.global_position.y > 360:
 			self.global_position.y = -40
@@ -132,6 +139,12 @@ func _on_Area2D_area_entered(area):
 		return
 	if area.is_in_group("hit"):
 		globals.healt -= 1
+		paused=true
+		var i=0
+		while i<20:
+			animation.play("dead")
+			yield(animation,"animation_finished")
+			i=i+1
 		if globals.healt == 0:
 			isLife = false
 		else:
@@ -143,12 +156,6 @@ func _on_Area2D_area_exited(area):
 
 func _on_Timer_timeout():
 	canFire = true
-
-func _on_Sprite_animation_finished():
-	if animation.get_animation() == "dead":
-		queue_free()
-		get_tree().change_scene("res://Prefabs/StartScreen.tscn")
-
 
 func _on_JumpSound_finished():
 	$FallSound.play()

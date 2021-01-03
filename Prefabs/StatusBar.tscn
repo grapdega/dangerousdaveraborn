@@ -15,7 +15,6 @@
 [ext_resource path="res://Images/Text/thin.png" type="Texture" id=13]
 [ext_resource path="res://Images/number/num0.png" type="Texture" id=14]
 
-
 [node name="StatusBar" type="CanvasLayer"]
 script = ExtResource( 2 )
 
