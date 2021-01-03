@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -18,7 +18,7 @@
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Jetpack.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=18]
-
+[ext_resource path="res://Prefabs/yildiz.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -181,9 +181,11 @@ position = Vector2( 44.9027, 302.364 )
 [node name="monster" type="Node" parent="."]
 
 [node name="Yuvarlak pic2" parent="monster" instance=ExtResource( 15 )]
+visible = false
 position = Vector2( 1312, 250 )
 
 [node name="Yuvarlak pic3" parent="monster" instance=ExtResource( 15 )]
+visible = false
 position = Vector2( 1920, 82.0925 )
 
 [node name="Yuvarlak pic4" parent="monster" instance=ExtResource( 15 )]
@@ -226,7 +228,7 @@ position = Vector2( 2832, 112 )
 position = Vector2( 2832, 144 )
 
 [node name="diamond39" parent="gold" instance=ExtResource( 6 )]
-position = Vector2( 2832, 176 )
+position = Vector2( 2832, 178 )
 
 [node name="diamond40" parent="gold" instance=ExtResource( 6 )]
 position = Vector2( 2896, 82.0925 )
@@ -291,9 +293,6 @@ position = Vector2( 1456, 304.864 )
 [node name="diamond24" parent="gold" instance=ExtResource( 6 )]
 position = Vector2( 592, 304 )
 
-[node name="diamond" parent="gold" instance=ExtResource( 4 )]
-position = Vector2( 236.934, 82.0925 )
-
 [node name="diamond3" parent="gold" instance=ExtResource( 4 )]
 position = Vector2( 504, 144 )
 
@@ -327,6 +326,9 @@ position = Vector2( 2256, 80 )
 [node name="diamond9" parent="gold" instance=ExtResource( 4 )]
 position = Vector2( 2224, 184 )
 
+[node name="diamond14" parent="gold" instance=ExtResource( 4 )]
+position = Vector2( 1874.61, 209.697 )
+
 [node name="diamond10" parent="gold" instance=ExtResource( 4 )]
 position = Vector2( 2256, 248 )
 
@@ -339,15 +341,11 @@ position = Vector2( 2440, 80 )
 [node name="diamond13" parent="gold" instance=ExtResource( 4 )]
 position = Vector2( 2504, 80 )
 
-[node name="ring" parent="gold" instance=ExtResource( 14 )]
-
 [node name="ring2" parent="gold" instance=ExtResource( 14 )]
 position = Vector2( 2864, 80.7577 )
 
 [node name="AnimationPlayer" parent="gold/ring2" index="2"]
 anims/fade_out = SubResource( 5 )
-
-[node name="red" parent="gold" instance=ExtResource( 12 )]
 
 [node name="red2" parent="gold" instance=ExtResource( 12 )]
 position = Vector2( 1456, 176 )
@@ -373,10 +371,11 @@ position = Vector2( 1776, 82.0925 )
 [node name="AnimationPlayer" parent="gold/King4" index="2"]
 anims/fade_out = SubResource( 7 )
 
-[node name="lolipop" parent="gold" instance=ExtResource( 10 )]
-
 [node name="lolipop2" parent="gold" instance=ExtResource( 10 )]
 position = Vector2( 688, 144 )
+
+[node name="lolipop4" parent="gold" instance=ExtResource( 10 )]
+position = Vector2( 654, 144 )
 
 [node name="lolipop3" parent="gold" instance=ExtResource( 10 )]
 position = Vector2( 2928, 79.9981 )
@@ -433,9 +432,7 @@ position = Vector2( 496, 80 )
 
 [node name="star" type="Node" parent="."]
 
-[node name="yildiz" type="Sprite" parent="star"]
-position = Vector2( 408, 112 )
-texture = ExtResource( 9 )
+[node name="yildiz" parent="star" instance=ExtResource( 19 )]
 
 [node name="yildiz2" type="Sprite" parent="star"]
 position = Vector2( 448, 152 )
@@ -580,6 +577,17 @@ position = Vector2( 3054.81, 336 )
 position = Vector2( 3086.44, 336 )
 scale = Vector2( 1.08, 1 )
 
+[node name="Red" type="Node" parent="."]
+
+[node name="red" parent="Red" instance=ExtResource( 12 )]
+position = Vector2( 46.6164, 86.3462 )
+
+[node name="red2" parent="Red" instance=ExtResource( 12 )]
+position = Vector2( 241.062, 87.7576 )
+
+[node name="ring" parent="Red" instance=ExtResource( 14 )]
+position = Vector2( 1808.6, 240.457 )
+
 [editable path="gold/diamond4"]
 
 [editable path="gold/diamond5"]
@@ -587,8 +595,6 @@ scale = Vector2( 1.08, 1 )
 [editable path="gold/diamond6"]
 
 [editable path="gold/diamond7"]
-
-[editable path="gold/ring"]
 
 [editable path="gold/ring2"]
 

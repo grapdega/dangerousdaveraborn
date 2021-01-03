@@ -24,7 +24,6 @@ tracks/0/keys = {
 }
 
 [node name="lolipop" type="Area2D"]
-position = Vector2( 656, 144 )
 scale = Vector2( 0.1, 0.1 )
 z_index = -998
 script = ExtResource( 2 )
