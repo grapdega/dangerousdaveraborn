@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -18,6 +18,8 @@
 [ext_resource path="res://Prefabs/gold/red.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/gold/ring.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/gold/King.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/gold/Diamond Bubble.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=20]
 
 [node name="testlevel" type="Node2D"]
 __meta__ = {
@@ -143,6 +145,30 @@ position = Vector2( 720, 240 )
 
 [node name="diamond8" parent="Gold2" instance=ExtResource( 9 )]
 position = Vector2( 1712, 176 )
+
+[node name="diamond15" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2864.55, 207.545 )
+
+[node name="diamond16" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2896.55, 207.545 )
+
+[node name="diamond17" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2928.55, 207.545 )
+
+[node name="diamond18" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2960.55, 207.545 )
+
+[node name="diamond19" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2864.55, 238.545 )
+
+[node name="diamond20" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2896.55, 238.545 )
+
+[node name="diamond21" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2928.55, 238.545 )
+
+[node name="diamond22" parent="Gold2" instance=ExtResource( 9 )]
+position = Vector2( 2960.55, 238.545 )
 
 [node name="diamond9" parent="Gold2" instance=ExtResource( 9 )]
 position = Vector2( 1712, 80 )
@@ -308,6 +334,63 @@ position = Vector2( 1069.18, 337.41 )
 
 [node name="Red" type="Node" parent="."]
 
+[node name="Diamond Bubble" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 107.943 )
+
+[node name="Diamond Bubble2" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 129.943 )
+
+[node name="Diamond Bubble3" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 151.943 )
+
+[node name="Diamond Bubble9" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 2896.73, 143.249 )
+
+[node name="Diamond Bubble10" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 2928.27, 143.807 )
+
+[node name="Diamond Bubble11" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 2959.24, 143.943 )
+
+[node name="Diamond Bubble4" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 173.943 )
+
+[node name="Diamond Bubble5" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 195.943 )
+
+[node name="Diamond Bubble6" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 217.943 )
+
+[node name="Diamond Bubble7" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 239.943 )
+
+[node name="Diamond Bubble8" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3019.24, 261.943 )
+
+[node name="Diamond Bubble12" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 108.777 )
+
+[node name="Diamond Bubble13" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 130.777 )
+
+[node name="Diamond Bubble14" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 152.777 )
+
+[node name="Diamond Bubble15" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 174.777 )
+
+[node name="Diamond Bubble16" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 196.777 )
+
+[node name="Diamond Bubble17" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 218.777 )
+
+[node name="Diamond Bubble18" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 240.777 )
+
+[node name="Diamond Bubble19" parent="Red" instance=ExtResource( 19 )]
+position = Vector2( 3073.47, 262.777 )
+
 [node name="red" parent="Red" instance=ExtResource( 16 )]
 position = Vector2( 1165.28, 181.329 )
 
@@ -326,11 +409,101 @@ position = Vector2( 1453.98, 85.0211 )
 [node name="red6" parent="Red" instance=ExtResource( 16 )]
 position = Vector2( 1488.94, 85.0211 )
 
+[node name="red7" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2672.86, 162.462 )
+
+[node name="red8" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2639.44, 162.462 )
+
+[node name="red9" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2672.86, 190 )
+
+[node name="red10" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2639.44, 190 )
+
+[node name="red11" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2672.86, 216 )
+
+[node name="red12" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2639.44, 216 )
+
+[node name="red13" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2672.86, 243.538 )
+
+[node name="red14" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2639.44, 243.538 )
+
+[node name="red15" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2672.86, 271 )
+
+[node name="red16" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 2639.44, 271 )
+
+[node name="red17" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 108.777 )
+
+[node name="red18" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 130.315 )
+
+[node name="red19" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 152.315 )
+
+[node name="red20" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 173.853 )
+
+[node name="red21" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 195.315 )
+
+[node name="red22" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 216.363 )
+
+[node name="red23" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 237.9 )
+
+[node name="red24" parent="Red" instance=ExtResource( 16 )]
+position = Vector2( 3046.23, 259.363 )
+
 [node name="ring" parent="Red" instance=ExtResource( 17 )]
 position = Vector2( 1550.69, 246 )
 
+[node name="ring2" parent="Red" instance=ExtResource( 17 )]
+position = Vector2( 2735.09, 242.363 )
+
+[node name="ring3" parent="Red" instance=ExtResource( 17 )]
+position = Vector2( 2735.09, 215.363 )
+
+[node name="ring4" parent="Red" instance=ExtResource( 17 )]
+position = Vector2( 2765.09, 215.363 )
+
+[node name="ring5" parent="Red" instance=ExtResource( 17 )]
+position = Vector2( 2795.09, 215.363 )
+
 [node name="Cup" parent="Red" instance=ExtResource( 15 )]
 position = Vector2( 1545.08, 156.165 )
+
+[node name="King" parent="Red" instance=ExtResource( 18 )]
+position = Vector2( 2735.56, 179.23 )
+
+[node name="King2" parent="Red" instance=ExtResource( 18 )]
+position = Vector2( 2767.56, 179.23 )
+
+[node name="King3" parent="Red" instance=ExtResource( 18 )]
+position = Vector2( 2799.56, 179.23 )
+
+[node name="King4" parent="Red" instance=ExtResource( 18 )]
+position = Vector2( 2864.56, 179.23 )
+
+[node name="King5" parent="Red" instance=ExtResource( 18 )]
+position = Vector2( 2896.56, 179.23 )
+
+[node name="King6" parent="Red" instance=ExtResource( 18 )]
+position = Vector2( 2928.56, 179.23 )
+
+[node name="King7" parent="Red" instance=ExtResource( 18 )]
+position = Vector2( 2960.56, 179.23 )
+
+[node name="Gun" parent="." instance=ExtResource( 20 )]
+position = Vector2( 2771.5, 244 )
 
 [editable path="KinematicBody2D"]
 
