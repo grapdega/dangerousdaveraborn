@@ -5,29 +5,46 @@
 [ext_resource path="res://Images/tile/tile130.png" type="Texture" id=3]
 [ext_resource path="res://Images/tile/tile129.png" type="Texture" id=4]
 [ext_resource path="res://Images/tile/tile132.png" type="Texture" id=5]
-[ext_resource path="res://Images/enemies/conevir.png" type="Texture" id=6]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20.9285, 13.1216 )
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 27.1737, 15.1417 )
-
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 299.135, 141.345 )
-
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="SpriteFrames" id=5]
 animations = [ {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "dead",
-"speed": 100.0
+"speed": 7.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "dummy",
+"speed": 5.0
 } ]
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 10.8954
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 14.9083
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array(  )
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "rotate"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
 
 [node name="Monster" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -35,32 +52,24 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="hit" type="Area2D" parent="." groups=[
-"hit",
-]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hit"]
-shape = SubResource( 1 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+animation = "dummy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
-
-[node name="Position2D" type="Position2D" parent="."]
-position = Vector2( -45.5868, -0.0160704 )
-__meta__ = {
-"_gizmo_extents_": 5.0
-}
+shape = SubResource( 6 )
 
 [node name="PlayerDetect" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetect"]
-position = Vector2( -126.134, -1.68179 )
 shape = SubResource( 3 )
 
-[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 4 )
-animation = "dead"
+[node name="Sprite" type="Sprite" parent="."]
+rotation = 6.28319
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/rotate = SubResource( 7 )
 [connection signal="body_entered" from="PlayerDetect" to="." method="_on_PlayerDetect_body_entered"]
-[connection signal="body_exited" from="PlayerDetect" to="." method="_on_PlayerDetect_body_exited"]

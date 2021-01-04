@@ -6,6 +6,7 @@ var initpos=0
 var direction=1
 
 func _ready():
+	add_to_group("bullet")
 	direction=Globals.playerDirection
 	if direction == -1:
 		rotate(PI)
@@ -20,6 +21,6 @@ func _process(delta):
 
 
 func _on_Bullet_body_entered(body):
-	if body.is_in_group("monster"):
+	if body.name == "Monster":
 		body.dead()
 	queue_free()

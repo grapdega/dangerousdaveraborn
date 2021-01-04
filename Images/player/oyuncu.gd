@@ -135,20 +135,23 @@ func climb(delta):
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("tree"):
 		inTree = true
+	if area.is_in_group("hit"):
+		dead()
+	
+func dead():
 	if globals.godmode:
 		return
-	if area.is_in_group("hit"):
-		globals.healt -= 1
-		paused=true
-		var i=0
-		while i<20:
-			animation.play("dead")
-			yield(animation,"animation_finished")
-			i=i+1
-		if globals.healt == 0:
-			isLife = false
-		else:
-			get_tree().reload_current_scene()
+	globals.healt -= 1
+	paused=true
+	var i=0
+	while i<20:
+		animation.play("dead")
+		yield(animation,"animation_finished")
+		i=i+1
+	if globals.healt == 0:
+		isLife = false
+	else:
+		get_tree().reload_current_scene()
 
 func _on_Area2D_area_exited(area):
 	if area.is_in_group("tree"):

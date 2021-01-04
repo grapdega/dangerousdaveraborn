@@ -2,6 +2,8 @@
 
 [ext_resource path="res://Images/object-images/yildiz.png" type="Texture" id=1]
 
-[node name="yildiz" type="Sprite"]
+[node name="yildiz" type="Sprite" groups=[
+"tree",
+]]
 position = Vector2( 408, 112 )
 texture = ExtResource( 1 )

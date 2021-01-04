@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Images/tree.png" type="Texture" id=1]
 
-
 [node name="Tree" type="Area2D" groups=[
 "tree",
 ]]
