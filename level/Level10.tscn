@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://Prefabs/gold/red.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/gold/King.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/gold/ring.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Prefabs/Monster/9-yuvarlak.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Jetpack.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=18]
@@ -177,20 +176,6 @@ texture = ExtResource( 3 )
 position = Vector2( 44.9027, 302.364 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 7 )]
-
-[node name="monster" type="Node" parent="."]
-
-[node name="Yuvarlak pic2" parent="monster" instance=ExtResource( 15 )]
-visible = false
-position = Vector2( 1312, 250 )
-
-[node name="Yuvarlak pic3" parent="monster" instance=ExtResource( 15 )]
-visible = false
-position = Vector2( 1920, 82.0925 )
-
-[node name="Yuvarlak pic4" parent="monster" instance=ExtResource( 15 )]
-visible = false
-position = Vector2( 2622.5, 154 )
 
 [node name="gold" type="Node" parent="."]
 
@@ -473,37 +458,37 @@ texture = ExtResource( 9 )
 [node name="Fire" type="Node" parent="."]
 
 [node name="Fire" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 784, 352 )
+position = Vector2( 784, 335 )
 
 [node name="Fire2" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 816, 352 )
+position = Vector2( 816, 335 )
 
 [node name="Fire3" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 848, 352 )
+position = Vector2( 848, 335 )
 
 [node name="Fire11" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 2320, 352.5 )
+position = Vector2( 2320, 339.5 )
 
 [node name="Fire12" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 2448, 352 )
+position = Vector2( 2448, 339 )
 
 [node name="Fire13" parent="Fire" instance=ExtResource( 11 )]
 position = Vector2( 2320, 176 )
 
 [node name="Fire14" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 2544, 350.06 )
+position = Vector2( 2544, 337.06 )
 
 [node name="Fire15" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 2640, 352 )
+position = Vector2( 2640, 339 )
 
 [node name="Fire16" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 2736, 352.5 )
+position = Vector2( 2736, 339.5 )
 
 [node name="Fire4" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 880, 352 )
+position = Vector2( 880, 335 )
 
 [node name="Fire5" parent="Fire" instance=ExtResource( 11 )]
-position = Vector2( 912, 352 )
+position = Vector2( 912, 335 )
 
 [node name="Fire6" parent="Fire" instance=ExtResource( 11 )]
 position = Vector2( 1616, 272 )

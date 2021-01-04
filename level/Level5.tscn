@@ -1,6 +1,5 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Prefabs/enemies/Korona2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/tuple.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=4]
@@ -12,9 +11,6 @@
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/enemies/Korona4.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Prefabs/enemies/Korona.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Prefabs/enemies/Korona3.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/gold/Diamond Bubble.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Images/object-images/yildiz.png" type="Texture" id=18]
@@ -125,10 +121,6 @@ texture = ExtResource( 18 )
 position = Vector2( 1504, 64 )
 texture = ExtResource( 18 )
 
-[node name="yildiz24" type="Sprite" parent="yildiz"]
-position = Vector2( 1696, 96 )
-texture = ExtResource( 18 )
-
 [node name="yildiz26" type="Sprite" parent="yildiz"]
 position = Vector2( 1792, 64 )
 texture = ExtResource( 18 )
@@ -205,18 +197,6 @@ scale = Vector2( 1, 1 )
 [node name="diamond11" parent="diamonds" instance=ExtResource( 12 )]
 position = Vector2( 990, 2925 )
 scale = Vector2( 1, 1 )
-
-[node name="Korona" parent="." instance=ExtResource( 14 )]
-
-[node name="Korona3" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1976, 184 )
-
-[node name="Korona4" parent="." instance=ExtResource( 13 )]
-position = Vector2( 3661.98, 216 )
-scale = Vector2( 0.990824, 1 )
-
-[node name="Korona2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 672, 168 )
 
 [node name="Fires" type="Node2D" parent="."]
 

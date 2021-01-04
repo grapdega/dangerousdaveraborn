@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Prefabs/StatusBar.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=2]
@@ -10,13 +10,8 @@
 [ext_resource path="res://Prefabs/Jetpack.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/enemies/Firildak4.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/enemies/Firildak3.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/enemies/Firildak2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Prefabs/enemies/Firildak.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/gold/Diamond Bubble.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Prefabs/Firildak6.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/gold/ring.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Animation" id=1]
@@ -155,27 +150,6 @@ position = Vector2( 1302.44, 304.742 )
 [node name="Jetpack" parent="." instance=ExtResource( 8 )]
 position = Vector2( 204.621, 285.742 )
 
-[node name="Firildak" parent="." instance=ExtResource( 14 )]
-position = Vector2( 535.368, 273.373 )
-
-[node name="PathFollow2D" parent="Firildak" index="0"]
-position = Vector2( 80, 27.3702 )
-
-[node name="Firildak2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1145.44, 265.742 )
-
-[node name="Firildak3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 1544.47, 72.0879 )
-
-[node name="PathFollow2D" parent="Firildak3" index="0"]
-position = Vector2( 80.0001, 26 )
-
-[node name="Firildak5" parent="." instance=ExtResource( 17 )]
-visible = false
-
-[node name="Firildak4" parent="." instance=ExtResource( 11 )]
-visible = false
-
 [node name="Waters" type="Node2D" parent="."]
 
 [node name="Water" parent="Waters" instance=ExtResource( 15 )]
@@ -297,13 +271,3 @@ position = Vector2( 1607.12, 83.0244 )
 position = Vector2( 1216.18, 78.2568 )
 
 [editable path="diamonds/diamond10"]
-
-[editable path="Firildak"]
-
-[editable path="Firildak2"]
-
-[editable path="Firildak3"]
-
-[editable path="Firildak5"]
-
-[editable path="Firildak4"]

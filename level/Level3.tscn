@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -8,17 +8,10 @@
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/Jetpack.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Monster.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Images/tileset/wall.png" type="Texture" id=11]
 [ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Fire2.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Script/path/Path2D.gd" type="Script" id=14]
-
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PoolVector2Array( -0.529732, -10.0649, 0.529732, 10.0649, 0.763, 17.0308, 15.6271, 18.5406, -15.6271, -18.5406, -50.554, 29.9129, 79.7689, 1.32433, -79.7689, -1.32433, -153.307, -7.229, 13.773, -12.7136, -13.773, 12.7136, -249.307, 24.771, -0.264866, 15.3622, 0.264866, -15.3622, -313.307, 16.771, 0, 0, 0, 0, -313.307, -47.229, -9.37452, -13.8934, 9.37452, 13.8934, -1.30701, -39.229, 1.05946, -14.0379, -1.05946, 14.0379, 6.69299, -7.229, 0, 0, 0, 0, 1.29272, 13.8524, 0, 0, 0, 0, 0.763, 17.0308 )
-}
 
 [node name="Level3" type="Node2D"]
 __meta__ = {
@@ -213,38 +206,6 @@ scale = Vector2( 1, 1 )
 [node name="diamond35" parent="diamonds" instance=ExtResource( 12 )]
 position = Vector2( 9230, 990 )
 scale = Vector2( 1, 1 )
-
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 1448, 168 )
-curve = SubResource( 1 )
-script = ExtResource( 14 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 0.763, 17.0308 )
-rotate = false
-
-[node name="Monster" parent="Path2D/PathFollow2D" instance=ExtResource( 9 )]
-position = Vector2( -0.303955, 0.121201 )
-rotation = 0.0011802
-
-[node name="Path2D2" type="Path2D" parent="."]
-position = Vector2( 1816, 168 )
-curve = SubResource( 1 )
-script = ExtResource( 14 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D2"]
-position = Vector2( 0.763, 17.0308 )
-rotate = false
-
-[node name="Monster" parent="Path2D2/PathFollow2D" instance=ExtResource( 9 )]
-position = Vector2( -0.303955, 0.121201 )
-rotation = 0.0011802
 
 [node name="Fires" type="Node2D" parent="."]
 

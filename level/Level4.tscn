@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Prefabs/Fire.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Images/tileset/floor1.png" type="Texture" id=11]
 [ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/Monster2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=15]
 
@@ -107,9 +106,6 @@ position = Vector2( 2224, 112.073 )
 
 [node name="Jetpack" parent="." instance=ExtResource( 8 )]
 position = Vector2( 2194.08, 176.245 )
-
-[node name="Yuvarlak pic2" parent="." instance=ExtResource( 13 )]
-position = Vector2( 1062.21, 180.714 )
 
 [node name="Plant7" parent="." instance=ExtResource( 9 )]
 position = Vector2( 2991.81, 207.849 )
@@ -267,9 +263,6 @@ position = Vector2( 3060.38, 81.3718 )
 
 [node name="diamond42" parent="Diamonds" instance=ExtResource( 12 )]
 position = Vector2( 2991.81, 270.159 )
-
-[node name="Yuvarlak pic" parent="." instance=ExtResource( 13 )]
-position = Vector2( 2904.24, 209.592 )
 
 [node name="Gun" parent="." instance=ExtResource( 14 )]
 position = Vector2( 239.73, 81.5656 )
