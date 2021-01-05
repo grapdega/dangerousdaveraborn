@@ -24,7 +24,6 @@ tracks/0/keys = {
 }
 
 [node name="diamond Red" type="Area2D"]
-position = Vector2( 562.198, 79.916 )
 scale = Vector2( 0.1, 0.1 )
 z_index = -998
 script = ExtResource( 1 )

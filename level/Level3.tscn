@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -16,8 +16,19 @@
 [ext_resource path="res://Prefabs/gold/King.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/gold/ring.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/firezone.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Prefabs/Path/Monster-Path.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Monster.tscn" type="PackedScene" id=18]
+
+[sub_resource type="Curve2D" id=2]
+resource_local_to_scene = true
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, -836.745, 5.63522, 0, 0, 0, 0, -673.403, -37.4983, 0, 0, 0, 0, -509.354, -0.0216217, 0, 0, 0, 0, -836.745, 5.63522 )
+}
+
+[sub_resource type="Curve2D" id=1]
+resource_local_to_scene = true
+_data = {
+"points": PoolVector2Array( -31.3996, -4.83483, 31.3996, 4.83483, 501.15, 148.051, 73.215, 2.75254, -73.215, -2.75254, 506, 181.207, 0, 0, 0, 0, 175.174, 195.427, -66.468, 5.65685, 66.468, -5.65685, 269.926, 159.364, 0, 0, 0, 0, 501.15, 148.051 )
+}
 
 [node name="Level3" type="Node2D"]
 __meta__ = {
@@ -343,12 +354,25 @@ position = Vector2( 2061.27, 80.1708 )
 [node name="MonsterGrup" type="Node" parent="."]
 
 [node name="Monster" parent="MonsterGrup" instance=ExtResource( 18 )]
-position = Vector2( 1503.3, 180.165 )
+position = Vector2( 567.957, 195.655 )
 texture = "res://Images/enemies/monster1.png"
-patrol_path = NodePath("Monster-Path")
-
-[node name="Monster-Path" parent="MonsterGrup/Monster" instance=ExtResource( 17 )]
-position = Vector2( -516.771, 22.653 )
+patrol_path = NodePath("Path2D2")
 
 [node name="Area2d" parent="MonsterGrup/Monster" instance=ExtResource( 16 )]
 position = Vector2( -411.223, 1.1813 )
+
+[node name="Path2D2" type="Path2D" parent="MonsterGrup/Monster"]
+position = Vector2( 427.8, -14.8492 )
+curve = SubResource( 2 )
+
+[node name="Monster2" parent="MonsterGrup" instance=ExtResource( 18 )]
+position = Vector2( 995.756, 180.806 )
+texture = "res://Images/enemies/monster1.png"
+patrol_path = NodePath("Path2D2")
+
+[node name="Area2d" parent="MonsterGrup/Monster2" instance=ExtResource( 16 )]
+position = Vector2( -411.223, 1.1813 )
+
+[node name="Path2D2" type="Path2D" parent="MonsterGrup/Monster2"]
+position = Vector2( -591.19, -184.842 )
+curve = SubResource( 1 )
