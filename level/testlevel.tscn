@@ -78,6 +78,15 @@ is_rotate = true
 position = Vector2( -478.053, -212.596 )
 curve = SubResource( 1 )
 
+[node name="Monster2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 342.442, 311.656 )
+patrol_path = NodePath("Path2D2")
+is_rotate = true
+
+[node name="Path2D2" type="Path2D" parent="Monster2"]
+position = Vector2( -478.053, -212.596 )
+curve = SubResource( 1 )
+
 [node name="tuple" parent="." instance=ExtResource( 19 )]
 position = Vector2( 47.4119, 306.052 )
 

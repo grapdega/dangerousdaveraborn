@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://Prefabs/Fire2.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/gold/King.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/gold/ring.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/firezone.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Path/Monster-Path.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Monster.tscn" type="PackedScene" id=18]
 
 [node name="Level3" type="Node2D"]
 __meta__ = {
@@ -334,5 +337,18 @@ position = Vector2( 1728, 145.811 )
 [node name="diamond11" parent="Diamon" instance=ExtResource( 12 )]
 position = Vector2( 1853.54, 144.742 )
 
-[node name="ring" parent="." instance=ExtResource( 15 )]
+[node name="ring" parent="Diamon" instance=ExtResource( 15 )]
 position = Vector2( 2061.27, 80.1708 )
+
+[node name="MonsterGrup" type="Node" parent="."]
+
+[node name="Monster" parent="MonsterGrup" instance=ExtResource( 18 )]
+position = Vector2( 1503.3, 180.165 )
+texture = "res://Images/enemies/monster1.png"
+patrol_path = NodePath("Monster-Path")
+
+[node name="Monster-Path" parent="MonsterGrup/Monster" instance=ExtResource( 17 )]
+position = Vector2( -516.771, 22.653 )
+
+[node name="Area2d" parent="MonsterGrup/Monster" instance=ExtResource( 16 )]
+position = Vector2( -411.223, 1.1813 )
