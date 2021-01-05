@@ -21,6 +21,6 @@ func _process(delta):
 
 
 func _on_Bullet_body_entered(body):
-	if body.name == "Monster":
+	if body.is_in_group("monster"):
 		body.dead()
 	queue_free()

@@ -26,7 +26,6 @@ func _ready():
 	if animation:
 		1==1
 		animation.play("dummy")
-	self.add_to_group("monster")
 	if is_rotate:
 		$AnimationPlayer.play("rotate")
 
