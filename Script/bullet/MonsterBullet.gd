@@ -9,10 +9,10 @@ onready var globals = get_node("/root/Globals")
 func _process(delta):
 	if initpos == 0:
 		initpos = global_position.x
+	velocity.x = speed * delta * direction
+	translate(velocity)
 	if (global_position.x -initpos)*direction > 640:
 		queue_free()
-	velocity.x = -speed * delta
-	translate(velocity)
 
 func _on_MonsterBullet_body_entered(_body):
 	queue_free()

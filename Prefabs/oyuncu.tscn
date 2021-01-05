@@ -34,14 +34,14 @@ animations = [ {
 "name": "dead",
 "speed": 100.0
 }, {
-"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "climb",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "climb",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ) ],
@@ -97,6 +97,5 @@ stream = ExtResource( 17 )
 stream = ExtResource( 18 )
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
-[connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="finished" from="JumpSound" to="." method="_on_JumpSound_finished"]

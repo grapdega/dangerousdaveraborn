@@ -173,3 +173,4 @@ func is_on_floor():
 			if direction == -1:
 				return true
 		return false
+

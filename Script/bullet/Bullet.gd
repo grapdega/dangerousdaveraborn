@@ -3,7 +3,7 @@ extends Area2D
 var speed = 300
 var velocity = Vector2()
 var initpos=0
-var direction=1
+export var direction=1
 
 func _ready():
 	add_to_group("bullet")

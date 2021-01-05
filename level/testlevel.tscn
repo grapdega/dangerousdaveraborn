@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -22,10 +22,11 @@
 [ext_resource path="res://Prefabs/gold/red.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Prefabs/gold/King.tscn" type="PackedScene" id=22]
+[ext_resource path="res://Prefabs/firezone.tscn" type="PackedScene" id=23]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( -15.1361, 18.4997, 15.1361, -18.4997, 481.065, 83.2104, 51.2947, 39.5221, -51.2947, -39.5221, 506, 181.207, -40.363, -37.8403, 40.363, 37.8403, 426, 247.207, -14.2952, -68.9535, 14.2952, 68.9535, 159.842, 213.549, -4.20448, -12.6134, 4.20448, 12.6134, 386.884, 141.232, -17.6588, -8.40896, 17.6588, 8.40896, 364.18, 180.754, -14.2952, -1.68179, 14.2952, 1.68179, 417.157, 150.482, -10.0908, -7.56807, 10.0908, 7.56807, 437.338, 94.983, 0, 0, 0, 0, 481.065, 83.2104 )
+"points": PoolVector2Array( -15.1361, 18.4997, 15.1361, -18.4997, 481.065, 83.2104, 51.2947, 39.5221, -51.2947, -39.5221, 506, 181.207, 0, 0, 0, 0, 308.96, 164.525, 0, 0, 0, 0, 481.065, 83.2104 )
 }
 
 [node name="testlevel" type="Node2D"]
@@ -106,3 +107,6 @@ position = Vector2( 2726.82, 494.977 )
 
 [node name="Brick" parent="." instance=ExtResource( 10 )]
 position = Vector2( 557.582, 115.779 )
+
+[node name="Area2d2" parent="." instance=ExtResource( 23 )]
+position = Vector2( 508.535, 112.502 )
