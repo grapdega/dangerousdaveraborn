@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
+[ext_resource path="res://Prefabs/star.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/tuple.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Gun.tscn" type="PackedScene" id=4]
@@ -11,6 +12,7 @@
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Tree.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Path/Monster-Path.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/gold/Diamond Bubble.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/gold/diamond Red.tscn" type="PackedScene" id=19]
@@ -221,6 +223,10 @@ position = Vector2( 72.5202, 300.004 )
 
 [node name="Diamond Bubble" type="Node" parent="."]
 
+[node name="Diamond Bubble9" parent="Diamond Bubble" instance=ExtResource( 17 )]
+position = Vector2( 3017, 79 )
+scale = Vector2( 0.1, 0.0861 )
+
 [node name="Diamond Bubble" parent="Diamond Bubble" instance=ExtResource( 17 )]
 position = Vector2( 188.766, 196.267 )
 scale = Vector2( 0.1, 0.0861 )
@@ -253,51 +259,120 @@ scale = Vector2( 0.1, 0.0861 )
 position = Vector2( 3148, 79 )
 scale = Vector2( 0.1, 0.0861 )
 
-[node name="Diamond Bubble9" parent="Diamond Bubble" instance=ExtResource( 17 )]
-position = Vector2( 3017, 79 )
-scale = Vector2( 0.1, 0.0861 )
+[node name="diamond Red" parent="Diamond Bubble" instance=ExtResource( 19 )]
+position = Vector2( 3499, 80 )
 
-[node name="Fire" parent="." instance=ExtResource( 20 )]
+[node name="Node" type="Node" parent="."]
+
+[node name="Fire" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2087.17, 327.515 )
 
-[node name="Fire2" parent="." instance=ExtResource( 20 )]
+[node name="Fire2" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2117.17, 327.515 )
 
-[node name="Fire3" parent="." instance=ExtResource( 20 )]
+[node name="Fire3" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2147.17, 327.928 )
 
-[node name="Fire4" parent="." instance=ExtResource( 20 )]
+[node name="Fire4" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2177.17, 327.928 )
 
-[node name="Fire5" parent="." instance=ExtResource( 20 )]
+[node name="Fire5" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2205.17, 327.928 )
 
-[node name="Fire6" parent="." instance=ExtResource( 20 )]
+[node name="Fire6" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2235.17, 327.928 )
 
-[node name="Fire7" parent="." instance=ExtResource( 20 )]
+[node name="Fire7" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2265.17, 328.341 )
 
-[node name="Fire8" parent="." instance=ExtResource( 20 )]
+[node name="Fire8" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2295.17, 328.341 )
 
-[node name="Fire9" parent="." instance=ExtResource( 20 )]
+[node name="Fire9" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2325.17, 328.341 )
 
-[node name="Fire10" parent="." instance=ExtResource( 20 )]
+[node name="Fire10" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2355.17, 328.341 )
 
-[node name="Fire11" parent="." instance=ExtResource( 20 )]
+[node name="Fire11" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2385.17, 328.755 )
 
-[node name="Fire12" parent="." instance=ExtResource( 20 )]
+[node name="Fire12" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2415.17, 328.755 )
 
-[node name="Fire13" parent="." instance=ExtResource( 20 )]
+[node name="Fire13" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2443.17, 328.755 )
 
-[node name="Fire14" parent="." instance=ExtResource( 20 )]
+[node name="Fire14" parent="Node" instance=ExtResource( 20 )]
 position = Vector2( 2475.17, 328.755 )
 
-[node name="diamond Red" parent="." instance=ExtResource( 19 )]
-position = Vector2( 3499, 80 )
+[node name="Star" type="Node" parent="."]
+
+[node name="star" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 264, 64 )
+
+[node name="star2" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 296, 104 )
+
+[node name="star3" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 328, 64 )
+
+[node name="star4" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 384, 64 )
+
+[node name="star5" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 353, 104 )
+
+[node name="star7" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 496, 64 )
+
+[node name="star10" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 616, 64 )
+
+[node name="star11" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 648, 104 )
+
+[node name="star14" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 760, 104 )
+
+[node name="star15" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 792, 64 )
+
+[node name="star18" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 912, 64 )
+
+[node name="star19" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 960, 64 )
+
+[node name="star20" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 992, 104 )
+
+[node name="star22" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1080, 64 )
+
+[node name="star25" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1200, 64 )
+
+[node name="star28" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1320, 64 )
+
+[node name="star31" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1432, 64 )
+
+[node name="star34" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1552, 64 )
+
+[node name="star38" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1696, 104 )
+
+[node name="star39" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1728, 64 )
+
+[node name="star43" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 1896, 64 )
+
+[node name="star48" parent="Star" instance=ExtResource( 1 )]
+position = Vector2( 2080, 64 )
+
+[node name="Monster-Path" parent="." instance=ExtResource( 13 )]
+position = Vector2( 352, 152 )

@@ -61,7 +61,7 @@ anims/rotate = SubResource( 3 )
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Position2D" type="Position2D" parent="."]
-position = Vector2( -55, 0 )
+position = Vector2( -32, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 4 )

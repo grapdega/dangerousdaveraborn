@@ -29,7 +29,6 @@ tile_data = PoolIntArray( 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 298.477, 67.058 )
-rightlimit = 643
 
 [node name="Plant" type="Node" parent="."]
 

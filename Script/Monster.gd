@@ -19,25 +19,14 @@ func _ready():
 	if texture:
 		$Sprite.texture = load(texture)
 	add_to_group("monster")
-	if patrol_path:
-		patrol_points = get_node(patrol_path).curve.get_baked_points()
 
-	timer = get_tree().create_timer(0.0)
 	if animation:
 		1==1
 		animation.play("dummy")
 	if is_rotate:
 		$AnimationPlayer.play("rotate")
 
-func _process(_delta):
-	if !patrol_path:
-		return
-	var target = patrol_points[patrol_index]
-	if global_position.distance_to(target) < 1:
-		patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
-		target = patrol_points[patrol_index]
-	velocity = (target - global_position).normalized() * move_speed
-	velocity = move_and_slide(velocity)
+
 
 func dead():
 	if $Sprite:

@@ -8,6 +8,7 @@ radius = 17.3796
 [node name="star" type="Area2D" groups=[
 "tree",
 ]]
+z_index = -999
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
