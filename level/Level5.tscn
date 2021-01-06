@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/tuple.tscn" type="PackedScene" id=3]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/gold/Diamond Bubble.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Images/object-images/yildiz.png" type="Texture" id=18]
 [ext_resource path="res://Prefabs/gold/diamond Red.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Prefabs/Fire.tscn" type="PackedScene" id=20]
 
@@ -22,116 +21,6 @@ __meta__ = {
 "_edit_horizontal_guides_": [ 38.2655 ],
 "_edit_vertical_guides_": [ 1056.34 ]
 }
-
-[node name="yildiz" type="Node" parent="."]
-
-[node name="yildiz" type="Sprite" parent="yildiz"]
-position = Vector2( 96.5, 68 )
-texture = ExtResource( 18 )
-
-[node name="yildiz2" type="Sprite" parent="yildiz"]
-position = Vector2( 43.059, 197.833 )
-texture = ExtResource( 18 )
-
-[node name="yildiz3" type="Sprite" parent="yildiz"]
-position = Vector2( 288, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz4" type="Sprite" parent="yildiz"]
-position = Vector2( 288, 128 )
-texture = ExtResource( 18 )
-
-[node name="yildiz5" type="Sprite" parent="yildiz"]
-position = Vector2( 398, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz7" type="Sprite" parent="yildiz"]
-position = Vector2( 353, 104 )
-texture = ExtResource( 18 )
-
-[node name="yildiz6" type="Sprite" parent="yildiz"]
-position = Vector2( 452.206, 128 )
-texture = ExtResource( 18 )
-
-[node name="yildiz8" type="Sprite" parent="yildiz"]
-position = Vector2( 480, 104 )
-texture = ExtResource( 18 )
-
-[node name="yildiz9" type="Sprite" parent="yildiz"]
-position = Vector2( 576, 128 )
-texture = ExtResource( 18 )
-
-[node name="yildiz10" type="Sprite" parent="yildiz"]
-position = Vector2( 608, 96 )
-texture = ExtResource( 18 )
-
-[node name="yildiz11" type="Sprite" parent="yildiz"]
-position = Vector2( 696, 56 )
-texture = ExtResource( 18 )
-
-[node name="yildiz12" type="Sprite" parent="yildiz"]
-position = Vector2( 736, 128 )
-texture = ExtResource( 18 )
-
-[node name="yildiz13" type="Sprite" parent="yildiz"]
-position = Vector2( 768, 96 )
-texture = ExtResource( 18 )
-
-[node name="yildiz14" type="Sprite" parent="yildiz"]
-position = Vector2( 832, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz15" type="Sprite" parent="yildiz"]
-position = Vector2( 864, 128 )
-texture = ExtResource( 18 )
-
-[node name="yildiz16" type="Sprite" parent="yildiz"]
-position = Vector2( 928, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz17" type="Sprite" parent="yildiz"]
-position = Vector2( 960, 96 )
-texture = ExtResource( 18 )
-
-[node name="yildiz18" type="Sprite" parent="yildiz"]
-position = Vector2( 1024, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz19" type="Sprite" parent="yildiz"]
-position = Vector2( 1024, 96 )
-texture = ExtResource( 18 )
-
-[node name="yildiz20" type="Sprite" parent="yildiz"]
-position = Vector2( 1152, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz21" type="Sprite" parent="yildiz"]
-position = Vector2( 1248, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz22" type="Sprite" parent="yildiz"]
-position = Vector2( 1376, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz23" type="Sprite" parent="yildiz"]
-position = Vector2( 1632, 128 )
-texture = ExtResource( 18 )
-
-[node name="yildiz25" type="Sprite" parent="yildiz"]
-position = Vector2( 1504, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz26" type="Sprite" parent="yildiz"]
-position = Vector2( 1792, 64 )
-texture = ExtResource( 18 )
-
-[node name="yildiz27" type="Sprite" parent="yildiz"]
-position = Vector2( 1824, 96 )
-texture = ExtResource( 18 )
-
-[node name="yildiz28" type="Sprite" parent="yildiz"]
-position = Vector2( 1920, 64 )
-texture = ExtResource( 18 )
 
 [node name="tuple" parent="." instance=ExtResource( 3 )]
 position = Vector2( 43.059, 302.5 )

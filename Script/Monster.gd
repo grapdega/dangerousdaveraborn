@@ -33,10 +33,10 @@ func _process(_delta):
 	if !patrol_path:
 		return
 	var target = patrol_points[patrol_index]
-	if position.distance_to(target) < 1:
+	if global_position.distance_to(target) < 1:
 		patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
 		target = patrol_points[patrol_index]
-	velocity = (target - position).normalized() * move_speed
+	velocity = (target - global_position).normalized() * move_speed
 	velocity = move_and_slide(velocity)
 
 func dead():
@@ -59,7 +59,7 @@ func fire():
 		$Timer.start()
 
 func _on_PlayerDetect_body_entered(body):
-	if body.is_in_group("player"):
+	if body.is_in_group("player") :
 		body.dead()
 		dead()
 	

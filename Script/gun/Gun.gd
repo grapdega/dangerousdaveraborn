@@ -7,6 +7,7 @@ func _on_Gun_body_entered(body):
 		globals.hasGun = true
 		queue_free()
 		
+# warning-ignore:unused_argument
 func _process(delta):
 	if globals.hasGun:
 		queue_free()

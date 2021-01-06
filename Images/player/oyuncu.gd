@@ -61,28 +61,31 @@ func _physics_process(delta):
 func jetpack_move(delta):
 	if not $JetpackSound2.playing:
 		$JetpackSound2.play()
+	velocity.y = 0
+	velocity.x = 0
 	if Input.is_action_pressed("jump"):
 		velocity.y = -speed*delta*runspeed
 		animation.play("jetpack")
-	elif Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("ui_down"):
 		velocity.y = speed*delta*runspeed
 		animation.play("jetpack")
-	elif Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left"):
 		velocity.x=-speed*delta*runspeed
 		globals.playerDirection=-1
 		animation.play("jetpack")
 		animation.flip_h=true
-	elif Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right"):
 		globals.playerDirection=1
 		velocity.x=+speed*delta*runspeed
 		animation.play("jetpack")
 		animation.flip_h=false
-	else:
-		velocity.y = 0
-		velocity.x = 0
-
+		
 func move(delta):
 	velocity.y+=gravity*delta*speed
+	velocity.x=0
+	animation.play("stop")
+	$WalkSound.stop()
+	
 	if velocity.y>maxgravity:
 		velocity.y=maxgravity
 	if Input.is_action_pressed("jump") and is_on_floor():
@@ -96,41 +99,37 @@ func move(delta):
 		velocity.x=-speed*delta*runspeed
 		animation.flip_h=true
 		animation.play("walk")
-	elif Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right"):
 		if not $WalkSound.playing:
 			$WalkSound.play()
 		globals.playerDirection=1
 		velocity.x=+speed*delta*runspeed
 		animation.flip_h=false
 		animation.play("walk")
-	else:
-		velocity.x=0
-		animation.play("stop")
-		$WalkSound.stop()
-		
+	
 	if not is_on_floor():
 		animation.play("jump")
 		$WalkSound.stop()
 
 func climb(delta):
+	velocity.y = 0
+	velocity.x = 0
+	animation.stop()
 	if Input.is_action_pressed("jump"):
 		velocity.y = -speed*delta*runspeed
 		if !is_on_floor():animation.play("climb")
-	elif Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("ui_down"):
 		velocity.y = speed*delta*runspeed
 		if !is_on_floor():animation.play("climb")
-	elif Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left"):
 		velocity.x=-speed*delta*runspeed
 		globals.playerDirection=-1
 		if !is_on_floor():animation.play("climb")
-	elif Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right"):
 		velocity.x=+speed*delta*runspeed
 		globals.playerDirection=1
 		if !is_on_floor():animation.play("climb")
-	else:
-		velocity.y = 0
-		velocity.x = 0
-		animation.stop()
+
 
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("tree"):
