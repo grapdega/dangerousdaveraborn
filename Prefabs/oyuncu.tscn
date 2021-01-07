@@ -29,11 +29,6 @@ animations = [ {
 "name": "stop",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ) ],
-"loop": true,
-"name": "jetpack",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 13 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "dead",
@@ -53,11 +48,18 @@ animations = [ {
 "loop": true,
 "name": "jump",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "jetpack",
+"speed": 5.0
 } ]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 4 )
-height = 20
+gravity = 4
+maxgravity = 50
+height = 25
 
 [node name="Area2D" type="Area2D" parent="."]
 

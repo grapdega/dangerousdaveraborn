@@ -6,11 +6,6 @@ onready var animation = $AnimatedSprite
 export var texture = "res://Images/enemies/conevir.png"
 var timer
 
-export var move_speed = 100
-export (NodePath) var patrol_path
-var patrol_points
-var velocity = Vector2.ZERO
-var patrol_index = 0
 export var is_rotate = false
 
 var canFire=true
