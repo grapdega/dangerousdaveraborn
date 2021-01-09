@@ -73,14 +73,6 @@ animation = "stop"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-anchor_mode = 0
-current = true
-limit_left = 0
-limit_top = 0
-limit_right = 999999
-limit_bottom = 420
-
 [node name="Timer" type="Timer" parent="."]
 
 [node name="WalkSound" type="AudioStreamPlayer2D" parent="."]

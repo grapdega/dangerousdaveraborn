@@ -363,7 +363,14 @@ curve = SubResource( 2 )
 [node name="Monster" parent="MonsterGrup" instance=ExtResource( 18 )]
 position = Vector2( 497.174, 193.886 )
 texture = "res://Images/enemies/monster1.png"
-patrol_path = NodePath("../Path2D")
 
 [node name="Area2d" parent="MonsterGrup/Monster" instance=ExtResource( 16 )]
 position = Vector2( -270.563, -12.699 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 3260
+limit_bottom = 0
+smoothing_enabled = true

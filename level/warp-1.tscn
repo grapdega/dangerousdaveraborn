@@ -276,3 +276,10 @@ position = Vector2( 1742.94, 145.209 )
 
 [node name="Cup" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1807.37, 302.531 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 1855
+limit_bottom = 0

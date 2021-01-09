@@ -7,6 +7,7 @@ export var maxgravity=70
 export var height=16
 export var hasClass = false
 export var rightlimit = 99999
+export var pagefactor=450
 var velocity = Vector2.ZERO
 var isLife = true
 export var canFire = true
@@ -15,15 +16,22 @@ onready var animation = $Sprite
 onready var globals = get_node("/root/Globals")
 const BULLET = preload("res://Prefabs/Bullet.tscn")
 var paused=false
+onready var cam = get_parent().get_node("Camera2D")
 
 func _ready():
 	self.add_to_group("player")
-	$Camera2D.limit_right=rightlimit
 
 func _physics_process(delta):
 	if paused:
 		return
-	$Camera2D.global_position.x=640*(int((global_position.x)/640))
+	var ratio=global_position.x/pagefactor
+	var pagenum=int(ratio)
+	if ratio - pagenum < 0.1:
+		pagenum=pagenum-1
+	if pagenum < 0:
+		pagenum=0
+	if cam:
+		cam.limit_left=(pagenum)*pagefactor
 	if isLife:
 		if Input.is_action_just_pressed("godmode"):
 			globals.godmode=true

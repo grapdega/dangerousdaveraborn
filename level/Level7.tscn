@@ -133,6 +133,7 @@ position = Vector2( 1904, 144 )
 [node name="Tree" parent="." instance=ExtResource( 17 )]
 position = Vector2( 1323.5, 235.5 )
 scale = Vector2( 0.586157, 0.586157 )
+z_index = -999
 
 [node name="Waters" type="Node2D" parent="."]
 
@@ -296,3 +297,10 @@ position = Vector2( 1686.66, 233.339 )
 
 [node name="Diamond Bubble4" parent="Diamond Bubble" instance=ExtResource( 21 )]
 position = Vector2( 2392.36, 178.651 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 2543
+limit_bottom = 0

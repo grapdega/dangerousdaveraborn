@@ -573,6 +573,13 @@ position = Vector2( 241.062, 87.7576 )
 [node name="ring" parent="Red" instance=ExtResource( 14 )]
 position = Vector2( 1808.6, 240.457 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 3200
+limit_bottom = 0
+
 [editable path="gold/diamond4"]
 
 [editable path="gold/diamond5"]

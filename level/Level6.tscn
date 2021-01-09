@@ -270,4 +270,11 @@ position = Vector2( 1607.12, 83.0244 )
 [node name="Diamond Bubble6" parent="Diamond Bubble" instance=ExtResource( 16 )]
 position = Vector2( 1216.18, 78.2568 )
 
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+limit_left = 0
+limit_top = 0
+limit_right = 2048
+limit_bottom = 0
+
 [editable path="diamonds/diamond10"]
