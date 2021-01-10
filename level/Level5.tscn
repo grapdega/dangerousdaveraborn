@@ -412,6 +412,7 @@ speed = 250
 position = Vector2( 457.5, 213.5 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D"]
+position = Vector2( 511, 152 )
 rotate = false
 
 [node name="Monster" parent="Monster/Path2D/PathFollow2D" instance=ExtResource( 14 )]

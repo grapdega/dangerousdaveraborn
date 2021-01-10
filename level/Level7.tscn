@@ -330,6 +330,7 @@ position = Vector2( 151.286, 274.316 )
 position = Vector2( 168.768, 183.497 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D"]
+position = Vector2( 149.648, 258.336 )
 rotate = false
 
 [node name="Monster" parent="Monster/Path2D/PathFollow2D" instance=ExtResource( 14 )]
