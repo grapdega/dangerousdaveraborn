@@ -91,11 +91,11 @@ func jetpack_move(delta):
 func move(delta):
 	velocity.y+=gravity*delta*speed
 	velocity.x=0
-	animation.play("stop")
-	$WalkSound.stop()
 	
 	if velocity.y>maxgravity:
 		velocity.y=maxgravity
+	if  (Input.is_action_pressed("left") or Input.is_action_pressed("right"))==false:
+		animation.play("stop")
 	if Input.is_action_pressed("jump") and is_on_floor():
 		if not $JumpSound.playing:
 			$JumpSound.play()
@@ -155,8 +155,9 @@ func dead():
 		animation.play("dead")
 		yield(animation,"animation_finished")
 		i=i+1
-	if globals.healt == 0:
+	if globals.healt == 0 and globals.godmode == false:
 		isLife = false
+		get_tree().change_scene("res://Prefabs/StartScreen.tscn")
 	else:
 		get_tree().reload_current_scene()
 

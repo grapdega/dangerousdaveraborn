@@ -26,6 +26,7 @@ func _ready():
 func dead():
 	if $Sprite:
 		$Sprite.queue_free()
+	canFire = false
 	if animation:
 		var i=0
 		while i<5:
@@ -38,8 +39,6 @@ func fire():
 		var bullet = BULLET.instance()
 		get_parent().get_parent().get_parent().add_child(bullet)
 		bullet.global_position = $Position2D.global_position
-		canFire = false
-		$Timer.start()
 
 func _on_PlayerDetect_body_entered(body):
 	if body.is_in_group("player") :
@@ -47,12 +46,8 @@ func _on_PlayerDetect_body_entered(body):
 		dead()
 	
 
-func _on_Timer_timeout():
-	canFire=true
-
-
 
 func _on_PlayerDetect_area_entered(area):
-	if area.is_in_group("firezone"):
+	if area.is_in_group("firezone") and canFire:
 		print("uwu")
 		fire()
