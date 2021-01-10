@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=2]
@@ -11,12 +11,20 @@
 [ext_resource path="res://Prefabs/diamond.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/firezone.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Script/path/path.gd" type="Script" id=13]
+[ext_resource path="res://Prefabs/Monster.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Tree.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Prefabs/gold/ring.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Prefabs/gold/red.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Prefabs/gold/Diamond Bubble.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Prefabs/gold/lolipop.tscn" type="PackedScene" id=22]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 17.8381, 0, -17.8381, 0, 149.648, 258.336, -1.18921, 40.433, 1.18921, -40.433, 117.106, 168.648, -14.8651, 0, 14.8651, 0, 147.16, 90.9992, 0, -39.2438, 0, 39.2438, 173.618, 175.099, 14.8651, 0.594603, -14.8651, -0.594603, 149.648, 258.336 )
+}
 
 [node name="Level7" type="Node2D"]
 __meta__ = {
@@ -36,271 +44,350 @@ tile_data = PoolIntArray( 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 
 
 [node name="StatusBar" parent="." instance=ExtResource( 3 )]
 
-[node name="tuple" parent="." instance=ExtResource( 4 )]
-position = Vector2( 56, 80 )
-rotation = 1.5708
-
-[node name="Jetpack" parent="." instance=ExtResource( 5 )]
-position = Vector2( 1208, 208 )
-
-[node name="plant" type="Node" parent="."]
-
-[node name="Plant" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 88, 336 )
-
-[node name="Plant2" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 120.187, 336 )
-
-[node name="Plant3" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 184, 336 )
-
-[node name="Plant4" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 216, 336 )
-
-[node name="Plant5" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 248, 336 )
-
-[node name="Plant6" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 312, 336 )
-
-[node name="Plant7" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 376, 336 )
-
-[node name="Plant8" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 408, 336 )
-
-[node name="Plant9" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 440, 336 )
-
-[node name="Plant10" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 568, 336 )
-
-[node name="Plant11" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 600, 336 )
-
-[node name="Plant12" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 832, 304 )
-
-[node name="Plant13" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 864, 304 )
-
-[node name="Plant14" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 895, 304 )
-
-[node name="Plant15" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 1688, 304 )
-
-[node name="Plant16" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 1936, 304 )
-
-[node name="Plant17" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 1968, 304 )
-
-[node name="Plant18" parent="plant" instance=ExtResource( 6 )]
-position = Vector2( 2000, 304 )
-
-[node name="Gun" parent="." instance=ExtResource( 7 )]
-position = Vector2( 152, 256 )
-
-[node name="fire" type="Node" parent="."]
-
-[node name="Fire" parent="fire" instance=ExtResource( 8 )]
-position = Vector2( 2008, 176 )
-
-[node name="Fire2" parent="fire" instance=ExtResource( 8 )]
-position = Vector2( 2136, 240 )
-
-[node name="Fire3" parent="fire" instance=ExtResource( 8 )]
-position = Vector2( 2264, 304 )
-
-[node name="diamonds" type="Node" parent="."]
-
-[node name="diamond7" parent="diamonds" instance=ExtResource( 9 )]
-position = Vector2( 2008, 80 )
-
-[node name="diamond8" parent="diamonds" instance=ExtResource( 9 )]
-position = Vector2( 2136, 144 )
-
-[node name="diamond9" parent="diamonds" instance=ExtResource( 9 )]
-position = Vector2( 2264, 144 )
-
-[node name="Cup" parent="." instance=ExtResource( 10 )]
-position = Vector2( 2488, 112 )
-
-[node name="Door" parent="." instance=ExtResource( 11 )]
-position = Vector2( 1904, 144 )
-
-[node name="Tree" parent="." instance=ExtResource( 17 )]
-position = Vector2( 1323.5, 235.5 )
-scale = Vector2( 0.586157, 0.586157 )
-z_index = -999
-
-[node name="Waters" type="Node2D" parent="."]
-
-[node name="Water" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1368.8, 336 )
-
-[node name="Water2" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1398.73, 336 )
-
-[node name="Water3" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1430.52, 336 )
-
-[node name="Water4" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1463.29, 336 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water5" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1368.8, 367.994 )
-
-[node name="Water6" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1398.73, 367.994 )
-
-[node name="Water7" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1430.52, 367.994 )
-
-[node name="Water8" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1463.29, 367.994 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water15" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1752.86, 336 )
-
-[node name="Water16" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1782.79, 336 )
-
-[node name="Water17" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1814.58, 336 )
-
-[node name="Water18" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1847.35, 336 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water19" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1752.86, 367.994 )
-
-[node name="Water20" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1782.79, 367.994 )
-
-[node name="Water21" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1814.58, 367.994 )
-
-[node name="Water22" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1847.35, 367.994 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water23" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2328.85, 304 )
-
-[node name="Water24" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2358.78, 304 )
-
-[node name="Water25" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2390.57, 304 )
-
-[node name="Water26" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2423.34, 304 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water27" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2328.85, 335.994 )
-
-[node name="Water28" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2358.78, 335.994 )
-
-[node name="Water29" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2390.57, 335.994 )
-
-[node name="Water30" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2423.34, 335.994 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water31" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2328.85, 367.994 )
-
-[node name="Water32" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2358.78, 367.994 )
-
-[node name="Water33" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2390.57, 367.994 )
-
-[node name="Water34" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2423.34, 367.994 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water35" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2454.68, 304 )
-
-[node name="Water36" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2487.46, 304 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water37" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2454.68, 335.994 )
-
-[node name="Water38" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2487.46, 335.994 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water39" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2454.68, 367.994 )
-
-[node name="Water40" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 2487.46, 367.994 )
-scale = Vector2( 1.11998, 1 )
-
-[node name="Water9" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1560.64, 336 )
-
-[node name="Water10" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1590.57, 336 )
-
-[node name="Water11" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1623.84, 336 )
-scale = Vector2( 1.08004, 1 )
-
-[node name="Water14" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1623.84, 367.994 )
-scale = Vector2( 1.08004, 1 )
-
-[node name="Water12" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1560.64, 367.994 )
-
-[node name="Water13" parent="Waters" instance=ExtResource( 18 )]
-position = Vector2( 1590.57, 367.994 )
-
-[node name="Ring" type="Node" parent="."]
-
-[node name="ring" parent="Ring" instance=ExtResource( 19 )]
-position = Vector2( 346.584, 147.561 )
-
-[node name="Lolipop" type="Node" parent="."]
-
-[node name="lolipop" parent="Lolipop" instance=ExtResource( 22 )]
-position = Vector2( 697.77, 304.508 )
-
-[node name="Red" type="Node" parent="."]
-
-[node name="red" parent="Red" instance=ExtResource( 20 )]
-position = Vector2( 1452.77, 203.336 )
-
-[node name="Diamond Bubble" type="Node" parent="."]
-
-[node name="Diamond Bubble" parent="Diamond Bubble" instance=ExtResource( 21 )]
-position = Vector2( 1014.9, 304.508 )
-
-[node name="Diamond Bubble2" parent="Diamond Bubble" instance=ExtResource( 21 )]
-position = Vector2( 1049.13, 304.508 )
-
-[node name="Diamond Bubble3" parent="Diamond Bubble" instance=ExtResource( 21 )]
-position = Vector2( 1686.66, 233.339 )
-
-[node name="Diamond Bubble4" parent="Diamond Bubble" instance=ExtResource( 21 )]
-position = Vector2( 2392.36, 178.651 )
-
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
 limit_top = 0
 limit_right = 2543
 limit_bottom = 0
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Diamond Bubble" type="Node" parent="Node"]
+
+[node name="Diamond Bubble" parent="Node/Diamond Bubble" instance=ExtResource( 21 )]
+position = Vector2( 1014.9, 304.508 )
+
+[node name="Diamond Bubble2" parent="Node/Diamond Bubble" instance=ExtResource( 21 )]
+position = Vector2( 1049.13, 304.508 )
+
+[node name="Diamond Bubble3" parent="Node/Diamond Bubble" instance=ExtResource( 21 )]
+position = Vector2( 1686.66, 233.339 )
+
+[node name="Diamond Bubble4" parent="Node/Diamond Bubble" instance=ExtResource( 21 )]
+position = Vector2( 2392.36, 178.651 )
+
+[node name="fire" type="Node" parent="Node"]
+
+[node name="Fire" parent="Node/fire" instance=ExtResource( 8 )]
+position = Vector2( 2008, 176 )
+
+[node name="Fire2" parent="Node/fire" instance=ExtResource( 8 )]
+position = Vector2( 2136, 240 )
+
+[node name="Fire3" parent="Node/fire" instance=ExtResource( 8 )]
+position = Vector2( 2264, 304 )
+
+[node name="diamonds" type="Node" parent="Node"]
+
+[node name="diamond7" parent="Node/diamonds" instance=ExtResource( 9 )]
+position = Vector2( 2008, 80 )
+
+[node name="diamond8" parent="Node/diamonds" instance=ExtResource( 9 )]
+position = Vector2( 2136, 144 )
+
+[node name="diamond9" parent="Node/diamonds" instance=ExtResource( 9 )]
+position = Vector2( 2264, 144 )
+
+[node name="Cup" parent="Node" instance=ExtResource( 10 )]
+position = Vector2( 2488, 112 )
+
+[node name="Door" parent="Node" instance=ExtResource( 11 )]
+position = Vector2( 1904, 144 )
+
+[node name="Tree" parent="Node" instance=ExtResource( 17 )]
+position = Vector2( 1323.5, 235.5 )
+scale = Vector2( 0.586157, 0.586157 )
+z_index = -999
+
+[node name="Waters" type="Node2D" parent="Node"]
+
+[node name="Water" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1368.8, 336 )
+
+[node name="Water2" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1398.73, 336 )
+
+[node name="Water3" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1430.52, 336 )
+
+[node name="Water4" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1463.29, 336 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water5" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1368.8, 367.994 )
+
+[node name="Water6" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1398.73, 367.994 )
+
+[node name="Water7" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1430.52, 367.994 )
+
+[node name="Water8" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1463.29, 367.994 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water15" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1752.86, 336 )
+
+[node name="Water16" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1782.79, 336 )
+
+[node name="Water17" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1814.58, 336 )
+
+[node name="Water18" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1847.35, 336 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water19" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1752.86, 367.994 )
+
+[node name="Water20" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1782.79, 367.994 )
+
+[node name="Water21" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1814.58, 367.994 )
+
+[node name="Water22" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1847.35, 367.994 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water23" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2328.85, 304 )
+
+[node name="Water24" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2358.78, 304 )
+
+[node name="Water25" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2390.57, 304 )
+
+[node name="Water26" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2423.34, 304 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water27" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2328.85, 335.994 )
+
+[node name="Water28" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2358.78, 335.994 )
+
+[node name="Water29" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2390.57, 335.994 )
+
+[node name="Water30" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2423.34, 335.994 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water31" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2328.85, 367.994 )
+
+[node name="Water32" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2358.78, 367.994 )
+
+[node name="Water33" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2390.57, 367.994 )
+
+[node name="Water34" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2423.34, 367.994 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water35" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2454.68, 304 )
+
+[node name="Water36" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2487.46, 304 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water37" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2454.68, 335.994 )
+
+[node name="Water38" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2487.46, 335.994 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water39" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2454.68, 367.994 )
+
+[node name="Water40" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 2487.46, 367.994 )
+scale = Vector2( 1.11998, 1 )
+
+[node name="Water9" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1560.64, 336 )
+
+[node name="Water10" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1590.57, 336 )
+
+[node name="Water11" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1623.84, 336 )
+scale = Vector2( 1.08004, 1 )
+
+[node name="Water14" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1623.84, 367.994 )
+scale = Vector2( 1.08004, 1 )
+
+[node name="Water12" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1560.64, 367.994 )
+
+[node name="Water13" parent="Node/Waters" instance=ExtResource( 18 )]
+position = Vector2( 1590.57, 367.994 )
+
+[node name="Ring" type="Node" parent="Node"]
+
+[node name="ring" parent="Node/Ring" instance=ExtResource( 19 )]
+position = Vector2( 346.584, 147.561 )
+
+[node name="Lolipop" type="Node" parent="Node"]
+
+[node name="lolipop" parent="Node/Lolipop" instance=ExtResource( 22 )]
+position = Vector2( 697.77, 304.508 )
+
+[node name="Red" type="Node" parent="Node"]
+
+[node name="red" parent="Node/Red" instance=ExtResource( 20 )]
+position = Vector2( 1452.77, 203.336 )
+
+[node name="tuple" parent="Node" instance=ExtResource( 4 )]
+position = Vector2( 56, 80 )
+rotation = 1.5708
+
+[node name="Jetpack" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 1208, 208 )
+
+[node name="plant" type="Node" parent="Node"]
+
+[node name="Plant" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 88, 336 )
+
+[node name="Plant2" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 120.187, 336 )
+
+[node name="Plant3" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 184, 336 )
+
+[node name="Plant4" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 216, 336 )
+
+[node name="Plant5" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 248, 336 )
+
+[node name="Plant6" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 312, 336 )
+
+[node name="Plant7" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 376, 336 )
+
+[node name="Plant8" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 408, 336 )
+
+[node name="Plant9" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 440, 336 )
+
+[node name="Plant10" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 568, 336 )
+
+[node name="Plant11" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 600, 336 )
+
+[node name="Plant12" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 832, 304 )
+
+[node name="Plant13" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 864, 304 )
+
+[node name="Plant14" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 895, 304 )
+
+[node name="Plant15" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 1688, 304 )
+
+[node name="Plant16" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 1936, 304 )
+
+[node name="Plant17" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 1968, 304 )
+
+[node name="Plant18" parent="Node/plant" instance=ExtResource( 6 )]
+position = Vector2( 2000, 304 )
+
+[node name="Gun" parent="Node" instance=ExtResource( 7 )]
+position = Vector2( 152, 256 )
+
+[node name="Monster" type="Node" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Monster"]
+position = Vector2( 6.23628, -0.445435 )
+curve = SubResource( 1 )
+script = ExtResource( 13 )
+speed = 250
+
+[node name="Area2d" parent="Monster/Path2D" instance=ExtResource( 12 )]
+position = Vector2( 151.286, 274.316 )
+
+[node name="Area2d2" parent="Monster/Path2D" instance=ExtResource( 12 )]
+position = Vector2( 168.768, 183.497 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D"]
+rotate = false
+
+[node name="Monster" parent="Monster/Path2D/PathFollow2D" instance=ExtResource( 14 )]
+texture = "res://Images/conevir/conevir7.png"
+
+[node name="Path2D2" type="Path2D" parent="Monster"]
+position = Vector2( 368.35, -2.22923 )
+curve = SubResource( 1 )
+script = ExtResource( 13 )
+speed = 250
+
+[node name="Area2d" parent="Monster/Path2D2" instance=ExtResource( 12 )]
+position = Vector2( 113.829, 164.19 )
+
+[node name="Area2d2" parent="Monster/Path2D2" instance=ExtResource( 12 )]
+position = Vector2( 168.768, 191.737 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D2"]
+position = Vector2( 149.648, 258.336 )
+rotate = false
+
+[node name="Monster" parent="Monster/Path2D2/PathFollow2D" instance=ExtResource( 14 )]
+texture = "res://Images/conevir/conevir7.png"
+
+[node name="Path2D3" type="Path2D" parent="Monster"]
+position = Vector2( 1365.35, 21.7708 )
+curve = SubResource( 1 )
+script = ExtResource( 13 )
+speed = 250
+
+[node name="Area2d" parent="Monster/Path2D3" instance=ExtResource( 12 )]
+position = Vector2( 137.053, 261.58 )
+
+[node name="Area2d2" parent="Monster/Path2D3" instance=ExtResource( 12 )]
+position = Vector2( 115.578, 117.393 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D3"]
+position = Vector2( 149.648, 258.336 )
+rotate = false
+
+[node name="Monster" parent="Monster/Path2D3/PathFollow2D" instance=ExtResource( 14 )]
+texture = "res://Images/conevir/conevir7.png"
+
+[node name="Path2D4" type="Path2D" parent="Monster"]
+position = Vector2( 1581.86, 26.2657 )
+curve = SubResource( 1 )
+script = ExtResource( 13 )
+speed = 250
+
+[node name="Area2d" parent="Monster/Path2D4" instance=ExtResource( 12 )]
+position = Vector2( 137.053, 261.58 )
+
+[node name="Area2d2" parent="Monster/Path2D4" instance=ExtResource( 12 )]
+position = Vector2( 122.657, 107.878 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D4"]
+position = Vector2( 149.648, 258.336 )
+rotate = false
+
+[node name="Monster" parent="Monster/Path2D4/PathFollow2D" instance=ExtResource( 14 )]
+texture = "res://Images/conevir/conevir7.png"
