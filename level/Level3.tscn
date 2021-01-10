@@ -16,6 +16,7 @@
 [ext_resource path="res://Prefabs/gold/King.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/gold/ring.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/firezone.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Script/path/path.gd" type="Script" id=17]
 [ext_resource path="res://Prefabs/Monster.tscn" type="PackedScene" id=18]
 
 [sub_resource type="Curve2D" id=1]
@@ -23,18 +24,10 @@ _data = {
 "points": PoolVector2Array( 9.67759, -19.3552, -9.67759, 19.3552, 693.752, 10.5961, 5.19131, 8.49487, -5.19131, -8.49487, 576.012, 11.7303, -28.7173, 7.869, 28.7173, -7.869, 583.741, -16.8107, -34.7828, 0.671865, 34.7828, -0.671865, 793.636, -16.8107, 5.95226, -7.09903, -5.95226, 7.09903, 812.069, 9.35184, 16.3518, 21.3574, -16.3518, -21.3574, 693.418, 9.92871 )
 }
 
-[sub_resource type="Curve2D" id=2]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 2.19937, -0.44101, 0, 0, 0, 0, -257.427, -3.77811 )
-}
-
 [node name="Level3" type="Node2D"]
 __meta__ = {
 "_edit_vertical_guides_": [ 1056.34 ]
 }
-
-[node name="tuple" parent="." instance=ExtResource( 4 )]
-position = Vector2( 48, 209.051 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( -5, -1 )
@@ -66,311 +59,338 @@ texture = ExtResource( 11 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 3 )]
 
-[node name="Door" parent="." instance=ExtResource( 8 )]
-position = Vector2( 2200, 80 )
-
-[node name="Jetpack" parent="." instance=ExtResource( 7 )]
-position = Vector2( 2124, 304 )
-
-[node name="Cup" parent="." instance=ExtResource( 6 )]
-position = Vector2( 2152, 304 )
-
-[node name="Gun" parent="." instance=ExtResource( 10 )]
-position = Vector2( 261.357, 145.811 )
-
-[node name="diamonds" type="Node2D" parent="."]
-position = Vector2( 2285, 13 )
-scale = Vector2( 0.1, 0.1 )
-
-[node name="diamond" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 310, 660 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond2" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 300, 0 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond3" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 300, 330 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond4" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 610, 340 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond5" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 620, 660 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond6" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 930, 660 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond7" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 940, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond8" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 1240, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond9" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 1530, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond10" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 1820, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond11" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 2120, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond12" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 2410, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond13" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 2700, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond14" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 3000, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond15" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 3290, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond16" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 3580, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond17" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 3880, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond18" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 4170, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond19" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 4460, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond20" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 4760, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond21" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 5050, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond22" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 5340, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond23" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 5640, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond24" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 5930, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond25" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 6220, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond26" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 6520, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond27" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 6810, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond28" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 7100, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond29" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 7400, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond30" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 7690, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond31" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 7990, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond32" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 8280, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond33" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 8580, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond34" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 8910, 980 )
-scale = Vector2( 1, 1 )
-
-[node name="diamond35" parent="diamonds" instance=ExtResource( 12 )]
-position = Vector2( 9230, 990 )
-scale = Vector2( 1, 1 )
-
-[node name="Fires" type="Node2D" parent="."]
-
-[node name="Fire" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 192, 209.051 )
-
-[node name="Fire2" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 320, 207.442 )
-
-[node name="Fire5" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 643.172, 207.442 )
-
-[node name="Fire6" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 769, 207.442 )
-
-[node name="Fire7" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 897, 207.442 )
-
-[node name="Fire8" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1056, 208 )
-
-[node name="Fire9" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1182, 207.442 )
-
-[node name="Fire10" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1213, 207.442 )
-
-[node name="Fire11" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1345, 208.051 )
-
-[node name="Fire12" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1472, 207.442 )
-
-[node name="Fire13" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1568, 207.442 )
-
-[node name="Fire14" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1728, 208.442 )
-
-[node name="Fire26" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 1758.2, 209.051 )
-
-[node name="Fire3" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 448, 207.442 )
-
-[node name="Fire4" parent="Fires" instance=ExtResource( 5 )]
-position = Vector2( 479, 207.442 )
-
-[node name="Fire15" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 1996, 240 )
-
-[node name="Fire16" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2027, 272 )
-
-[node name="Fire17" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2060, 302 )
-
-[node name="Fire22" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2060, 272 )
-
-[node name="Fire24" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2184, 271 )
-
-[node name="Fire25" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2217, 240 )
-
-[node name="Fire23" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2030, 240 )
-
-[node name="Fire18" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2094, 302 )
-
-[node name="Fire19" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2185, 302 )
-
-[node name="Fire20" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2218, 271 )
-
-[node name="Fire21" parent="Fires" instance=ExtResource( 13 )]
-position = Vector2( 2250, 240 )
-
 [node name="KinematicBody2D" parent="." instance=ExtResource( 1 )]
 position = Vector2( 79.0546, 206.32 )
-
-[node name="Diamon" type="Node" parent="."]
-
-[node name="diamond12" parent="Diamon" instance=ExtResource( 14 )]
-position = Vector2( 2285, 176.062 )
-
-[node name="lolipop" parent="Diamon" instance=ExtResource( 9 )]
-position = Vector2( 2284.52, 210.523 )
-
-[node name="diamond" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 48.0001, 148.98 )
-
-[node name="diamond2" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 188.909, 146.861 )
-
-[node name="diamond3" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 478.142, 143.683 )
-
-[node name="diamond4" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 643.418, 144.742 )
-
-[node name="diamond5" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 769, 144.742 )
-
-[node name="diamond6" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 940.785, 145.811 )
-
-[node name="diamond7" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 1182, 143.683 )
-
-[node name="diamond8" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 1345, 143.683 )
-
-[node name="diamond9" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 1503.57, 145.811 )
-
-[node name="diamond10" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 1728, 145.811 )
-
-[node name="diamond11" parent="Diamon" instance=ExtResource( 12 )]
-position = Vector2( 1853.54, 144.742 )
-
-[node name="ring" parent="Diamon" instance=ExtResource( 15 )]
-position = Vector2( 2061.27, 80.1708 )
-
-[node name="MonsterGrup" type="Node" parent="."]
-
-[node name="oc" type="Path2D" parent="MonsterGrup"]
-visible = false
-position = Vector2( -334.365, 174.123 )
-curve = SubResource( 1 )
-
-[node name="Path2D" type="Path2D" parent="MonsterGrup"]
-position = Vector2( 497.174, 193.886 )
-curve = SubResource( 2 )
-
-[node name="Monster" parent="MonsterGrup" instance=ExtResource( 18 )]
-position = Vector2( 497.174, 193.886 )
-texture = "res://Images/enemies/monster1.png"
-
-[node name="Area2d" parent="MonsterGrup/Monster" instance=ExtResource( 16 )]
-position = Vector2( -270.563, -12.699 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 limit_left = 0
 limit_top = 0
-limit_right = 3260
+limit_right = 9999
 limit_bottom = 0
-smoothing_enabled = true
+
+[node name="Monster" type="Node" parent="."]
+
+[node name="Path2D" type="Path2D" parent="Monster"]
+position = Vector2( 709.164, 193.15 )
+curve = SubResource( 1 )
+script = ExtResource( 17 )
+
+[node name="Area2d" parent="Monster/Path2D" instance=ExtResource( 16 )]
+position = Vector2( 559.038, -3.4118 )
+rotation = 2.28755
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D"]
+position = Vector2( 693.752, 10.5961 )
+rotation = 2.28755
+rotate = false
+
+[node name="Monster" parent="Monster/Path2D/PathFollow2D" instance=ExtResource( 18 )]
+rotation = -2.28638
+texture = "res://Images/enemies/monster1.png"
+
+[node name="Area2d2" parent="Monster/Path2D" instance=ExtResource( 16 )]
+position = Vector2( 693.964, -35.1991 )
+
+[node name="Path2D2" type="Path2D" parent="Monster"]
+position = Vector2( 1119.73, 174.026 )
+curve = SubResource( 1 )
+script = ExtResource( 17 )
+
+[node name="Area2d" parent="Monster/Path2D2" instance=ExtResource( 16 )]
+position = Vector2( 559.038, -3.4118 )
+rotation = 2.28755
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D2"]
+position = Vector2( 693.752, 10.5961 )
+rotation = 2.28755
+rotate = false
+
+[node name="Monster" parent="Monster/Path2D2/PathFollow2D" instance=ExtResource( 18 )]
+rotation = -2.28638
+texture = "res://Images/enemies/monster1.png"
+
+[node name="Item" type="Node" parent="."]
+
+[node name="Diamon" type="Node" parent="Item"]
+
+[node name="diamond12" parent="Item/Diamon" instance=ExtResource( 14 )]
+position = Vector2( 2285, 176.062 )
+
+[node name="lolipop" parent="Item/Diamon" instance=ExtResource( 9 )]
+position = Vector2( 2284.52, 210.523 )
+
+[node name="diamond" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 48.0001, 148.98 )
+
+[node name="diamond2" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 188.909, 146.861 )
+
+[node name="diamond3" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 478.142, 143.683 )
+
+[node name="diamond4" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 643.418, 144.742 )
+
+[node name="diamond5" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 769, 144.742 )
+
+[node name="diamond6" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 940.785, 145.811 )
+
+[node name="diamond7" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 1182, 143.683 )
+
+[node name="diamond8" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 1345, 143.683 )
+
+[node name="diamond9" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 1503.57, 145.811 )
+
+[node name="diamond10" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 1728, 145.811 )
+
+[node name="diamond11" parent="Item/Diamon" instance=ExtResource( 12 )]
+position = Vector2( 1853.54, 144.742 )
+
+[node name="ring" parent="Item/Diamon" instance=ExtResource( 15 )]
+position = Vector2( 2061.27, 80.1708 )
+
+[node name="Door" parent="Item" instance=ExtResource( 8 )]
+position = Vector2( 2200, 80 )
+
+[node name="Jetpack" parent="Item" instance=ExtResource( 7 )]
+position = Vector2( 2124, 304 )
+
+[node name="Cup" parent="Item" instance=ExtResource( 6 )]
+position = Vector2( 2152, 304 )
+
+[node name="Gun" parent="Item" instance=ExtResource( 10 )]
+position = Vector2( 261.357, 145.811 )
+
+[node name="diamonds" type="Node2D" parent="Item"]
+position = Vector2( 2285, 13 )
+scale = Vector2( 0.1, 0.1 )
+
+[node name="diamond" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 310, 660 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond2" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 300, 0 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond3" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 300, 330 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond4" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 610, 340 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond5" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 620, 660 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond6" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 930, 660 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond7" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 940, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond8" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 1240, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond9" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 1530, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond10" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 1820, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond11" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 2120, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond12" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 2410, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond13" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 2700, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond14" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 3000, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond15" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 3290, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond16" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 3580, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond17" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 3880, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond18" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 4170, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond19" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 4460, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond20" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 4760, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond21" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 5050, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond22" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 5340, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond23" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 5640, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond24" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 5930, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond25" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 6220, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond26" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 6520, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond27" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 6810, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond28" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 7100, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond29" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 7400, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond30" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 7690, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond31" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 7990, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond32" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 8280, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond33" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 8580, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond34" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 8910, 980 )
+scale = Vector2( 1, 1 )
+
+[node name="diamond35" parent="Item/diamonds" instance=ExtResource( 12 )]
+position = Vector2( 9230, 990 )
+scale = Vector2( 1, 1 )
+
+[node name="Fires" type="Node2D" parent="Item"]
+
+[node name="Fire" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 192, 209.051 )
+
+[node name="Fire2" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 320, 207.442 )
+
+[node name="Fire5" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 643.172, 207.442 )
+
+[node name="Fire6" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 769, 207.442 )
+
+[node name="Fire7" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 897, 207.442 )
+
+[node name="Fire8" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1056, 208 )
+
+[node name="Fire9" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1182, 207.442 )
+
+[node name="Fire10" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1213, 207.442 )
+
+[node name="Fire11" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1345, 208.051 )
+
+[node name="Fire12" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1472, 207.442 )
+
+[node name="Fire13" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1568, 207.442 )
+
+[node name="Fire14" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1728, 208.442 )
+
+[node name="Fire26" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 1758.2, 209.051 )
+
+[node name="Fire3" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 448, 207.442 )
+
+[node name="Fire4" parent="Item/Fires" instance=ExtResource( 5 )]
+position = Vector2( 479, 207.442 )
+
+[node name="Fire15" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 1996, 240 )
+
+[node name="Fire16" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2027, 272 )
+
+[node name="Fire17" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2060, 302 )
+
+[node name="Fire22" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2060, 272 )
+
+[node name="Fire24" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2184, 271 )
+
+[node name="Fire25" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2217, 240 )
+
+[node name="Fire23" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2030, 240 )
+
+[node name="Fire18" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2094, 302 )
+
+[node name="Fire19" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2185, 302 )
+
+[node name="Fire20" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2218, 271 )
+
+[node name="Fire21" parent="Item/Fires" instance=ExtResource( 13 )]
+position = Vector2( 2250, 240 )
+
+[node name="tuple" parent="Item" instance=ExtResource( 4 )]
+position = Vector2( 48, 209.051 )

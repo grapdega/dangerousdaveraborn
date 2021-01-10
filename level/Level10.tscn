@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://Prefabs/gold/round gold.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/StatusBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/plant.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Images/object-images/yildiz.png" type="Texture" id=9]
+[ext_resource path="res://Prefabs/star.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/gold/lolipop.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Fire2.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/gold/red.tscn" type="PackedScene" id=12]
@@ -17,7 +17,6 @@
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Jetpack.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Water.tscn" type="PackedScene" id=18]
-[ext_resource path="res://Prefabs/yildiz.tscn" type="PackedScene" id=19]
 
 [sub_resource type="Animation" id=1]
 resource_name = "fade_out"
@@ -415,46 +414,6 @@ position = Vector2( 304, 112 )
 [node name="Door" parent="." instance=ExtResource( 5 )]
 position = Vector2( 496, 80 )
 
-[node name="star" type="Node" parent="."]
-
-[node name="yildiz" parent="star" instance=ExtResource( 19 )]
-
-[node name="yildiz2" type="Sprite" parent="star"]
-position = Vector2( 448, 152 )
-texture = ExtResource( 9 )
-
-[node name="yildiz3" type="Sprite" parent="star"]
-position = Vector2( 464, 216 )
-texture = ExtResource( 9 )
-
-[node name="yildiz4" type="Sprite" parent="star"]
-position = Vector2( 400, 256 )
-texture = ExtResource( 9 )
-
-[node name="yildiz5" type="Sprite" parent="star"]
-position = Vector2( 432, 272 )
-texture = ExtResource( 9 )
-
-[node name="yildiz6" type="Sprite" parent="star"]
-position = Vector2( 520, 272 )
-texture = ExtResource( 9 )
-
-[node name="yildiz7" type="Sprite" parent="star"]
-position = Vector2( 552, 168 )
-texture = ExtResource( 9 )
-
-[node name="yildiz8" type="Sprite" parent="star"]
-position = Vector2( 584, 144 )
-texture = ExtResource( 9 )
-
-[node name="yildiz9" type="Sprite" parent="star"]
-position = Vector2( 560, 112 )
-texture = ExtResource( 9 )
-
-[node name="yildiz10" type="Sprite" parent="star"]
-position = Vector2( 560, 80 )
-texture = ExtResource( 9 )
-
 [node name="Fire" type="Node" parent="."]
 
 [node name="Fire" parent="Fire" instance=ExtResource( 11 )]
@@ -579,6 +538,38 @@ limit_left = 0
 limit_top = 0
 limit_right = 3200
 limit_bottom = 0
+
+[node name="Star" type="Node" parent="."]
+
+[node name="star2" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 431.997, 271.545 )
+
+[node name="star3" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 399.456, 255.671 )
+
+[node name="star4" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 463.745, 216.78 )
+
+[node name="star5" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 447.871, 152.49 )
+
+[node name="star6" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 408.186, 112.805 )
+
+[node name="star7" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 559.783, 81.0571 )
+
+[node name="star8" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 560.137, 111.816 )
+
+[node name="star9" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 584.178, 143.99 )
+
+[node name="star10" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 552.712, 167.678 )
+
+[node name="star11" parent="Star" instance=ExtResource( 9 )]
+position = Vector2( 520.185, 271.976 )
 
 [editable path="gold/diamond4"]
 

@@ -35,9 +35,8 @@ func dead():
 	queue_free()
 
 func fire():
-	if canFire:
 		var bullet = BULLET.instance()
-		get_parent().get_parent().add_child(bullet)
+		get_parent().get_parent().get_parent().add_child(bullet)
 		bullet.global_position = $Position2D.global_position
 		canFire = false
 		$Timer.start()

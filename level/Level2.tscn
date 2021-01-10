@@ -154,7 +154,6 @@ position = Vector2( 664, 310.986 )
 [node name="diamond10" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 672, 85 )
 point = 50
-texture = "res://item/diamond/bubble.png"
 
 [node name="Sprite" parent="diamonds/diamond10" index="0"]
 texture = ExtResource( 10 )
@@ -165,7 +164,6 @@ anims/fade_out = SubResource( 1 )
 [node name="diamond11" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 924, 214 )
 point = 50
-texture = "res://item/diamond/bubble.png"
 
 [node name="Sprite" parent="diamonds/diamond11" index="0"]
 texture = ExtResource( 10 )
@@ -176,7 +174,6 @@ anims/fade_out = SubResource( 2 )
 [node name="diamond12" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 888, 312 )
 point = 50
-texture = "res://item/diamond/bubble.png"
 
 [node name="Sprite" parent="diamonds/diamond12" index="0"]
 texture = ExtResource( 10 )
@@ -187,7 +184,6 @@ anims/fade_out = SubResource( 3 )
 [node name="diamond13" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 1016, 312 )
 point = 50
-texture = "res://item/diamond/bubble.png"
 
 [node name="Sprite" parent="diamonds/diamond13" index="0"]
 texture = ExtResource( 10 )
@@ -198,7 +194,6 @@ anims/fade_out = SubResource( 4 )
 [node name="diamond14" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 1176, 312 )
 point = 50
-texture = "res://item/diamond/bubble.png"
 
 [node name="Sprite" parent="diamonds/diamond14" index="0"]
 texture = ExtResource( 10 )
@@ -209,7 +204,6 @@ anims/fade_out = SubResource( 5 )
 [node name="diamond3" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 57.0545, 85 )
 point = 150
-texture = "res://item/diamond/diamond_red.png"
 
 [node name="Sprite" parent="diamonds/diamond3" index="0"]
 texture = ExtResource( 4 )
@@ -217,7 +211,6 @@ texture = ExtResource( 4 )
 [node name="diamond4" parent="diamonds" instance=ExtResource( 5 )]
 position = Vector2( 272, 255.939 )
 point = 150
-texture = "res://item/diamond/diamond_red.png"
 
 [node name="Sprite" parent="diamonds/diamond4" index="0"]
 texture = ExtResource( 4 )
