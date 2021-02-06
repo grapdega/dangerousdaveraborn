@@ -328,7 +328,7 @@ script = ExtResource( 15 )
 speed = 400
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Monster/Path2D21"]
-position = Vector2( 3857.62, 217.771 )
+position = Vector2( 3857.62, 217.77 )
 offset = 572.572
 rotate = false
 

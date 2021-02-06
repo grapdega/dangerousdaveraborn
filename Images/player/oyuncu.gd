@@ -9,7 +9,6 @@ export var hasClass = false
 export var rightlimit = 99999
 export var pagefactor=450
 var velocity = Vector2.ZERO
-var isLife = true
 export var canFire = true
 var inTree = false
 onready var animation = $Sprite
@@ -32,7 +31,7 @@ func _physics_process(delta):
 		pagenum=0
 	if cam:
 		cam.limit_left=(pagenum)*pagefactor
-	if isLife:
+	if globals.isLife:
 		if Input.is_action_just_pressed("godmode"):
 			globals.godmode=true
 			globals.healt=-1
@@ -156,8 +155,8 @@ func dead():
 		yield(animation,"animation_finished")
 		i=i+1
 	if globals.healt == 0 and globals.godmode == false:
-		isLife = false
-		get_tree().change_scene("res://Prefabs/StartScreen.tscn")
+		globals.isLife = false
+		#get_tree().change_scene("res://Prefabs/StartScreen.tscn")
 	else:
 		get_tree().reload_current_scene()
 

@@ -69,6 +69,12 @@ func _process(_delta):
 		$GunNode.visible = true
 	else: $GunNode.visible = false
 	
+	if !globals.isLife:
+		$GameOver.visible = true
+	else:
+		$GameOver.visible = false
+		
+	
 	if globals.jetpackIsActive:
 		if false == globals.godmode:
 			$JetpackNode/JetpackCount.value -= 1

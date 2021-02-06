@@ -3,6 +3,7 @@ onready var globals = get_node("/root/Globals")
 
 func _ready():
 	globals.level=0
+	globals.isLife = true
 	globals.healt=5
 
 func _process(delta):
