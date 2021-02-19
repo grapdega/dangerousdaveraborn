@@ -50,4 +50,5 @@ func _on_PlayerDetect_body_entered(body):
 func _on_PlayerDetect_area_entered(area):
 	if area.is_in_group("firezone") and canFire:
 		print("uwu")
-		fire()
+		if globals.gameMode == "Hard":
+			fire()

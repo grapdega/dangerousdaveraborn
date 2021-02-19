@@ -287,10 +287,6 @@ position = Vector2( 1000, 336 )
 position = Vector2( 2912, 305 )
 scale = Vector2( 0.79, 0.854 )
 
-[node name="Tree" parent="Item/Fires/Fire2" instance=ExtResource( 11 )]
-position = Vector2( -1518.62, -165.757 )
-scale = Vector2( 0.746835, 0.765808 )
-
 [node name="Fire3" parent="Item/Fires" instance=ExtResource( 9 )]
 position = Vector2( 2824, 272 )
 
@@ -308,6 +304,11 @@ z_index = -998
 [node name="Tree2" parent="Item" instance=ExtResource( 11 )]
 position = Vector2( 3088.47, 203.833 )
 scale = Vector2( 0.913957, 0.8154 )
+z_index = -998
+
+[node name="Tree3" parent="Item" instance=ExtResource( 11 )]
+position = Vector2( 1712.29, 163.444 )
+scale = Vector2( 0.59, 0.654 )
 z_index = -998
 
 [node name="Waters" type="Node2D" parent="Item"]

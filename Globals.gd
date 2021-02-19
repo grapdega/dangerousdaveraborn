@@ -12,3 +12,4 @@ var monsterIsDead = false
 var godmode = false
 var playerDirection = 1
 var isLife = true
+var gameMode = ""

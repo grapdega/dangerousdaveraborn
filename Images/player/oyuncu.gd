@@ -32,7 +32,7 @@ func _physics_process(delta):
 	if cam:
 		cam.limit_left=(pagenum)*pagefactor
 	if globals.isLife:
-		if Input.is_action_just_pressed("godmode"):
+		if globals.gameMode == "Trick" and Input.is_action_just_pressed("godmode"):
 			globals.godmode=true
 			globals.healt=-1
 			globals.hasGun=true
