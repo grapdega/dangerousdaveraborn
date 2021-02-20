@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Images/Checkbox/checkbox.png" type="Texture" id=1]
+[ext_resource path="res://Images/Checkbox/checkbox-checked.png" type="Texture" id=2]
+[ext_resource path="res://Images/Focus/a5.png" type="Texture" id=3]
+[ext_resource path="res://Images/Focus/a2.png" type="Texture" id=4]
+[ext_resource path="res://Images/PauseMenu/ExitGame.png" type="Texture" id=5]
+[ext_resource path="res://Images/PauseMenu/sound.png" type="Texture" id=6]
+[ext_resource path="res://Images/Focus/a1.png" type="Texture" id=7]
+[ext_resource path="res://Images/PauseMenu/pause-menu.png" type="Texture" id=8]
+[ext_resource path="res://Images/Focus/a3.png" type="Texture" id=9]
+[ext_resource path="res://Images/Focus/a4.png" type="Texture" id=10]
+[ext_resource path="res://Script/PauseMenu.gd" type="Script" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="PauseMenu" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 0.561218
+margin_top = -0.140747
+margin_right = 0.561279
+margin_bottom = -0.140747
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 103.439
+margin_top = 72.1407
+margin_right = 533.439
+margin_bottom = 310.141
+texture = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitGame" type="TextureButton" parent="."]
+margin_left = 262.439
+margin_top = 186.721
+margin_right = 388.439
+margin_bottom = 226.721
+rect_scale = Vector2( 0.76, 0.4 )
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="TextureRect" parent="."]
+margin_left = 262.439
+margin_top = 218.721
+margin_right = 388.439
+margin_bottom = 258.721
+rect_scale = Vector2( 0.479995, 0.4 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="SoundCheck" type="CheckBox" parent="."]
+margin_left = 328.241
+margin_top = 208.857
+margin_right = 360.241
+margin_bottom = 240.857
+rect_scale = Vector2( 1.04837, 1.02015 )
+focus_mode = 0
+custom_icons/checked = ExtResource( 2 )
+custom_icons/unchecked = ExtResource( 1 )
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Focus" type="AnimatedSprite" parent="."]
+position = Vector2( 246, 195 )
+frames = SubResource( 1 )
+frame = 2
+playing = true
+[connection signal="mouse_entered" from="ExitGame" to="." method="_on_ExitGame_mouse_entered"]
+[connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]
+[connection signal="mouse_entered" from="Sound" to="." method="_on_Sound_mouse_entered"]
+[connection signal="mouse_entered" from="SoundCheck" to="." method="_on_SoundCheck_mouse_entered"]
+[connection signal="pressed" from="SoundCheck" to="." method="_on_SoundCheck_pressed"]

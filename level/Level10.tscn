@@ -130,7 +130,6 @@ rotate = false
 
 [node name="Monster" parent="Monster/Path2D2/PathFollow2D" instance=ExtResource( 19 )]
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 texture = "res://Images/conevir/conevir10.png"
 
 [node name="Path2D3" type="Path2D" parent="Monster"]
@@ -149,7 +148,6 @@ rotate = false
 
 [node name="Monster" parent="Monster/Path2D3/PathFollow2D" instance=ExtResource( 19 )]
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 texture = "res://Images/conevir/conevir10.png"
 
 [node name="Path2D4" type="Path2D" parent="Monster"]
@@ -171,7 +169,6 @@ rotate = false
 
 [node name="Monster" parent="Monster/Path2D4/PathFollow2D" instance=ExtResource( 19 )]
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 texture = "res://Images/conevir/conevir10.png"
 
 [node name="Path2D5" type="Path2D" parent="Monster"]
@@ -193,7 +190,6 @@ rotate = false
 
 [node name="Monster" parent="Monster/Path2D5/PathFollow2D" instance=ExtResource( 19 )]
 rotation = 3.14159
-scale = Vector2( 1, 1 )
 texture = "res://Images/conevir/conevir10.png"
 
 [node name="Item" type="Node" parent="."]

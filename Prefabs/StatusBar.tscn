@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Images/DaveFace.png" type="Texture" id=1]
 [ext_resource path="res://Script/StatusBar/StatusBar.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Images/Text/thin.png" type="Texture" id=13]
 [ext_resource path="res://Images/number/num0.png" type="Texture" id=14]
 [ext_resource path="res://Prefabs/GameOver.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/PauseMenu.tscn" type="PackedScene" id=16]
 
 [node name="StatusBar" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -159,3 +160,6 @@ texture = ExtResource( 13 )
 
 [node name="GameOver" parent="." instance=ExtResource( 15 )]
 position = Vector2( 320, 192 )
+
+[node name="PauseMenu" parent="." instance=ExtResource( 16 )]
+visible = false

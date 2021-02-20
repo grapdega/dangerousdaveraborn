@@ -40,7 +40,8 @@ func _physics_process(delta):
 			globals.player_has_class=true
 		velocity = move_and_slide(velocity)
 		if Input.is_action_just_pressed("jetpack") and globals.hasJetpack:
-			$JetpackSound1.play()
+			if globals.musicActive:
+				$JetpackSound1.play()
 			globals.jetpackIsActive = !globals.jetpackIsActive
 		if globals.jetpackIsActive:
 			animation.play("jetpack")
@@ -66,7 +67,7 @@ func _physics_process(delta):
 		animation.play("dead")
 
 func jetpack_move(delta):
-	if not $JetpackSound2.playing:
+	if not $JetpackSound2.playing and globals.musicActive:
 		$JetpackSound2.play()
 	velocity.y = 0
 	velocity.x = 0
@@ -86,7 +87,7 @@ func jetpack_move(delta):
 		velocity.x=+speed*delta*runspeed
 		animation.play("jetpack")
 		animation.flip_h=false
-		
+
 func move(delta):
 	velocity.y+=gravity*delta*speed
 	velocity.x=0
@@ -96,18 +97,18 @@ func move(delta):
 	if  (Input.is_action_pressed("left") or Input.is_action_pressed("right"))==false:
 		animation.play("stop")
 	if Input.is_action_pressed("jump") and is_on_floor():
-		if not $JumpSound.playing:
+		if not $JumpSound.playing and globals.musicActive:
 			$JumpSound.play()
 		velocity.y-=speed*delta*gravity*height
 	if Input.is_action_pressed("left"):
-		if not $WalkSound.playing:
+		if not $WalkSound.playing and globals.musicActive:
 			$WalkSound.play()
 		globals.playerDirection=-1
 		velocity.x=-speed*delta*runspeed
 		animation.flip_h=true
 		animation.play("walk")
 	if Input.is_action_pressed("right"):
-		if not $WalkSound.playing:
+		if not $WalkSound.playing and globals.musicActive:
 			$WalkSound.play()
 		globals.playerDirection=1
 		velocity.x=+speed*delta*runspeed
@@ -137,13 +138,12 @@ func climb(delta):
 		globals.playerDirection=1
 		if !is_on_floor():animation.play("climb")
 
-
 func _on_Area2D_area_entered(area):
 	if area.is_in_group("tree"):
 		inTree = true
 	if area.is_in_group("hit"):
 		dead()
-	
+
 func dead():
 	if globals.godmode:
 		return
@@ -168,7 +168,8 @@ func _on_Timer_timeout():
 	canFire = true
 
 func _on_JumpSound_finished():
-	$FallSound.play()
+	if globals.musicActive:
+		$FallSound.play()
 
 func is_on_floor():
 	var direction=0
@@ -180,4 +181,3 @@ func is_on_floor():
 			if direction == -1:
 				return true
 		return false
-

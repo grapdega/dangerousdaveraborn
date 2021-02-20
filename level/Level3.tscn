@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Prefabs/oyuncu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/tileset/tileset.tres" type="TileSet" id=2]
@@ -18,8 +18,12 @@
 [ext_resource path="res://Prefabs/firezone.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Script/path/path.gd" type="Script" id=17]
 [ext_resource path="res://Prefabs/Monster.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Script/TrickMod.gd" type="Script" id=19]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16.5233, 16.303 )
+
+[sub_resource type="Curve2D" id=2]
 _data = {
 "points": PoolVector2Array( 9.67759, -19.3552, -9.67759, 19.3552, 693.752, 10.5961, 5.19131, 8.49487, -5.19131, -8.49487, 576.012, 11.7303, -28.7173, 7.869, 28.7173, -7.869, 583.741, -16.8107, -34.7828, 0.671865, 34.7828, -0.671865, 793.636, -16.8107, 5.95226, -7.09903, -5.95226, 7.09903, 812.069, 9.35184, 16.3518, 21.3574, -16.3518, -21.3574, 693.418, 9.92871 )
 }
@@ -56,6 +60,12 @@ texture = ExtResource( 11 )
 [node name="wall2" type="Sprite" parent="TileMap"]
 position = Vector2( 2000, 80 )
 texture = ExtResource( 11 )
+script = ExtResource( 19 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap/wall2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileMap/wall2/StaticBody2D"]
+shape = SubResource( 1 )
 
 [node name="StatusBar" parent="." instance=ExtResource( 3 )]
 
@@ -73,7 +83,7 @@ limit_bottom = 0
 
 [node name="Path2D" type="Path2D" parent="Monster"]
 position = Vector2( 709.164, 193.15 )
-curve = SubResource( 1 )
+curve = SubResource( 2 )
 script = ExtResource( 17 )
 
 [node name="Area2d" parent="Monster/Path2D" instance=ExtResource( 16 )]
@@ -94,7 +104,7 @@ position = Vector2( 693.964, -35.1991 )
 
 [node name="Path2D2" type="Path2D" parent="Monster"]
 position = Vector2( 1119.73, 174.026 )
-curve = SubResource( 1 )
+curve = SubResource( 2 )
 script = ExtResource( 17 )
 
 [node name="Area2d" parent="Monster/Path2D2" instance=ExtResource( 16 )]
