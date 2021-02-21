@@ -1,14 +1,20 @@
 extends Control
 onready var globals = $"/root/Globals"
+
 func _ready():
 	$Focus.position = Vector2(246, 195)
-	$SoundCheck.pressed = true
 
 func _process(delta):
-	if $SoundCheck.is_pressed():
-		globals.musicActive = true
+	if globals.musicActive:
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
 	else:
-		globals.musicActive = false
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
+		
+	if globals.musicActive:
+		$SoundCheck.pressed = true
+	else:
+		$SoundCheck.pressed = false
+
 func _input(event):
 	if event.is_action_pressed("pause"):
 		get_tree().paused = !get_tree().paused
@@ -17,18 +23,14 @@ func _input(event):
 func _on_ExitGame_mouse_entered():
 	$Focus.position = Vector2(246, 195)
 
-
 func _on_ExitGame_pressed():
 	get_tree().quit()
-
 
 func _on_SoundCheck_mouse_entered():
 	$Focus.position = Vector2(246, 226)
 
-
 func _on_Sound_mouse_entered():
 	$Focus.position = Vector2(246, 226)
 
-
 func _on_SoundCheck_pressed():
-	pass
+	globals.musicActive = !globals.musicActive

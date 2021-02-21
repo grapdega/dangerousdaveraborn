@@ -74,6 +74,7 @@ rect_scale = Vector2( 1.04837, 1.02015 )
 focus_mode = 0
 custom_icons/checked = ExtResource( 2 )
 custom_icons/unchecked = ExtResource( 1 )
+pressed = true
 enabled_focus_mode = 0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -82,7 +83,7 @@ __meta__ = {
 [node name="Focus" type="AnimatedSprite" parent="."]
 position = Vector2( 246, 195 )
 frames = SubResource( 1 )
-frame = 2
+frame = 3
 playing = true
 [connection signal="mouse_entered" from="ExitGame" to="." method="_on_ExitGame_mouse_entered"]
 [connection signal="pressed" from="ExitGame" to="." method="_on_ExitGame_pressed"]

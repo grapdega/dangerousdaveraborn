@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Images/intro/dangerousdave4.png" type="Texture" id=1]
 [ext_resource path="res://Images/intro/dangerousdave2.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Prefabs/Cup.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Door.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Images/tileset/wall.png" type="Texture" id=14]
+[ext_resource path="res://Prefabs/PauseMenu.tscn" type="PackedScene" id=15]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -103,6 +104,9 @@ position = Vector2( 207.892, 301.943 )
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 176, 240 )
 texture = ExtResource( 14 )
+
+[node name="PauseMenu" parent="." instance=ExtResource( 15 )]
+visible = false
 [connection signal="body_entered" from="DoorNormal/Area2DNormal" to="." method="_on_Area2DNormal_body_entered"]
 [connection signal="body_entered" from="DoorHard/Area2DHard" to="." method="_on_Area2DHard_body_entered"]
 [connection signal="body_entered" from="DoorTrick/Area2DTrick" to="." method="_on_Area2DTrick_body_entered"]

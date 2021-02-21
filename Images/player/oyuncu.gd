@@ -40,8 +40,7 @@ func _physics_process(delta):
 			globals.player_has_class=true
 		velocity = move_and_slide(velocity)
 		if Input.is_action_just_pressed("jetpack") and globals.hasJetpack:
-			if globals.musicActive:
-				$JetpackSound1.play()
+			$JetpackSound1.play()
 			globals.jetpackIsActive = !globals.jetpackIsActive
 		if globals.jetpackIsActive:
 			animation.play("jetpack")
@@ -67,7 +66,7 @@ func _physics_process(delta):
 		animation.play("dead")
 
 func jetpack_move(delta):
-	if not $JetpackSound2.playing and globals.musicActive:
+	if not $JetpackSound2.playing:
 		$JetpackSound2.play()
 	velocity.y = 0
 	velocity.x = 0
@@ -97,18 +96,18 @@ func move(delta):
 	if  (Input.is_action_pressed("left") or Input.is_action_pressed("right"))==false:
 		animation.play("stop")
 	if Input.is_action_pressed("jump") and is_on_floor():
-		if not $JumpSound.playing and globals.musicActive:
+		if not $JumpSound.playing:
 			$JumpSound.play()
 		velocity.y-=speed*delta*gravity*height
 	if Input.is_action_pressed("left"):
-		if not $WalkSound.playing and globals.musicActive:
+		if not $WalkSound.playing:
 			$WalkSound.play()
 		globals.playerDirection=-1
 		velocity.x=-speed*delta*runspeed
 		animation.flip_h=true
 		animation.play("walk")
 	if Input.is_action_pressed("right"):
-		if not $WalkSound.playing and globals.musicActive:
+		if not $WalkSound.playing:
 			$WalkSound.play()
 		globals.playerDirection=1
 		velocity.x=+speed*delta*runspeed
@@ -168,8 +167,7 @@ func _on_Timer_timeout():
 	canFire = true
 
 func _on_JumpSound_finished():
-	if globals.musicActive:
-		$FallSound.play()
+	$FallSound.play()
 
 func is_on_floor():
 	var direction=0
